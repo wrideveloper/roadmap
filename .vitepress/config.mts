@@ -20,10 +20,7 @@ export default defineConfig({
 
         sidebar: {
             '/miniclass/web/': [
-                {
-                    text: "Web Development",
-                    link: "/miniclass/web/"
-                },
+                { text: "Web Development", link: "/miniclass/web/" },
                 {
                     text: 'Pendahuluan',
                     items: [
@@ -69,7 +66,10 @@ export default defineConfig({
                     text: "Javascript",
                     items: [
                         { text: "Pengenalan Javascript", link: "/miniclass/web/javascript/pengenalan-javascript" },
-                        { text: "Javascript for Java Developer", link: "/miniclass/web/javascript/javascript-for-java-dev" },
+                        {
+                            text: "Javascript for Java Developer",
+                            link: "/miniclass/web/javascript/javascript-for-java-dev"
+                        },
                         { text: "Array", link: "/miniclass/web/javascript/array" },
                         { text: "Fungsi", link: "/miniclass/web/javascript/fungsi" },
                         { text: "Manipulasi DOM", link: "/miniclass/web/javascript/manipulasi-dom" },
@@ -87,6 +87,121 @@ export default defineConfig({
                         { text: "Import Export", link: "/miniclass/web/nodejs/import-export" },
                         { text: "Node Package Manager", link: "/miniclass/web/nodejs/node-package-manager" },
                         { text: "Nodemon", link: "/miniclass/web/nodejs/nodemon" },
+                    ]
+                },
+            ],
+            '/miniclass/game/': [
+                { text: "Game Development", link: "/miniclass/game/" },
+                {
+                    text: "Pendahuluan",
+                    items: [
+                        { text: "Tahapan Pembuatan Game", link: "/miniclass/game/pendahuluan/tahapan-pembuatan-game" },
+                        { text: "Game Design Document", link: "/miniclass/game/pendahuluan/game-design-document" },
+                        { text: "Story Board", link: "/miniclass/game/pendahuluan/story-board" },
+                    ]
+                },
+                {
+                    text: "Pengenalan Unity",
+                    items: [
+                        { text: "Penjelasan Unity", link: "/miniclass/game/pengenalan-unity/penjelasan-unity" },
+                        {
+                            text: "Game Object Component",
+                            link: "/miniclass/game/pengenalan-unity/game-object-component"
+                        },
+                        {
+                            text: "Pengenalan Interface Unity",
+                            link: "/miniclass/game/pengenalan-unity/pengenalan-interface-unity"
+                        },
+                        { text: "Physic2D", link: "/miniclass/game/pengenalan-unity/physic2d" },
+                    ]
+                },
+                {
+                    text: "Pengenalan C#",
+                    items: [
+                        {
+                            text: "Constructor",
+                            link: "/miniclass/game/pengenalan-csharp/constructor"
+                        },
+                        {
+                            text: "Dasar OOP C#",
+                            link: "/miniclass/game/pengenalan-csharp/dasar-oop-csharp"
+                        },
+                        { text: "Fungsi", link: "/miniclass/game/pengenalan-csharp/fungsi" },
+                        {
+                            text: "Getter dan Setter",
+                            link: "/miniclass/game/pengenalan-csharp/getter-dan-setter"
+                        },
+                        {
+                            text: "Inheritance",
+                            link: "/miniclass/game/pengenalan-csharp/inheritance"
+                        },
+                        {
+                            text: "Object Attribute",
+                            link: "/miniclass/game/pengenalan-csharp/object-attribute"
+                        },
+                        {
+                            text: "Pengenalan C#",
+                            link: "/miniclass/game/pengenalan-csharp/pengenalan-csharp"
+                        },
+                    ]
+                },
+                {
+                    text: "Penerapan C# pada Unity",
+                    items: [
+                        { text: "AddForce", link: "/miniclass/game/penerapan-csharp-pada-unity/addforce" },
+                        {
+                            text: "Collider Trigger",
+                            link: "/miniclass/game/penerapan-csharp-pada-unity/collider-trigger"
+                        },
+                        { text: "Delta Time", link: "/miniclass/game/penerapan-csharp-pada-unity/delta-time" },
+                        { text: "GetComponent", link: "/miniclass/game/penerapan-csharp-pada-unity/getcomponent" },
+                        { text: "Input", link: "/miniclass/game/penerapan-csharp-pada-unity/input" },
+                        {
+                            text: "Membuat Game 2D Sederhana",
+                            link: "/miniclass/game/penerapan-csharp-pada-unity/membuat-game-2d-sederhana"
+                        },
+                        { text: "Transform", link: "/miniclass/game/penerapan-csharp-pada-unity/transform" },
+                        { text: "Velocity", link: "/miniclass/game/penerapan-csharp-pada-unity/velocity" },
+                    ]
+                },
+                {
+                    text: "Miniproject",
+                    items: [
+                        { text: "Mengoleksi Objek", link: "/miniclass/game/miniproject/mengoleksi-objek" },
+                        { text: "Overview", link: "/miniclass/game/miniproject/overview" },
+                        { text: "Player Movement", link: "/miniclass/game/miniproject/player-movement" },
+                        { text: "Scene Management", link: "/miniclass/game/miniproject/scene-management" },
+                        { text: "Scoring System", link: "/miniclass/game/miniproject/scoring-system" },
+                    ]
+                },
+                {
+                    text: "Teknik Pembuatan Game",
+                    items: [
+                        {
+                            text: "Membuat Game 2D",
+                            link: "/miniclass/game/teknik-pembuatan-game/membuat-game-2d-dengan-teknik-pembuatan-game"
+                        },
+                    ]
+                },
+                {
+                    text: "Efek pada Unity",
+                    items: [
+                        { text: "Animation", link: "/miniclass/game/efek-pada-unity/animation" },
+                        { text: "Audio", link: "/miniclass/game/efek-pada-unity/audio" },
+                        { text: "Lighting", link: "/miniclass/game/efek-pada-unity/lighting" },
+                    ]
+                },
+                {
+                    text: "User Interface",
+                    items: [
+                        { text: "User Interface", link: "/miniclass/game/user-interface/user-interface" },
+                    ]
+                },
+                {
+                    text: "Penyimpanan Eksternal",
+                    items: [
+                        { text: "Binary File", link: "/miniclass/game/penyimpanan-eksternal/binary-file.md" },
+                        { text: "SQLite", link: "/miniclass/game/penyimpanan-eksternal/sqlite.md" },
                     ]
                 },
             ]
