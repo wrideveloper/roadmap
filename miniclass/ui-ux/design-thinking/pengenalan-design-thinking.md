@@ -1,7 +1,7 @@
 # 📌 Intro - Pengenalan Design Thinking
 
 > [!INFO]
-> Note: _Sub bab ini penjelasan Design Thinking dikemas dalam sebuah Studi Kasus yang dikerjakan di _Miniclass UX _Semester Genap 2021, yaitu _**Redesigning KFCKU Mobile App.**_
+> Sub bab ini penjelasan Design Thinking dikemas dalam sebuah Studi Kasus yang dikerjakan di _Miniclass UX_ Semester Genap 2021, yaitu _**Redesigning KFCKU Mobile App.**_
 
 ![Sumber: BBVA.com](../assets/image.png)
 

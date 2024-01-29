@@ -1,7 +1,7 @@
 # Mengidentifikasi dan Mendefinisikan Insights
 
 > [!INFO]
-> _Note: _Sub bab ini penjelasan Design Thinking dikemas dalam sebuah Studi Kasus yang dikerjakan di _Miniclass UX _Semester Genap 2021, yaitu _**Redesigning KFCKU Mobile App.**_
+> Sub bab ini penjelasan Design Thinking dikemas dalam sebuah Studi Kasus yang dikerjakan di _Miniclass UX_ Semester Genap 2021, yaitu _**Redesigning KFCKU Mobile App.**_
 
 ## :question:Apa itu _Insight_?
 

@@ -1,7 +1,7 @@
 # Menuangkan Ide Brilian dengan Sketchstorming
 
 > [!INFO]
-> _Note:_ Sub bab ini penjelasan Design Thinking dikemas dalam sebuah Studi Kasus yang dikerjakan di _Miniclass UX_ Semester Genap 2021, yaitu _**Redesigning KFCKU Mobile App.**_
+> Sub bab ini penjelasan Design Thinking dikemas dalam sebuah Studi Kasus yang dikerjakan di _Miniclass UX_ Semester Genap 2021, yaitu _**Redesigning KFCKU Mobile App.**_
 
 ![Sumber: toptal.com](<../../assets/image (20).png>)
 
