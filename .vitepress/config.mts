@@ -12,6 +12,7 @@ export default defineConfig({
         },
 
         footer: {
+            message: 'Made with <a href="https://vitepress.dev" target="_blank">Vitepress</a>',
             copyright: 'Copyright © 2024-present <a href="https://github.com/wrideveloper">Workshop Riset Informatika</a>',
         },
 
