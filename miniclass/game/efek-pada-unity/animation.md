@@ -2,7 +2,7 @@
 
 Dalam pembuatan game, animasi akan menjadi faktor pendukung yang dapat membuat game kita menjadi semakin menarik
 
-![animation](../.gitbook/assets/animation.png)
+![animation](./animation.png)
 
 Dengan menggunakan unity kita tidak membutuhkan aplikasi tambahan untuk membuat suatu animasi, yang kita butuhkan hanyalah kumpulan gambar yang saling terkait untuk membangun animasi misalnya seperti gambar diatas
 

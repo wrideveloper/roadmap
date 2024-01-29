@@ -1,10 +1,10 @@
 # Transform
 
-![](../.gitbook/assets/transform.png)
+![](./transform.png)
 
 ## 1. Penjelasan Transform
 
-![transform inspector](../.gitbook/assets/transform-inspector.png)
+![transform inspector](./transform-inspector.png)
 
 Transform dalam unity berguna untuk menentukan posisi, rotasi, serta ukuran dari suatu game object. Transform dapat diakses melalui `inspector` atau juga bisa melalui `script` dengan menggunakan attribute `transform`
 

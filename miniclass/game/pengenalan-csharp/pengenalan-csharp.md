@@ -1,6 +1,6 @@
 # Pengenalan C\#
 
-![c\#](../.gitbook/assets/cSharp.png)
+![c\#](./cSharp.png)
 
 ## 1. Penjelasan C Sharp
 

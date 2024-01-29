@@ -1,6 +1,6 @@
 # Pengenalan Interface Unity
 
-![](../.gitbook/assets/interface.jpg)
+![](./interface.jpg)
 
 Hal pertama yang akan kita pelajari tentu saja adalah interface dari game engine unity
 
@@ -16,9 +16,8 @@ Game view merupakan tempat dimana kita dapat melihat preview dan memainkan game 
 
 Hierarchy window menampilkan semua game object yang kita masukkan ke scene view secara hirarki
 
-{% hint style="info" %}
-Game object merupakan objek apapun yang sudah kita masukkan ke scene view, game object dapat berupa karakter, benda mati, atau apapun
-{% endhint %}
+> [!HINT]
+> Game object merupakan objek apapun yang sudah kita masukkan ke scene view, game object dapat berupa karakter, benda mati, atau apapun
 
 ## 4. Project Window
 

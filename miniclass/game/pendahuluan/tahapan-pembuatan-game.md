@@ -6,7 +6,7 @@ Untuk membuat sebuah game, ada tiga tahapan umum yang harus dilalui, yaitu `Ide`
 
 Pada tahap ini akan dilakukan brainstorming dan protyping, output yang dihasilkan dari tahap ini adalah sebuah concept document
 
-![concept document](../.gitbook/assets/concept-document.jpg)
+![concept document](./concept-document.jpg)
 
 Beberapa tips dalam tahap ini :
 
@@ -19,7 +19,7 @@ Beberapa tips dalam tahap ini :
 
 Setelah desain dari game selesai, maka tahap selanjutnya adalah mengembangkan game tersebut, output dari tahapan ini adalah sebuah game final.
 
-![game-development](../.gitbook/assets/game-development.jpg)
+![game-development](./game-development.jpg)
 
 Beberapa tips dalam tahap ini :
 
@@ -32,7 +32,7 @@ Beberapa tips dalam tahap ini :
 
 Setelah game selesai dikembangkan maka dilanjutkan dengan mempublish game ke pasar
 
-![](../.gitbook/assets/publish.png)
+![](./publish.png)
 
 Kunci sukses pada tahap ini :
 

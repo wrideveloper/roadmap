@@ -1,6 +1,6 @@
 # Event Pada Javascript
 
-<img src="event.png" width="600" />
+<img src="./event.png" width="600" />
 
 ## 1. Permasalahan
 Saat membuat fitur web,terkadang kita membutuhkan perintah sebagai respon sistem terhadap kegiatan yang dilakukan oleh user pada web. Contohnya menampilkan pesan (alert) setelah user mengisi sebuah form, merubah warna button setelah di klik, dll.

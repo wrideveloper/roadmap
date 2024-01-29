@@ -2,7 +2,7 @@
 
 ## 1. Permasalahan
 
-<img src="array.jpg" width="350" />
+<img src="./array.jpg" width="350" />
 
 Terkadang, untuk membuat suatu fitur pada web, kita butuh menyimpan list of data (atau kumpulan data), di dalam sebuah variable. Namun variable hanya bisa menyimpan satu data saja, bukan kumpulan data. Oleh karena itu ketika kita ingin mengumpulkan data, kita bisa menggunakan Array.
 
@@ -155,8 +155,8 @@ Setelah melakukan perubahan di atas, simpanlah dan buka file index.html pada bro
 
 1. Menambahkan Data Baru
 
-   ![Menambahkan Data](array1.PNG)
+   ![Menambahkan Data](./array1.png)
 
 2. Filter Data
 
-   ![Filter Data](array2.PNG)
+   ![Filter Data](./array2.png)

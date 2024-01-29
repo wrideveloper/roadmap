@@ -1,6 +1,6 @@
 # Penjelasan Unity
 
-![unity logo](../.gitbook/assets/unity-logo.png)
+![unity logo](./unity-logo.png)
 
 ## 1. Penjelasan Game Engine
 

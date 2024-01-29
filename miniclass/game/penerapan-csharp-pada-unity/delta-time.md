@@ -1,6 +1,6 @@
 # Delta Time
 
-![](../.gitbook/assets/delta-time.png)
+![](./delta-time.png)
 
 ## 1. Penjelasan Delta Time
 

@@ -1,6 +1,6 @@
 # GetComponent
 
-![getcomponent](../.gitbook/assets/getcomponent.png)
+![getcomponent](./getcomponent.png)
 
 ## 1. Penjelasan GetComponent
 

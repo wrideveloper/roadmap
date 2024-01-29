@@ -1,6 +1,6 @@
 # Input
 
-![](../.gitbook/assets/input.png)
+![](./input.png)
 
 ## 1. Input.GetKey
 
@@ -26,7 +26,7 @@ if (Input.GetButton("Jump")) {
 
 Disini kita mendeteksi apakah button dengan label jump sudah ditekan atau belum, apabila ditekan maka kita akan menjalankan method `Jump()`, mungkin sekilas mirip seperti dengan menggunakan `Input.GetKey` namun akan kelihatan bedanya apabila kita membuka `Input Manager` \(Edit - Project Settings - Input\)
 
-![input manager](../.gitbook/assets/input-manager.png)
+![input manager](./input-manager.png)
 
 Disitu bisa kita lihat bahwa label Jump memiliki dua tombol, yaitu space dan up, sehingga kita bisa melakukan `Jump()` dengan menekan tombol space atau up, disini kita juga bisa mengatur agar tombol Jump juga menerima input dari joysticks sehingga pada script yang kita buat kita tidak perlu menghandle banyak tombol, cukup panggil nama tombolnya saja \(misalnya Jump\) kemudian tinggal diatur di `Input Manager`
 
@@ -42,7 +42,7 @@ Disitu bisa kita lihat bahwa label Jump memiliki dua tombol, yaitu space dan up,
 
 Misalnya kita mempunyai axis dengan label horizontal :
 
-![input manager horizontal](../.gitbook/assets/input-manager-horizontal.png)
+![input manager horizontal](./input-manager-horizontal.png)
 
 Disana kita mengeset left sebagai tombol negatif \(bernilai -1\) dan right sebagai tombol positif \(bernilai 1\)
 

@@ -1,6 +1,6 @@
 # Collider Trigger
 
-![](../.gitbook/assets/collider2d.png)
+![](./collider2d.png)
 
 ## 1. Penjelasan Collider Trigger
 

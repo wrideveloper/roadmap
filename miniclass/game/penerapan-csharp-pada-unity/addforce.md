@@ -1,6 +1,6 @@
 # Add Force
 
-![Jump](../.gitbook/assets/jump.png)
+![Jump](./jump.png)
 
 ## 1. Penjelasan Add Force
 

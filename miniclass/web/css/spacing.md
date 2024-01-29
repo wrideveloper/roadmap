@@ -2,7 +2,7 @@
 
 Space atau ruang kosong sangat penting dalam mendesain sebuah website, karena memberikan kenyamanan kepada user. Dengan CSS kita dapat memberikan space terhadap suatu elemen HTML, terdapat dua jenis space dalam CSS, yaitu `padding` dan `margin`
 
-<img src="margin-padding.jpeg" width="600" />
+<img src="./margin-padding.jpeg" width="600" />
 
 ## 1. Padding
 

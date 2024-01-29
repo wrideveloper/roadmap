@@ -1,6 +1,6 @@
 # Velocity
 
-![Velocity](../.gitbook/assets/velocity.jpeg)
+![Velocity](./velocity.jpeg)
 
 ## 1. Penjelasan Velocity
 

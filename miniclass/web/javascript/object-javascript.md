@@ -1,6 +1,6 @@
 # Objek
 
-<img src="objek.jpg" width="350" />
+<img src="./objek.jpg" width="350" />
 
 ## 1 Permasalahan
 
