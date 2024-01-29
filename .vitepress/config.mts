@@ -11,8 +11,12 @@ export default defineConfig({
             alt: 'Workshop Riset Informatika'
         },
 
+        footer: {
+            copyright: 'Copyright © 2024-present <a href="https://github.com/wrideveloper">Workshop Riset Informatika</a>',
+        },
+
         search: {
-            provider: "local",
+            provider: 'local',
         },
 
         editLink: {
@@ -33,7 +37,7 @@ export default defineConfig({
                 { text: "Web Development", link: "/miniclass/web/" },
                 {
                     text: 'Pendahuluan',
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: 'Cara Kerja Website', link: '/miniclass/web/pendahuluan/cara-kerja-website' },
                         {
@@ -48,7 +52,7 @@ export default defineConfig({
                 },
                 {
                     text: "HTML",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Pengenalan HTML", link: "/miniclass/web/html/pengenalan-html" },
                         { text: "Text Formatting", link: "/miniclass/web/html/text-formatting" },
@@ -62,7 +66,7 @@ export default defineConfig({
                 },
                 {
                     text: "CSS",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Pengenalan CSS", link: "/miniclass/web/css/pengenalan-css" },
                         { text: "CSS Selector", link: "/miniclass/web/css/selector-css" },
@@ -77,7 +81,7 @@ export default defineConfig({
                 },
                 {
                     text: "Javascript",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Pengenalan Javascript", link: "/miniclass/web/javascript/pengenalan-javascript" },
                         {
@@ -94,7 +98,7 @@ export default defineConfig({
                 },
                 {
                     text: "NodeJS",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Pengenalan NodeJS", link: "/miniclass/web/nodejs/pengenalan-nodejs" },
                         { text: "Membuat Server HTTP", link: "/miniclass/web/nodejs/membuat-server-http" },
@@ -109,7 +113,7 @@ export default defineConfig({
                 { text: "Game Development", link: "/miniclass/game/" },
                 {
                     text: "Pendahuluan",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Tahapan Pembuatan Game", link: "/miniclass/game/pendahuluan/tahapan-pembuatan-game" },
                         { text: "Game Design Document", link: "/miniclass/game/pendahuluan/game-design-document" },
@@ -118,7 +122,7 @@ export default defineConfig({
                 },
                 {
                     text: "Pengenalan Unity",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Penjelasan Unity", link: "/miniclass/game/pengenalan-unity/penjelasan-unity" },
                         {
@@ -134,7 +138,7 @@ export default defineConfig({
                 },
                 {
                     text: "Pengenalan C#",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         {
                             text: "Constructor",
@@ -165,7 +169,7 @@ export default defineConfig({
                 },
                 {
                     text: "Penerapan C# pada Unity",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "AddForce", link: "/miniclass/game/penerapan-csharp-pada-unity/addforce" },
                         {
@@ -185,7 +189,7 @@ export default defineConfig({
                 },
                 {
                     text: "Miniproject",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Mengoleksi Objek", link: "/miniclass/game/miniproject/mengoleksi-objek" },
                         { text: "Overview", link: "/miniclass/game/miniproject/overview" },
@@ -196,7 +200,7 @@ export default defineConfig({
                 },
                 {
                     text: "Teknik Pembuatan Game",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         {
                             text: "Membuat Game 2D",
@@ -206,7 +210,7 @@ export default defineConfig({
                 },
                 {
                     text: "Efek pada Unity",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Animation", link: "/miniclass/game/efek-pada-unity/animation" },
                         { text: "Audio", link: "/miniclass/game/efek-pada-unity/audio" },
@@ -215,14 +219,14 @@ export default defineConfig({
                 },
                 {
                     text: "User Interface",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "User Interface", link: "/miniclass/game/user-interface/user-interface" },
                     ]
                 },
                 {
                     text: "Penyimpanan Eksternal",
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: "Binary File", link: "/miniclass/game/penyimpanan-eksternal/binary-file.md" },
                         { text: "SQLite", link: "/miniclass/game/penyimpanan-eksternal/sqlite.md" },
@@ -232,7 +236,10 @@ export default defineConfig({
         },
 
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/wrideveloper' }
+            { icon: 'github', link: 'https://github.com/wrideveloper/roadmap' },
+            { icon: 'instagram', link: 'https://instagram.com/wri_polinema' },
+            { icon: 'linkedin', link: 'https://www.linkedin.com/company/wripolinema/' },
+            { icon: 'youtube', link: 'https://www.youtube.com/@workshoprisetinformatika6528' },
         ]
     }
 })

@@ -21,18 +21,26 @@ hero:
 
 features:
   - title: Web Development
+    link: /miniclass/web/
+    linkText: Explore
     icon: 
         src: /assets/web-dev-logo.png
     details: Miniclass yang berfokus dengan web development
   - title: Mobile Development
+    link: /miniclass/mobile/
+    linkText: Explore
     icon: 
         src: /assets/mobile-dev-logo.png
     details: Miniclass yang berfokus dengan mobile development
   - title: Game Development
+    link: /miniclass/game/
+    linkText: Explore
     icon: 
         src: /assets/game-dev-logo.png
     details: Miniclass yang berfokus dengan game development
   - title: UI/UX Design
+    link: /miniclass/ui-ux/
+    linkText: Explore
     icon: 
         src: /assets/ui-ux-design-logo.png
     details: Miniclass yang berfokus dengan UI/UX Design
