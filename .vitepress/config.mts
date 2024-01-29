@@ -4,10 +4,20 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: "WRI Roadmap",
     description: "A learning roadmap for Workshop Riset Informatika miniclass",
+    lastUpdated: true,
     themeConfig: {
         logo: {
             src: '/assets/wri-logo.png',
             alt: 'Workshop Riset Informatika'
+        },
+
+        search: {
+            provider: "local",
+        },
+
+        editLink: {
+            text: 'Edit this page on GitHub',
+            pattern: 'https://github.com/wrideveloper/roadmap/edit/main/:path',
         },
 
         nav: [
@@ -23,6 +33,7 @@ export default defineConfig({
                 { text: "Web Development", link: "/miniclass/web/" },
                 {
                     text: 'Pendahuluan',
+                    collapsed: true,
                     items: [
                         { text: 'Cara Kerja Website', link: '/miniclass/web/pendahuluan/cara-kerja-website' },
                         {
@@ -37,6 +48,7 @@ export default defineConfig({
                 },
                 {
                     text: "HTML",
+                    collapsed: true,
                     items: [
                         { text: "Pengenalan HTML", link: "/miniclass/web/html/pengenalan-html" },
                         { text: "Text Formatting", link: "/miniclass/web/html/text-formatting" },
@@ -50,6 +62,7 @@ export default defineConfig({
                 },
                 {
                     text: "CSS",
+                    collapsed: true,
                     items: [
                         { text: "Pengenalan CSS", link: "/miniclass/web/css/pengenalan-css" },
                         { text: "CSS Selector", link: "/miniclass/web/css/selector-css" },
@@ -64,6 +77,7 @@ export default defineConfig({
                 },
                 {
                     text: "Javascript",
+                    collapsed: true,
                     items: [
                         { text: "Pengenalan Javascript", link: "/miniclass/web/javascript/pengenalan-javascript" },
                         {
@@ -80,6 +94,7 @@ export default defineConfig({
                 },
                 {
                     text: "NodeJS",
+                    collapsed: true,
                     items: [
                         { text: "Pengenalan NodeJS", link: "/miniclass/web/nodejs/pengenalan-nodejs" },
                         { text: "Membuat Server HTTP", link: "/miniclass/web/nodejs/membuat-server-http" },
@@ -94,6 +109,7 @@ export default defineConfig({
                 { text: "Game Development", link: "/miniclass/game/" },
                 {
                     text: "Pendahuluan",
+                    collapsed: true,
                     items: [
                         { text: "Tahapan Pembuatan Game", link: "/miniclass/game/pendahuluan/tahapan-pembuatan-game" },
                         { text: "Game Design Document", link: "/miniclass/game/pendahuluan/game-design-document" },
@@ -102,6 +118,7 @@ export default defineConfig({
                 },
                 {
                     text: "Pengenalan Unity",
+                    collapsed: true,
                     items: [
                         { text: "Penjelasan Unity", link: "/miniclass/game/pengenalan-unity/penjelasan-unity" },
                         {
@@ -117,6 +134,7 @@ export default defineConfig({
                 },
                 {
                     text: "Pengenalan C#",
+                    collapsed: true,
                     items: [
                         {
                             text: "Constructor",
@@ -147,6 +165,7 @@ export default defineConfig({
                 },
                 {
                     text: "Penerapan C# pada Unity",
+                    collapsed: true,
                     items: [
                         { text: "AddForce", link: "/miniclass/game/penerapan-csharp-pada-unity/addforce" },
                         {
@@ -166,6 +185,7 @@ export default defineConfig({
                 },
                 {
                     text: "Miniproject",
+                    collapsed: true,
                     items: [
                         { text: "Mengoleksi Objek", link: "/miniclass/game/miniproject/mengoleksi-objek" },
                         { text: "Overview", link: "/miniclass/game/miniproject/overview" },
@@ -176,6 +196,7 @@ export default defineConfig({
                 },
                 {
                     text: "Teknik Pembuatan Game",
+                    collapsed: true,
                     items: [
                         {
                             text: "Membuat Game 2D",
@@ -185,6 +206,7 @@ export default defineConfig({
                 },
                 {
                     text: "Efek pada Unity",
+                    collapsed: true,
                     items: [
                         { text: "Animation", link: "/miniclass/game/efek-pada-unity/animation" },
                         { text: "Audio", link: "/miniclass/game/efek-pada-unity/audio" },
@@ -193,12 +215,14 @@ export default defineConfig({
                 },
                 {
                     text: "User Interface",
+                    collapsed: true,
                     items: [
                         { text: "User Interface", link: "/miniclass/game/user-interface/user-interface" },
                     ]
                 },
                 {
                     text: "Penyimpanan Eksternal",
+                    collapsed: true,
                     items: [
                         { text: "Binary File", link: "/miniclass/game/penyimpanan-eksternal/binary-file.md" },
                         { text: "SQLite", link: "/miniclass/game/penyimpanan-eksternal/sqlite.md" },
