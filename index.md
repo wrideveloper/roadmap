@@ -21,11 +21,19 @@ hero:
 
 features:
   - title: Web Development
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    icon: 
+        src: /assets/web-dev-logo.png
+    details: Miniclass yang berfokus dengan web development
   - title: Mobile Development
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    icon: 
+        src: /assets/mobile-dev-logo.png
+    details: Miniclass yang berfokus dengan mobile development
   - title: Game Development
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    icon: 
+        src: /assets/game-dev-logo.png
+    details: Miniclass yang berfokus dengan game development
   - title: UI/UX Design
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    icon: 
+        src: /assets/ui-ux-design-logo.png
+    details: Miniclass yang berfokus dengan UI/UX Design
 ---
