@@ -1,0 +1,9 @@
+# 🔎 UX Research
+
+## :oil: Materi
+
+* [Pengenalan UX Research](pengenalan-ux-research.md)
+* [Mengumpulkan Data](mengumpulkan-data.md)
+* [Membuat User Persona](membuat-user-persona.md)
+* [Membuat User Story](membuat-user-story.md)
+* [Melakukan User Story Mapping](melakukan-user-story-mapping.md)

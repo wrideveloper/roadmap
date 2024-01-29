@@ -1,10 +1,3 @@
----
-description: >-
-  Pada bagian ini, kita akan belajar tentang membuat permainan sederhana. Yang
-  mana player dapat bergerak ke kanan, kiri, atas, dan bawah untuk mengoleksi
-  objek yang tersebar dalam game.
----
-
 # Overview
 
 ## Assets
