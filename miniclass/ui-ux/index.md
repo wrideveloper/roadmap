@@ -1,6 +1,6 @@
 # Intro to Miniclass UI/UX
 
-![Sumber: dribbble.com](https://github.com/wrideveloper/miniclass-ux/raw/master/assets/image%20(14).png)
+![Sumber: dribbble.com](./assets/home.png)
 
 ## [👋](https://emojipedia.org/waving-hand/) Selamat Datang di Miniclass UI/UX!
 
