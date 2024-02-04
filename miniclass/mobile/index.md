@@ -1,4 +1,4 @@
-# Miniclass Mobile Development
+# 📱 Miniclass Mobile Development
 
 ![Sumber: technologynews24x7.com](./assets/home.jpeg)
 
@@ -13,3 +13,4 @@ Materi pada Gitbook ini membahas berbagai metode dan langkah-langkah dalam disip
 * [flutter.dev](https://docs.flutter.dev/)
 * [youtube: @flutterdev](https://www.youtube.com/@flutterdev)
 * [youtube: @ericodarmawan](https://www.youtube.com/@ericodarmawan)
+* [medium](https://medium.com/)
