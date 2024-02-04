@@ -249,6 +249,7 @@ export default defineConfig({
                                 { text: "Pengenalan Dart", link: "/miniclass/mobile/pemrograman-dart/pengenalan-dart" },
                                 { text: "Variabel dan Tipe Data", link: "/miniclass/mobile/pemrograman-dart/dart-fundamental" },
                                 { text: "Control Flow", link: "/miniclass/mobile/pemrograman-dart/control-flow" },
+                                { text: "Collections", link: "/miniclass/mobile/pemrograman-dart/collections" },
                             ]
                         },
                         {
