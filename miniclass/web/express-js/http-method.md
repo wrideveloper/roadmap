@@ -63,30 +63,26 @@ Cara membuat rute menggunakan method selain GET pada express :
 Contoh kasus menggunakan file dari materi sebelumnya,
 
 ### 4.1. Mengubah kode untuk menambahkan kontak baru
+  - Dari `app.get` dan `/contact/create`:
+```javascript
 
-    Dari `app.get` dan `/contact/create`:
-
-    ```javascript
-    // menambahkan kontak baru
-    app.get("/contact/create", function (req, res) {
-        contacts.push({ name: "tono", phone: "085637263625" })
-        res.send({ success: true })
-    })
-    ```
-
-    Menjadi `app.post` dan `/contact`:
-
-    ```javascript
-    // menambahkan kontak baru
-    app.post("/contact", function (req, res) {
-        contacts.push({ name: "tono", phone: "085637263625" })
-        res.send({ success: true })
-    })
-    ```
-
+      // menambahkan kontak baru
+      app.get("/contact/create", function (req, res) {
+          contacts.push({ name: "tono", phone: "085637263625" })
+          res.send({ success: true })
+      })
+```
+  - Menjadi `app.post` dan `/contact`:
+```javascript
+      // menambahkan kontak baru
+      app.post("/contact", function (req, res) {
+          contacts.push({ name: "tono", phone: "085637263625" })
+          res.send({ success: true })
+      })
+```
 ### 4.2. Mengubah kode untuk mengubah kontak pada index 0
 
-    Dari `app.get` dan `/contact/edit`:
+  - Dari `app.get` dan `/contact/edit`:
 
     ```javascript
     // mengubah kontak pada index 0
@@ -100,7 +96,7 @@ Contoh kasus menggunakan file dari materi sebelumnya,
     })
     ```
 
-    Menjadi `app.put` dan `/contact`:
+- Menjadi `app.put` dan `/contact`:
 
     ```javascript
     // mengubah kontak pada index 0
@@ -116,7 +112,7 @@ Contoh kasus menggunakan file dari materi sebelumnya,
 
 ### 4.3. mengubah kode untuk menghapus kontak pada index 0
 
-    Dari `app.get` dan `/contact/delete`:
+  - Dari `app.get` dan `/contact/delete`:
 
     ```javascript
     // menghapus kontak pada index 0
@@ -130,7 +126,7 @@ Contoh kasus menggunakan file dari materi sebelumnya,
     })
     ```
 
-    Menjadi `app.delete` dan `/contact`:
+- Menjadi `app.delete` dan `/contact`:
 
     ```javascript
     // menghapus kontak pada index 0
