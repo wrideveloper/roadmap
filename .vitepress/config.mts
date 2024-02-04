@@ -237,6 +237,41 @@ export default defineConfig({
                     ]
                 },
             ],
+            '/miniclass/mobile/': [
+                { text: "Mobile Development", link: "/miniclass/mobile/" },
+                {
+                    text: "Dart",
+                    items: [
+                        {
+                            text: "Pemrograman Dart",
+                            collapsed: false,
+                            items: [
+                                { text: "Pengenalan Dart", link: "/miniclass/mobile/pemrograman-dart/pengenalan-dart" },
+                                { text: "Variabel dan Tipe Data", link: "/miniclass/mobile/pemrograman-dart/dart-fundamental" },
+                            ]
+                        },
+                        {
+                            text: "OOP Dart",
+                            collapsed: false,
+                            items: [
+                                { text: "OOP pada Dart", link: "/miniclass/mobile/oop-dart/oop-dart" },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    text: "Flutter",
+                    items: [
+                        {
+                            text: "Widget Flutter",
+                            collapsed: false,
+                            items: [
+                                { text: "Widget", link: "/miniclass/mobile/widget-flutter/widget" },
+                            ]
+                        }
+                    ]
+                }
+            ],
             '/miniclass/ui-ux/': [
                 { text: "Intro to Miniclass UI/UX", link: "/miniclass/ui-ux/" },
                 {
