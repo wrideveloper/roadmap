@@ -257,6 +257,16 @@ export default defineConfig({
                             collapsed: false,
                             items: [
                                 { text: "OOP pada Dart", link: "/miniclass/mobile/oop-dart/oop-dart" },
+                                { text: "Class", link: "/miniclass/mobile/oop-dart/class" },
+                                { text: "Properties & Methods", link: "/miniclass/mobile/oop-dart/properties-methods" },
+                                { text: "Constructor", link: "/miniclass/mobile/oop-dart/constructor" },
+                                { text: "Cascade Notation", link: "/miniclass/mobile/oop-dart/cascade-notation" },
+                                { text: "Inheritance", link: "/miniclass/mobile/oop-dart/inheritance" },
+                                { text: "Abstract Class", link: "/miniclass/mobile/oop-dart/abstract-class" },
+                                { text: "Implicit Interface", link: "/miniclass/mobile/oop-dart/implicit-interface" },
+                                { text: "Enumerated Type", link: "/miniclass/mobile/oop-dart/enumerated-types" },
+                                { text: "Mixins", link: "/miniclass/mobile/oop-dart/mixins" },
+                                { text: "Extension Method", link: "/miniclass/mobile/oop-dart/extension-method" },
                             ]
                         },
                     ]
