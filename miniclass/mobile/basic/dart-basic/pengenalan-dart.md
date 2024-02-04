@@ -1,6 +1,20 @@
-# Pengenalan Dart
+# 🍳 Pengenalan Dart
 
-Dart adalah bahasa pemrograman yang open source dan general purpose. Dart dikembangkan oleh Google dan ditujukan untuk membuat aplikasi multiplatform seperti mobile, desktop, dan web.
+![dart logo](../assets/pengenalan-dart.png)
+
+Pernahkah kamu mendengar Flutter? Kerangka kerja populer untuk membuat aplikasi mobile multiplatform ini ternyata menggunakan bahasa pemrograman Dart. Bagi yang belum familiar, mari kita selami lebih dalam tentang Dart!
+
+## Apa itu Dart?
+
+Dart adalah bahasa pemrograman open source yang bersifat general purpose, artinya dapat digunakan untuk berbagai macam aplikasi. Dikembangkan oleh Google, Dart memungkinkan kamu membangun aplikasi multiplatform, baik untuk mobile, desktop, maupun web.
+
+## Sejarah Singkat Dart
+
+Diperkenalkan pada tahun 2011, Dart awalnya diciptakan untuk menggantikan JavaScript dalam pengembangan web Google. Seiring waktu, Dart terus berkembang dan pada tahun 2018, Dart 2.0 diluncurkan dengan membawa perubahan signifikan pada sistem tipenya.
+
+## Momentum Baru dengan Flutter
+
+Rilisnya Flutter SDK pada tahun 2018 menjadi titik balik bagi Dart. Flutter memungkinkan para pengembang untuk membuat aplikasi mobile native untuk iOS dan Android dengan menggunakan satu codebase. Hal ini menarik perhatian banyak developer dan meningkatkan popularitas Dart secara signifikan.
 
 ## Kenapa Dart?
 * Dart adalah bahasa pemrograman yang fleksibel. Dart bisa berjalan di mana pun baik itu Android, iOS, maupun web.
