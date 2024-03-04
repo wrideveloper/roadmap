@@ -266,7 +266,7 @@ export default defineConfig({
                                 { text: "Implicit Interface", link: "/miniclass/mobile/oop-dart/implicit-interface" },
                                 { text: "Enumerated Type", link: "/miniclass/mobile/oop-dart/enumerated-types" },
                                 { text: "Mixins", link: "/miniclass/mobile/oop-dart/mixins" },
-                                { text: "Extension Method", link: "/miniclass/mobile/oop-dart/extension-method" },
+                                { text: "Extension Method", link: "/miniclass/mobile/oop-dart/extension-methods" }
                             ]
                         },
                     ]
