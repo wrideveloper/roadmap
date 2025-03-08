@@ -22,4 +22,5 @@ Kalau kamu membaca ini, berarti kamu tertarik untuk mempelajari dasar-dasar peng
 ## 🌐 Referensi Luar
 - [Official Unity Learn](https://learn.unity.com/)
 ## 🧑‍🏫 Kontributor
+- Muhammad Erril Putra Pratidina
 - Alexander Agung Raya
