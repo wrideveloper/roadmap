@@ -1,9 +1,14 @@
+---
+marp: true
+theme: uncover
+---
+<!-- headingDivider: 2 -->
 # 🔬⚙️ WRI: Miniclass Game 🎮🎮🎮
 
 Halo, *ker*! Selamat datang di Miniclass Game Development WRI. 
 
 Sebelum kamu membaca materi game,<br>
-kami dari tim mentor ingin memberi selamat untuk kamu karena sudah menjadi bagian miniclass paling seru di WRI.<br>
+kami dari tim mentor ingin memberi selamat untuk kamu karena sudah menjadi bagian miniclass paling seru di WRI.
 
 Semangat!
 
@@ -20,6 +25,7 @@ Kalau kamu membaca ini, berarti kamu tertarik untuk mempelajari dasar-dasar peng
 - [Dasar Unity](miniclass/game/bahan-ajar/dasar-unity/index.md)
 	- [Antarmuka](miniclass/game/bahan-ajar/dasar-unity/index.md#antarmuka)
 	- [Unsur Dasar Unity](miniclass/game/bahan-ajar/dasar-unity/index.md#Unsur%20Dasar%20Unity)
+
 %% - [Project-Based Learning](miniclass/game/bahan-ajar/project-based-learning/index.md) %%
 
 ## 🌐 Referensi Luar
