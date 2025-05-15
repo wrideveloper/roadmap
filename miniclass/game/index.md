@@ -26,5 +26,5 @@ Kalau kamu membaca ini, berarti kamu tertarik untuk mempelajari dasar-dasar peng
 - [Official Unity Learn](https://learn.unity.com/)
 
 ## 🧑‍🏫 Kontributor
-- Muhammad Erril Putra Pratidina
-- Alexander Agung Raya
+- [Muhammad Erril Putra Pratidina](https://github.com/VozSoldat)
+- [Alexander Agung Raya](https://github.com/AlexanderDev2004)

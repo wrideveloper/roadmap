@@ -21,7 +21,7 @@ Kamu mungkin sudah kenal dengan front-end, back-end, fullstack, dan UIUX di bida
 
 Ingat! Dalam game development, ada banyak sekali bidang keilmuan yang diperlukan dalam sebuah pengembangan. Walau begitu, ada 3 role penting dalam game development.
 ### Game Designer
-![100](/miniclass/game/assets/Pasted%20image%2020241112070901.png)
+![500](/miniclass/game/assets/Pasted%20image%2020241112070901.png)
 
 Dalam game development, **designer** bukanlah ❌ orang yang menggambar/mendesain UI atau ilustrasi. Desainer adalah orang yang membuat desain atau rancangan sebuah game, meliputi judul game, tema, genre, mekanika dan dinamika permainan, target audiensi, art, dan masih banyak lagi.
 
@@ -41,9 +41,8 @@ Kamu juga harus bisa berkomunikasi dengan baik dengan **game designer** dan **ar
 
 **Artist** dalam game development bertanggung jawab atas tampilan visual dari game yang akan dimainkan, meliputi desain karakter, lingkungan, hingga elemen UI. Ada berbagai jenis artist dalam tim game development, di antaranya **2D artist** yang membuat ilustrasi karakter atau **3D artist** yang memodelkan objek dalam bentuk tiga dimensi.
 
-Sebagai artist, kamu akan bekerja erat dengan **game designer** untuk memastikan estetika visual sesuai dengan konsep yang diinginkan, dan juga dengan **programmer** untuk memastikan aset grafis yang kamu buat bisa diimplementasikan dengan baik dalam _engine_ game.
+Sebagai artist, kamu akan bekerja erat dengan **game designer** untuk memastikan estetika visual sesuai dengan konsep yang diinginkan, dan juga dengan **programmer** untuk memastikan aset grafis yang kamu buat bisa diimplementasikan dengan baik dalam _engine_ game[^1].
 
-Sumber[^1]
 ## Desain Game
 Sebelum membuat game, kamu--sebagai developer--harus bikin rancangan atau desain dari game yang kamu mau buat. 
 
@@ -51,8 +50,10 @@ Sebelum membuat game, kamu--sebagai developer--harus bikin rancangan atau desain
 > #### Game Design
 > Desain atau rancangan **lengkap** suatu game, meliputi judul game, tema, genre, mekanika dan dinamika permainan, target audiensi, art, dan masih banyak lagi. 
 
-Semua unsur yang akan kita buat, dari model karakter, script movement, mekanisme battle, nyawa, dan lainnya harus mengikuti ketentuan yang sudah dibuat di game desain **document**. Orang yang membuat game desain bernama **game designer**.
-berikut ini adalah cara untuk membuat game desain kamu. [sendiri.](pengenalan/penulisan-game-desain/index.md)
+Semua unsur yang akan kita buat, dari model karakter, script movement, mekanisme battle, nyawa, dan lainnya harus mengikuti ketentuan yang sudah dibuat di game desain **document**.
 
+Lanjut membaca cara merancang *game design* di [Penulisan Game Design](miniclass/game/bahan-ajar/pengenalan/penulisan-game-desain/index.md#Penulisan%20Game%20Design).
+
+---
 
 [^1]: https://www.futurelearn.com/info/courses/how-to-start-your-career-in-games-development/0/steps/57132

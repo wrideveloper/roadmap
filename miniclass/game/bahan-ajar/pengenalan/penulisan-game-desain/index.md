@@ -1,11 +1,12 @@
-### Pengertian Game Desain
+# Penulisan Game Design
+## Pengertian Game Design
 ![500](/miniclass/game/assets/Pasted%20image%2020241112070901.png)
 
 Dalam game development, **designer** bukanlah ❌ orang yang menggambar/mendesain UI atau ilustrasi. Desainer adalah orang yang membuat desain atau rancangan sebuah game, meliputi judul game, tema, genre, mekanika dan dinamika permainan, target audiensi, art, dan masih banyak lagi.
 
 Sebagai desainer, kamu akan menulis sebuah dokumen bernama **Game Desain Document**. Kamu akan mengajak timmu untuk brainstorming bagaimana detail mekanika game, artstyle, cerita, dan lainnya.
 
-### Cara Penulisan Game Desain
+## Cara Penulisan Game Desain
 ![500](/miniclass/game/assets/Pasted%20image%2020241112072104.png)
 
 1. **Cari Game Desain Template** yang tersedia di internet, tapi kamu juga bisa membuat sendiri.
@@ -21,7 +22,7 @@ Sebagai desainer, kamu akan menulis sebuah dokumen bernama **Game Desain Documen
    - **Gameplay**: Interaksi pemain dengan game.
         - **Core Loop**: Loop utama dalam gameplay seperti di dalam game Class of clans. ![500](/miniclass/game/assets/image-asset-loopcore.jpeg)
         - **Player Actions**: Aksi yang dapat dilakukan pemain seperti jalan, attack, pick up item, dan lainnya.
-        ![500](/miniclass/game/assets/GTA-V-deadzone-settings.png)
+	        ![500](/miniclass/game/assets/GTA-V-deadzone-settings.png)
          - **Progression Game**: Kemajuan dalam game.
             ![500](/miniclass/game/assets/Progression%20Game.jpg)
          - **Rewards**: Hadiah yang didapat pemain.
@@ -48,7 +49,7 @@ Sebagai desainer, kamu akan menulis sebuah dokumen bernama **Game Desain Documen
 4. **Tulis dengan Detail**: Pastikan setiap bagian dijelaskan dengan jelas dan detail.
 5. **Review dan Revisi**: Setelah selesai, review dokumen dan lakukan revisi jika diperlukan.
 
-### Contoh Struktur Game Design Document (GDD)
+## Contoh Struktur Game Design Document (GDD)
 Berikut adalah contoh struktur GDD yang bisa Anda gunakan:
 
 ```markdown
