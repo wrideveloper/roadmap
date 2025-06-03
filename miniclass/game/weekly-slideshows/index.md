@@ -4,5 +4,5 @@
 Pada setiap pertemuan, materi disampaikan dengan tayangan salindia (*slideshow*) pada Figma atau Marp.
 
 ## Slideshows
-- [W1: Selamat Datang](miniclass/game/weekly-slideshow/week-1-selamat-datang.md)
+- [W1: Selamat Datang](miniclass/game/weekly-slideshows/week-1-selamat-datang.md)
 - 

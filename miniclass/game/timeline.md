@@ -1,4 +1,4 @@
-# Timeline
+****# Timeline
 Berikut adalah materi-materi yang akan *mentee* pelajari setiap minggu.
 
 | Pekan | Materi                                                                                                      |
@@ -16,11 +16,13 @@ Berikut adalah materi-materi yang akan *mentee* pelajari setiap minggu.
 | 11    | Membangun User Interface                                                                                    |
 | 12    | [Alat Kolaborasi I](miniclass/game/timeline.md#Alat%20Kolaborasi%20I)                                       |
 | 13    | Alat Kolaborasi II                                                                                          |
+| 14    |                                                                                                             |
 
 ## Perincian
 ### Selamat Datang di Game Development
-- Game Tidak Hanya Digital?
+- Apa Itu Game Development
 - Apa Itu Game?
+- Game Tidak Hanya Digital?
 - Industri Game di Indonesia
 - Game Engine
 - Role dan Talent
@@ -59,3 +61,11 @@ Berikut adalah materi-materi yang akan *mentee* pelajari setiap minggu.
 - Penerapan di Unity
 	- Unity `gitignore`
 	- File Biner
+### Alat Kolaborasi II
+- Figma Team
+- ~~Whiteboard~~ FigJam Brainstorming
+	- Stickies
+	- Mood Board
+	- Preference Diagram
+- Penulisan *Game Design Document*
+- Merging Perubahan di Proyek Unity

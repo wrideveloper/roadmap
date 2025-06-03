@@ -15,16 +15,16 @@ Semangat!
 ## 📃 Topik
 Kalau kamu membaca ini, berarti kamu tertarik untuk mempelajari dasar-dasar pengembangan game. Tenang saja, kita akan menjelajahi proses ini langkah demi langkah.
 - [Bahan Ajar Miniclass](##📖%20Bahan%20Ajar%20Miniclass)
-- [Slideshow Pertemuan (Marp)](/miniclass/game/weekly-slideshow/index.md)
+- [Slideshow Pertemuan (Marp)](miniclass/game/weekly-slideshows/index.md)
 - [Referensi Luar](##🌐%20Referensi%20Luar)
 
 ## 📖 Bahan Ajar Miniclass
-- [Pengenalan Game Development](miniclass/game/bahan-ajar/pengenalan/index.md)
-	- [Peran-Peran dalam Game Development](miniclass/game/bahan-ajar/pengenalan/index.md#role%20dalam%20game%20development)
-	- [Pembuatan Game Design](miniclass/game/bahan-ajar/pengenalan/index.md#game%20design)
-- [Dasar Unity](miniclass/game/bahan-ajar/dasar-unity/index.md)
-	- [Antarmuka](miniclass/game/bahan-ajar/dasar-unity/index.md#antarmuka)
-	- [Unsur Dasar Unity](miniclass/game/bahan-ajar/dasar-unity/index.md#Unsur%20Dasar%20Unity)
+- [Pengenalan Game Development](miniclass/game/bahan/pengenalan/index.md)
+	- [Peran-Peran dalam Game Development](miniclass/game/bahan/pengenalan/index.md#role%20dalam%20game%20development)
+	- [Pembuatan Game Design](miniclass/game/bahan/pengenalan/index.md#game%20design)
+- [Dasar Unity](miniclass/game/bahan/dasar-unity/index.md)
+	- [Antarmuka](miniclass/game/bahan/dasar-unity/index.md#antarmuka)
+	- [Unsur Dasar Unity](miniclass/game/bahan/dasar-unity/index.md#Unsur%20Dasar%20Unity)
 
 %% - [Project-Based Learning](miniclass/game/bahan-ajar/project-based-learning/index.md) %%
 

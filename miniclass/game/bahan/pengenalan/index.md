@@ -52,7 +52,7 @@ Sebelum membuat game, kamu--sebagai developer--harus bikin rancangan atau desain
 
 Semua unsur yang akan kita buat, dari model karakter, script movement, mekanisme battle, nyawa, dan lainnya harus mengikuti ketentuan yang sudah dibuat di game desain **document**.
 
-Lanjut membaca cara merancang *game design* di [Penulisan Game Design](miniclass/game/bahan-ajar/pengenalan/penulisan-game-desain/index.md#Penulisan%20Game%20Design).
+Lanjut membaca cara merancang *game design* di [Penulisan Game Design](miniclass/game/bahan/pengenalan/penulisan-game-desain/index.md#Penulisan%20Game%20Design).
 
 ---
 
