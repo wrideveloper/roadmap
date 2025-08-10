@@ -2,8 +2,9 @@
 marp: true
 theme: uncover
 class: invert
+headingDivider: "2"
 ---
-<!--headingDivider: 2-->
+
 # Selamat Datang di Game Development
 ![](https://ichef.bbci.co.uk/news/480/cpsprodpb/3002/live/9a436380-435a-11ef-b362-7fae70c22de6.jpg.webp)
 
@@ -207,7 +208,7 @@ Isinya bisa meliputi desain karakter, skema warna, gaya gambar dan animasi, dan 
 
 ---
 
-![bg right](miniclass/game/weekly-materials/WhatsApp%20Image%202025-06-03%20at%2021.14.28_13563f2f.jpg)
+![bg right](miniclass/game/assets/WhatsApp%20Image%202025-06-03%20at%2021.14.28_13563f2f.jpg)
 
 Artist bukan cuma menggambar di bidang dua dimensi.
 
