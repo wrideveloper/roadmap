@@ -1,0 +1,24 @@
+/* @theme my_yellow */
+@import 'uncover';
+
+section {
+  padding: 50px;
+  color: chocolate;
+  background-color: red;
+}
+
+header,
+footer {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  height: 20px;
+}
+
+header {
+  top: 30px;
+}
+
+footer {
+  bottom: 30px;
+}
