@@ -35,7 +35,7 @@ element.appendChild(para);
 
 #### Hasil dari kode diatas
 
-![alt text](image.png)
+<!-- ![alt text](image.png) -->
 
 ### 2.1. Collections (HTML Collections)
 
