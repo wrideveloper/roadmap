@@ -1,15 +1,10 @@
 {
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.1.2",
     "vitepress": "1.0.0-rc.40"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
-  },
-  "dependencies": {
-    "@marp-team/marp-core": "^4.0.1",
-    "@marp-team/marpit": "^3.1.2"
   }
 }
