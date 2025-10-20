@@ -1,6 +1,6 @@
 # Pengenalan MySQL
 
-![img.png](assets/mysql.png)<br>
+![img.png](./assets/mysql.png)<br>
 MySQL adalah sistem manajemen database relasional (RDBMS) open-source berbasis SQL yang bekerja dengan model
 client-server. Kalau DBMS adalah sistem manajemen database secara umum, RDBMS merupakan software pengelolaan database
 berdasarkan model relasional.
@@ -12,7 +12,7 @@ efisien. Dalam perpustakaan ini, mereka menggunakan sistem basis data relasional
 penulis, dan kategori buku. Berikut adalah beberapa analogi untuk konsep-konsep dalam basis data relasional:
 
 1. **Tabel:** <br><br>
-   ![img.png](assets/arsip.png)<br>
+   ![img.png](./assets/arsip.png)<br>
    Setiap jenis informasi diatur dalam sebuah tabel. Anggap tabel ini sebagai lemari arsip di perpustakaan, di mana
    setiap
    lemari berisi informasi tertentu.
@@ -62,7 +62,7 @@ penulis, dan kategori buku. Berikut adalah beberapa analogi untuk konsep-konsep 
 ## Konsep Relational Database
 
 1. **Primary Key**:<br>
-   ![img.png](assets/pk.png)<br>
+   ![img.png](./assets/pk.png)<br>
     - Primary Key adalah kolom atau kombinasi kolom yang memiliki nilai unik untuk setiap baris di dalam tabel. Primary
       Key
       memastikan bahwa setiap record (baris) dapat diidentifikasi secara unik.
@@ -73,7 +73,7 @@ penulis, dan kategori buku. Berikut adalah beberapa analogi untuk konsep-konsep 
       dengan
       nilai uniknya.
 2. **Foreign Key:**<br>
-   <img src="assets/fk.png"/>
+   <img src="./assets/fk.png"/>
     - Foreign Key adalah kolom atau kumpulan kolom di satu tabel yang merujuk ke Primary Key di tabel lain. Foreign Key
       digunakan untuk membuat hubungan antara dua tabel.
     - Foreign Key membantu menjaga integritas data dengan memastikan bahwa nilai di kolom tersebut selalu ada di tabel
