@@ -1,4 +1,4 @@
-# 🎯 Final Code: Hello World App  
+# 🎯 Kode Akhir: Login Styling  
 
 Berikut adalah kode akhir dari UI "Login Screen" yang telah kita buat.  
 

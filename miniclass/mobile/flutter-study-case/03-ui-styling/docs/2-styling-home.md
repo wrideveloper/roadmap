@@ -1,4 +1,4 @@
-# 🎨 Menata Desain Aplikasi Flutter 🧑‍🎨  
+# 🎨 Mendesain Halaman Home  
 
 Pada bagian ini, kita akan melanjutkan penerapan styling berdasarkan desain UI yang telah disiapkan. Fokus kita kali ini adalah pada bagian **Home Screen** dari aplikasi.
 

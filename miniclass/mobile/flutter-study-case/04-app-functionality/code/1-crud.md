@@ -1,4 +1,4 @@
-# 🎯 Final Code: App Functionality (CRUD)  
+# 🎯 Kode Akhir: CRUD Todo  
 
 Berikut adalah kode akhir untuk **Halaman Home** yang menerapkan fungsionalitas **CRUD** (Create, Read/Retrieve, Update, Delete) pada Todo yang telah kita buat.
 

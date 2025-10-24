@@ -1,4 +1,4 @@
-# 🎯 Final Code: Styling LoginScreen and HomeScreen  
+# 🎯 Kode Akhir: Home Styling  
 
 Berikut adalah kode akhir dari UI "Login Screen" dan "Home Screen" yang telah kita buat di section styling Home.  
 

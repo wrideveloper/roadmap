@@ -1,4 +1,4 @@
-# 🎨 Menata Desain Aplikasi Flutter 🧑‍🎨  
+# 🎨 Mendesain Halaman Login  
 
 Pada bagian ini, kita akan mulai menerapkan styling berdasarkan desain UI yang telah disiapkan. Selain itu, kita juga akan merapikan struktur proyek Flutter agar lebih terorganisir dan mudah dikelola.  
 
