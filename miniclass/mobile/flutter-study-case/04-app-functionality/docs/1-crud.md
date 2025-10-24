@@ -1,4 +1,4 @@
-# 🔧 Fungsionalitas Aplikasi 📲
+# 🔧 Fungsionalitas Aplikasi (CRUD Todo)
 
 Karena kita sebelumnya sudah selesai membuat styling dari aplikasi mobile kita, sekarang kita akan membuat fungsionalitas dari aplikasinya.
 

@@ -276,6 +276,80 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: "Flutter Study Case",
+          collapsed: false,
+          items: [
+            {
+              text: "01. Introduction",
+              collapsed: false,
+              items: [
+                {
+                  text: "🖐️ Studi Kasus & Pengantar",
+                  link: "/miniclass/mobile/flutter-study-case/01-intro/docs/1-section-intro.md",
+                },
+                {
+                  text: "📱 Pengenalan Project",
+                  link: "/miniclass/mobile/flutter-study-case/01-intro/docs/2-pengenalan-project.md",
+                },
+              ],
+            },
+            {
+              text: "02. Getting Started",
+              collapsed: false,
+              items: [
+                {
+                  text: "🛠️ Membuat Proyek Flutter Baru",
+                  link: "/miniclass/mobile/flutter-study-case/02-getting-started/docs/1-get-started.md",
+                },
+                {
+                  text: "👋 Menampilkan Hello World",
+                  link: "/miniclass/mobile/flutter-study-case/02-getting-started/docs/2-hello-world.md",
+                },
+                {
+                  text: "🎯 Kode Akhir: Hello World",
+                  link: "/miniclass/mobile/flutter-study-case/02-getting-started/code/2-hello-world.md",
+                },
+              ],
+            },
+            {
+              text: "03. UI Styling",
+              collapsed: false,
+              items: [
+                {
+                  text: "🎨 Mendesain Halaman Login",
+                  link: "/miniclass/mobile/flutter-study-case/03-ui-styling/docs/1-styling-login.md",
+                },
+                {
+                  text: "🎨 Mendesain Halaman Home",
+                  link: "/miniclass/mobile/flutter-study-case/03-ui-styling/docs/2-styling-home.md",
+                },
+                {
+                  text: "🎯 Kode Akhir: Login Styling",
+                  link: "/miniclass/mobile/flutter-study-case/03-ui-styling/code/1-styling-login.md",
+                },
+                {
+                  text: "🎯 Kode Akhir: Home Styling",
+                  link: "/miniclass/mobile/flutter-study-case/03-ui-styling/code/2-styling-home.md",
+                },
+              ],
+            },
+            {
+              text: "04. App Functionality",
+              collapsed: false,
+              items: [
+                {
+                  text: "🔧 Fungsionalitas Aplikasi (CRUD Todo)",
+                  link: "/miniclass/mobile/flutter-study-case/04-app-functionality/docs/1-crud.md",
+                },
+                {
+                  text: "🎯 Kode Akhir: CRUD Todo",
+                  link: "/miniclass/mobile/flutter-study-case/04-app-functionality/code/1-crud.md",
+                },
+              ],
+            },
+          ],
+        },
       ],
       "/miniclass/ui-ux/": [
         { text: "Intro to Miniclass UI/UX", link: "/miniclass/ui-ux/" },
