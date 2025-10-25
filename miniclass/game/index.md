@@ -12,7 +12,7 @@ Silabus utama merupakan materi yang disampaikan pada miniclass.
 | --------------------- | ------- | -------------------------------------------- |
 | ***Semester Ganjil*** | --      | --                                           |
 | M-1                   | 1       | [Selamat Datang di Game Development](M-1.md) |
-| M-2                   | 2       | Ayo Bermain Game                             |
+| M-2                   | 2       | [Ayo Bermain Game](M-2.md)                   |
 | M-3                   | 3       | Petualangan Unity                            |
 | M-4                   | 4       | Kode dan Hidup Seorang MC                    |
 | M-5                   | 5       | Game Platformer                              |

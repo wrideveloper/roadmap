@@ -169,6 +169,10 @@ export default defineConfig({
                   text: "Selamat Datang di Game Development",
                   link: "/miniclass/game/M-1.md",
                 },
+                {
+                  text: "Ayo Bermain Game!",
+                  link: "/miniclass/game/M-2.md",
+                }
               ],
             },
             {
