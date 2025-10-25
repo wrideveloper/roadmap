@@ -191,6 +191,61 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: "Side Stream",
+          collapsed: true,
+          items: [
+            {
+              text: "Pengenalan Unity",
+              collapsed: true,
+              items:[
+                {
+                  text: "Penjelasan Unity",
+                  link: "/miniclass/game/side-stream/pengenalan-unity/penjelasan-unity.md",
+                },
+                {
+                  text: "Pengenalan Interface Unity",
+                  link: "/miniclass/game/side-stream/pengenalan-unity/pengenalan-interface-unity.md",
+                },
+                {
+                  text: "Game Object dan Component",
+                  link: "/miniclass/game/side-stream/pengenalan-unity/game-object-component.md",
+                },
+                {
+                  text: "2D Physics",
+                  link: "/miniclass/game/side-stream/pengenalan-unity/physics-2d.md",
+                }
+              ]
+            },
+            {
+              text: "Pengenalan C#",
+              collapsed: true,
+              items: [
+                {
+                  text: "Pengenalan C#",
+                  link: "/miniclass/game/side-stream/pengenalan-csharp/pengenalan-csharp.md",
+                },
+                {
+                  text: "Fungsi",
+                  link: "/miniclass/game/side-stream/pengenalan-csharp/fungsi.md",
+                },
+                {
+                  text: "Constructor",
+                  link: "/miniclass/game/side-stream/pengenalan-csharp/constructor.md",
+                },
+                {
+                  text: "Getter dan Setter",
+                  link: "/miniclass/game/side-stream/pengenalan-csharp/getter-dan-setter.md",
+                },
+                {
+                  text: "Inheritance",
+                  link: "/miniclass/game/side-stream/pengenalan-csharp/inheritance.md",
+                },
+
+              ]
+            }
+          ]
+        }
       ],
       "/miniclass/mobile/": [
         { text: "Mobile Development", link: "/miniclass/mobile/" },
