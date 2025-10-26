@@ -78,7 +78,7 @@ Game Arts memuat pemaparan estetika dan seni dalam game development, terutama 2D
 
 #### Perincian
 
-- **M-1.** Analisis Art pada Game 2D
+- **A-1.** Analisis Art pada Game 2D
 	- Pemaparan dua jenis art 2D: pixel art & line art.
 	- Analisis contoh game dari kedua jenis art.
 	- Garis.
@@ -93,7 +93,7 @@ Game Arts memuat pemaparan estetika dan seni dalam game development, terutama 2D
 	    
 	- Mentee menyampaikan analisis art game yang ia suka.
     
-- **M-2.** Batasan dalam 2D Art
+- **A-2.** Batasan dalam 2D Art
 	- Format export.
 	- Pixel Per Unit.
 	- 9-Slice.
@@ -102,12 +102,12 @@ Game Arts memuat pemaparan estetika dan seni dalam game development, terutama 2D
 	- Tilemap sederhana.
 	- Mentee membuat asset UI button & tilemap.
     
-- **M-3.** Mood Board dan Character Sheet
+- **A-3.** Mood Board dan Character Sheet
 	- Penjelasan mengenai Mood Board.
 	- Character sheet.
 	- Mentee membuat character sheet mereka sendiri.
     
-- **M-4.** Implementasi membuat asset untuk game platformer.
+- **A-4.** Implementasi membuat asset untuk game platformer.
 	- Tilemap.
 	- Character sprite.
 	- UI.
@@ -121,7 +121,7 @@ Game Arts memuat pemaparan estetika dan seni dalam game development, terutama 2D
 | --------------------- | ------- | -------------------------------------------- |
 | ***Semester Ganjil*** | --      | --                                           |
 | M-1                   | 1       | [Selamat Datang di Game Development](M-1.md) |
-| T-1                   | 2       | Halo Untuk 3D Modelling                      |
+| T-1                   | 2       | [Halo Untuk 3D Modelling](T-1.md)            |
 | T-2                   | 3       | Ayo Kita Buat 3D!                            |
 | T-3                   | 4       | Intermediate 3D Modelling 1                  |
 | T-4                   | 5       | Intermediate 3D Modelling 2                  |

@@ -162,17 +162,17 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
+              text: "Selamat Datang di Game Development",
+              link: "/miniclass/game/M-1.md",
+            },
+            {
               text: "Game Programming",
               collapsed: false,
               items: [
                 {
-                  text: "Selamat Datang di Game Development",
-                  link: "/miniclass/game/M-1.md",
-                },
-                {
                   text: "Ayo Bermain Game!",
                   link: "/miniclass/game/M-2.md",
-                }
+                },
               ],
             },
             {
@@ -189,6 +189,16 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              text: "3D Game Arts",
+              collapsed: false,
+              items: [
+                {
+                  text: "Halo untuk 3D Modelling",
+                  link: "/miniclass/game/T-1.md",
+                }
+              ],
+            }
           ],
         },
         {
@@ -198,7 +208,7 @@ export default defineConfig({
             {
               text: "Pengenalan Unity",
               collapsed: true,
-              items:[
+              items: [
                 {
                   text: "Penjelasan Unity",
                   link: "/miniclass/game/side-stream/pengenalan-unity/penjelasan-unity.md",
@@ -213,9 +223,9 @@ export default defineConfig({
                 },
                 {
                   text: "2D Physics",
-                  link: "/miniclass/game/side-stream/pengenalan-unity/physics-2d.md",
-                }
-              ]
+                  link: "/miniclass/game/side-stream/pengenalan-unity/physic2d.md",
+                },
+              ],
             },
             {
               text: "Pengenalan C#",
@@ -241,11 +251,10 @@ export default defineConfig({
                   text: "Inheritance",
                   link: "/miniclass/game/side-stream/pengenalan-csharp/inheritance.md",
                 },
-
-              ]
-            }
-          ]
-        }
+              ],
+            },
+          ],
+        },
       ],
       "/miniclass/mobile/": [
         { text: "Mobile Development", link: "/miniclass/mobile/" },
