@@ -1,6 +1,6 @@
 # Penjelasan Unity
 
-![unity logo](unity-logo.png)
+![unity logo](unity-logo.webp)
 
 ## 1. Penjelasan Game Engine
 

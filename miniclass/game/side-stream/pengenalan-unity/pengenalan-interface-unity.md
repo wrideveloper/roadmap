@@ -1,6 +1,6 @@
 # Pengenalan Interface Unity
 
-![](interface.jpg)
+![](interface.webp)
 
 Hal pertama yang akan kita pelajari tentu saja adalah interface dari game engine unity
 
