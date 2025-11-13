@@ -1,6 +1,6 @@
 # Pengenalan C\#
 
-![c\#](cSharp.webp)
+![c\#](cSharp.png)
 
 ## 1. Penjelasan C Sharp
 
