@@ -12,9 +12,9 @@ Silabus utama merupakan materi yang disampaikan pada miniclass.
 | --------------------- | ------- | -------------------------------------------- |
 | ***Semester Ganjil*** | --      | --                                           |
 | M-1                   | 1       | [Selamat Datang di Game Development](M-1.md) |
-| M-2                   | 2       | [Ayo Bermain Game](M-2.md)                   |
-| M-3                   | 3       | Petualangan Unity                            |
-| M-4                   | 4       | Kode dan Hidup Seorang MC                    |
+| M-2                   | 2       | [Ayo Bermain Game!](M-2.md)                  |
+| M-3                   | 3       | [Petualangan Unity](M-3.md)                  |
+| M-4                   | 4       | [Kode dan Hidup Seorang MC](M-4.md)          |
 | M-5                   | 5       | Game Platformer                              |
 
 #### Perincian
@@ -73,7 +73,7 @@ Game Arts memuat pemaparan estetika dan seni dalam game development, terutama 2D
 | M-1                   | 1       | [Selamat Datang di Game Development](M-1.md) |
 | A-1                   | 2       | [Menjadi Elitist Game Art](A-1.md)           |
 | A-2                   | 3       | [Membangun Pijakan dalam Game Art](A-2.md)   |
-| A-3                   | 4       | Mood Board dan Character Sheet               |
+| A-3                   | 4       | [Mood Board dan Character Sheet](A-3.md)     |
 | A-4                   | 5       | Menciptakan Asset Game Platformer            |
 
 #### Perincian
@@ -122,8 +122,8 @@ Game Arts memuat pemaparan estetika dan seni dalam game development, terutama 2D
 | ***Semester Ganjil*** | --      | --                                           |
 | M-1                   | 1       | [Selamat Datang di Game Development](M-1.md) |
 | T-1                   | 2       | [Halo Untuk 3D Modelling](T-1.md)            |
-| T-2                   | 3       | Ayo Kita Buat 3D!                            |
-| T-3                   | 4       | Intermediate 3D Modelling 1                  |
+| T-2                   | 3       | [Ayo Kita Buat 3D!](T-2.md)                  |
+| T-3                   | 4       | [Intermediate 3D Modelling 1](T-3.md)]       |
 | T-4                   | 5       | Intermediate 3D Modelling 2                  |
 
 #### Perincian

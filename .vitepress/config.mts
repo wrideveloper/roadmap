@@ -173,6 +173,14 @@ export default defineConfig({
                   text: "Ayo Bermain Game!",
                   link: "/miniclass/game/M-2.md",
                 },
+                {
+                  text: "Petualangan Unity",
+                  link: "/miniclass/game/M-3.md",
+                },
+                {
+                  text: "Kode dan Hidup Seorang MC",
+                  link: "/miniclass/game/M-4.md",
+                },
               ],
             },
             {
@@ -187,6 +195,10 @@ export default defineConfig({
                   text: "Membangun Pijakan dalam Game Art",
                   link: "/miniclass/game/A-2.md",
                 },
+                {
+                  text: "Moodboard dan Character Concept",
+                  link: "/miniclass/game/A-3.md",
+                },
               ],
             },
             {
@@ -196,6 +208,14 @@ export default defineConfig({
                 {
                   text: "Halo untuk 3D Modelling",
                   link: "/miniclass/game/T-1.md",
+                },
+                {
+                  text: "Ayo Kita Buat 3D Model",
+                  link: "/miniclass/game/T-2.md",
+                },
+                {
+                  text: "Intermediate 3D Modelling 1",
+                  link: "/miniclass/game/T-3.md",
                 }
               ],
             }
