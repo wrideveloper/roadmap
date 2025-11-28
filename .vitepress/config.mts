@@ -53,7 +53,7 @@ export default defineConfig({
             },
             {
               text: "HTTP Request dan HTTP Response",
-              link: "/miniclass/web/pendahuluan/http-request-dan-http-response",
+              link: "/miniclass/web/pendahuluan/http-request-dan-response",
             },
           ],
         },
