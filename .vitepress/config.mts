@@ -53,7 +53,7 @@ export default defineConfig({
             },
             {
               text: "HTTP Request dan HTTP Response",
-              link: "/miniclass/web/pendahuluan/http-request-dan-http-response",
+              link: "/miniclass/web/pendahuluan/http-request-dan-response",
             },
           ],
         },
@@ -136,22 +136,22 @@ export default defineConfig({
           items: [
             {
               text: "Pengenalan NodeJS",
-              link: "/miniclass/web/nodejs/pengenalan-nodejs",
+              link: "/miniclass/web/node-js/node-js",
             },
             {
               text: "Membuat Server HTTP",
-              link: "/miniclass/web/nodejs/membuat-server-http",
+              link: "/miniclass/web/node-js/membuat-server-http",
             },
-            { text: "Routing", link: "/miniclass/web/nodejs/routing" },
+            { text: "Routing", link: "/miniclass/web/node-js/routing" },
             {
               text: "Import Export",
-              link: "/miniclass/web/nodejs/import-export",
+              link: "/miniclass/web/node-js/import-export",
             },
             {
               text: "Node Package Manager",
-              link: "/miniclass/web/nodejs/node-package-manager",
+              link: "/miniclass/web/node-js/node-package-manager",
             },
-            { text: "Nodemon", link: "/miniclass/web/nodejs/nodemon" },
+            { text: "Nodemon", link: "/miniclass/web/node-js/nodemon" },
           ],
         },
       ],
