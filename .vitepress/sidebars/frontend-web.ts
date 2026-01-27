@@ -1,5 +1,5 @@
 export default [
-  { text: "Frontend Development", link: "/miniclass/frontend/web/" },
+  { text: "Web Development", link: "/miniclass/frontend/web/" },
   {
     text: "Pendahuluan",
     collapsed: false,

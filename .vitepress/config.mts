@@ -36,7 +36,7 @@ export default defineConfig({
 
     nav: [
       { text: "Home", link: "/" },
-      { text: "Frontend", link: "/miniclass/frontend/" },
+      { text: "Frontend", link: "/miniclass/frontend/", activeMatch: "/miniclass/frontend/", },
       { text: "Backend", link: "/miniclass/backend/" },
       { text: "Game", link: "/miniclass/game/" },
       { text: "UI/UX", link: "/miniclass/ui-ux/" },
