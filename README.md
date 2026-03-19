@@ -5,6 +5,103 @@ Roadmap ini dibuat untuk memudahkan peserta serta mentor dalam memahami materi y
 
 ## Panduan Kontribusi Materi
 
+### Prerequisite (prasyarat)
+
+Sebelum kita bisa melakukan local development kita memerlukan JavaScript runtime diantaranya adalah(salah satu saja):
+
+#### Bun
+
+Windows:
+
+powershell
+
+```powershell
+powershell -c "irm bun.sh/install.ps1|iex"
+```
+
+MacOS & Linux:
+
+```bash
+curl -fsSL https://bun.com/install | bash
+```
+
+Package Manager:
+
+npm:
+
+```
+npm install -g bun # the last `npm` command you'll ever need
+```
+
+untuk instalasi detail bisa lihat [link](https://bun.com/docs/installation)
+
+#### NodeJS + pnpm
+
+- Instalasi NodeJS bisa lihat dari [link](https://nodejs.org/en/download)
+
+- pnpm
+
+Windows:
+
+powershell
+
+```powershell
+Invoke-WebRequest https://get.pnpm.io/install.ps1 -UseBasicParsing | Invoke-Expression
+```
+
+MacOS & Linux (POSIX systems):
+
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+atau
+
+```bash
+wget -qO- https://get.pnpm.io/install.sh | sh -
+```
+
+detail instalasi pnpm bisa lihat [link](https://pnpm.io/installation)
+
+### Local Development cycle
+
+1\. clone / Fork Repository ini (agar bisa membuat PR(Pull Request) disarankan melakukan fork)
+
+```bash
+git clone https://github.com/wrideveloper/roadmap.git
+cd roadmap
+```
+
+2\. install dependencies
+
+bun (disarankan)
+
+```bash
+bun install
+```
+
+atau pnpm:
+
+```bash
+pnpm install
+```
+
+3\. mulai local development
+
+bun
+
+```
+bun run docs:dev
+```
+
+pnpm
+
+```
+pnpm run docs:dev
+```
+
+buka browser dan buka localhost URL yang diberikan pada terminal (biasanya `http://localhost:3000` or `http://localhost:5173`)
+
 ### 1. Struktur Folder Materi
 
 Setiap miniclass memiliki folder tersendiri di dalam direktori `miniclass/`. Berikut adalah struktur folder untuk masing-masing miniclass:
@@ -23,6 +120,7 @@ miniclass/
 ### 2. Menambahkan Materi Baru
 
 #### Aturan Penamaan Folder
+
 - **Buat 1 folder untuk 1 pertemuan/topik materi**
 - Gunakan nama folder yang deskriptif dan menggunakan format kebab-case
 - Contoh: `pengenalan-html`, `express-js`, `flutter-widgets`
@@ -30,12 +128,14 @@ miniclass/
 #### Lokasi Penyimpanan Materi
 
 **Untuk Backend, Game, UI/UX, dan Cyber:**
+
 ```
 miniclass/{nama-miniclass}/{topik}/
 └── nama-materi.md
 ```
 
 Contoh:
+
 ```
 miniclass/backend/fundamental/
 ├── pendahuluan.md
@@ -44,12 +144,14 @@ miniclass/backend/fundamental/
 ```
 
 **Untuk Frontend:**
+
 ```
 miniclass/frontend/{web|mobile}/{topik}/
 └── nama-materi.md
 ```
 
 Contoh:
+
 ```
 miniclass/frontend/web/html/
 ├── pengenalan-html.md
@@ -62,6 +164,7 @@ miniclass/frontend/mobile/widget-flutter/
 ### 3. Penyimpanan Assets
 
 #### Untuk Backend, Game, UI/UX, dan Cyber
+
 Simpan assets di folder `assets/` pada **root folder miniclass**:
 
 ```
@@ -72,6 +175,7 @@ miniclass/{nama-miniclass}/assets/
 ```
 
 Contoh:
+
 ```
 miniclass/backend/assets/
 └── database/
@@ -80,6 +184,7 @@ miniclass/backend/assets/
 ```
 
 #### Untuk Frontend (Web & Mobile)
+
 Simpan assets di folder `assets/` pada **masing-masing peminatan**:
 
 ```
@@ -90,6 +195,7 @@ miniclass/frontend/{web|mobile}/assets/
 ```
 
 Contoh:
+
 ```
 miniclass/frontend/web/assets/
 └── html/
@@ -140,6 +246,7 @@ Buka file sidebar yang sesuai, lalu tambahkan entry baru dengan format:
 #### Contoh Penambahan Sidebar
 
 **Untuk Backend** (edit `.vitepress/sidebars/backend.ts`):
+
 ```typescript
 {
   text: "Fundamental",
@@ -158,6 +265,7 @@ Buka file sidebar yang sesuai, lalu tambahkan entry baru dengan format:
 ```
 
 **Untuk Frontend Web** (edit `.vitepress/sidebars/frontend-web.ts`):
+
 ```typescript
 {
   text: "HTML",
@@ -172,6 +280,7 @@ Buka file sidebar yang sesuai, lalu tambahkan entry baru dengan format:
 ```
 
 **Untuk Frontend Mobile** (edit `.vitepress/sidebars/frontend-mobile.ts`):
+
 ```typescript
 {
   text: "Flutter Widgets",
