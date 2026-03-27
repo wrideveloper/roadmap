@@ -1,0 +1,44 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" rx="28" fill="#F6F2EA"/>
+  <rect x="28" y="28" width="1144" height="504" rx="24" fill="#FFFDF9" stroke="#DDD3C3" stroke-width="2"/>
+  <text x="72" y="86" fill="#1D2D35" font-family="Verdana" font-size="30" font-weight="700">Dari Scan ke Attack Surface Map</text>
+  <text x="72" y="118" fill="#6A7880" font-family="Verdana" font-size="18">Tujuan enumerasi adalah mengubah output tool menjadi hipotesis serangan yang terukur.</text>
+  <g>
+    <rect x="78" y="176" width="248" height="288" rx="24" fill="#E8EFF3" stroke="#C4D1D9" stroke-width="2"/>
+    <text x="125" y="221" fill="#18323E" font-family="Verdana" font-size="24" font-weight="700">Hasil Scan</text>
+    <text x="115" y="262" fill="#52656D" font-family="Verdana" font-size="18">22/tcp  ssh</text>
+    <text x="115" y="292" fill="#52656D" font-family="Verdana" font-size="18">80/tcp  http</text>
+    <text x="115" y="322" fill="#52656D" font-family="Verdana" font-size="18">445/tcp smb</text>
+    <text x="115" y="366" fill="#52656D" font-family="Verdana" font-size="18">Version banner</text>
+    <text x="115" y="396" fill="#52656D" font-family="Verdana" font-size="18">Default script output</text>
+  </g>
+  <g>
+    <rect x="476" y="176" width="248" height="288" rx="24" fill="#F5EEE2" stroke="#D7C9B4" stroke-width="2"/>
+    <text x="513" y="221" fill="#18323E" font-family="Verdana" font-size="24" font-weight="700">Enumerasi</text>
+    <text x="515" y="262" fill="#52656D" font-family="Verdana" font-size="18">Cek akses anonymous</text>
+    <text x="515" y="292" fill="#52656D" font-family="Verdana" font-size="18">Buka service di browser</text>
+    <text x="515" y="322" fill="#52656D" font-family="Verdana" font-size="18">Content discovery</text>
+    <text x="515" y="352" fill="#52656D" font-family="Verdana" font-size="18">Validasi misconfig</text>
+    <text x="515" y="382" fill="#52656D" font-family="Verdana" font-size="18">Cari bukti tambahan</text>
+  </g>
+  <g>
+    <rect x="874" y="176" width="248" height="288" rx="24" fill="#E4EEE9" stroke="#C4D1C9" stroke-width="2"/>
+    <text x="900" y="221" fill="#18323E" font-family="Verdana" font-size="24" font-weight="700">Attack Surface</text>
+    <text x="915" y="262" fill="#52656D" font-family="Verdana" font-size="18">Service</text>
+    <text x="1004" y="262" fill="#52656D" font-family="Verdana" font-size="18">HTTP</text>
+    <text x="915" y="296" fill="#52656D" font-family="Verdana" font-size="18">Evidence</text>
+    <text x="1004" y="296" fill="#52656D" font-family="Verdana" font-size="18">/admin</text>
+    <text x="915" y="330" fill="#52656D" font-family="Verdana" font-size="18">Weakness</text>
+    <text x="1004" y="330" fill="#52656D" font-family="Verdana" font-size="18">Auth gap</text>
+    <text x="915" y="364" fill="#52656D" font-family="Verdana" font-size="18">Confidence</text>
+    <text x="1004" y="364" fill="#52656D" font-family="Verdana" font-size="18">Medium</text>
+    <text x="915" y="398" fill="#52656D" font-family="Verdana" font-size="18">Next Step</text>
+    <text x="1004" y="398" fill="#52656D" font-family="Verdana" font-size="18">Validate</text>
+  </g>
+  <path d="M326 320H476" stroke="#C9B79C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M454 305L482 320L454 335" stroke="#C9B79C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M724 320H874" stroke="#C9B79C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M852 305L880 320L852 335" stroke="#C9B79C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="78" y="484" width="1044" height="34" rx="12" fill="#F3EFE6"/>
+  <text x="106" y="507" fill="#7B6548" font-family="Verdana" font-size="16">Catat hanya informasi yang membantu keputusan: apa servicenya, apa buktinya, seberapa yakin, dan langkah aman berikutnya.</text>
+</svg>
