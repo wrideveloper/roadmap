@@ -1,0 +1,36 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" rx="28" fill="#F6F2EA"/>
+  <rect x="28" y="28" width="1144" height="504" rx="24" fill="#FFFDF8" stroke="#DDD3C3" stroke-width="2"/>
+  <text x="72" y="88" fill="#1D2D35" font-family="Verdana" font-size="30" font-weight="700">Loop Dasar Web Application Testing</text>
+  <text x="72" y="120" fill="#6A7880" font-family="Verdana" font-size="18">Pelajari alur request-response, lalu ubah input dengan aman untuk melihat perilaku aplikasi.</text>
+  <g>
+    <rect x="106" y="212" width="188" height="110" rx="22" fill="#E8EFF3" stroke="#C4D1D9" stroke-width="2"/>
+    <text x="154" y="268" fill="#18323E" font-family="Verdana" font-size="24" font-weight="700">Browser</text>
+  </g>
+  <g>
+    <rect x="374" y="212" width="188" height="110" rx="22" fill="#F5EEE2" stroke="#D7C9B4" stroke-width="2"/>
+    <text x="430" y="268" fill="#18323E" font-family="Verdana" font-size="24" font-weight="700">Burp</text>
+    <text x="414" y="294" fill="#566870" font-family="Verdana" font-size="17">Intercept / Repeater</text>
+  </g>
+  <g>
+    <rect x="642" y="212" width="188" height="110" rx="22" fill="#E4EEE9" stroke="#C4D1C9" stroke-width="2"/>
+    <text x="695" y="268" fill="#18323E" font-family="Verdana" font-size="24" font-weight="700">Web App</text>
+    <text x="684" y="294" fill="#566870" font-family="Verdana" font-size="17">Response & logic</text>
+  </g>
+  <g>
+    <rect x="910" y="212" width="188" height="110" rx="22" fill="#EFE7F3" stroke="#D1C4D8" stroke-width="2"/>
+    <text x="959" y="268" fill="#18323E" font-family="Verdana" font-size="24" font-weight="700">Finding</text>
+    <text x="954" y="294" fill="#566870" font-family="Verdana" font-size="17">Impact & evidence</text>
+  </g>
+  <path d="M294 267H374" stroke="#C9B79C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M354 252L382 267L354 282" stroke="#C9B79C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M562 267H642" stroke="#C9B79C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M622 252L650 267L622 282" stroke="#C9B79C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M830 267H910" stroke="#C9B79C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M890 252L918 267L890 282" stroke="#C9B79C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1004 322V404H468V332" stroke="#C9B79C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M483 384L468 412L453 384" stroke="#C9B79C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="144" y="392" width="914" height="82" rx="20" fill="#F2EFE8" stroke="#D8CEBE"/>
+  <text x="177" y="428" fill="#7B6548" font-family="Verdana" font-size="16" font-weight="700">PERTANYAAN</text>
+  <text x="312" y="428" fill="#31464F" font-family="Verdana" font-size="18">Input apa yang bisa diubah? Response apa yang berubah? Apakah perilaku itu aman, atau membuka risiko seperti IDOR, auth gap, atau content exposure?</text>
+</svg>
