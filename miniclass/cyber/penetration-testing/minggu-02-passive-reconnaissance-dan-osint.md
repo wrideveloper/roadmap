@@ -1,104 +1,145 @@
 # Minggu 2: Passive Reconnaissance dan OSINT
 
-Passive recon adalah fase pengumpulan konteks target tanpa melakukan interaksi langsung ke sistem target. Ini adalah minggu untuk melatih rasa ingin tahu yang terstruktur: apa yang bisa diketahui hanya dari informasi publik atau paket mock target yang disiapkan mentor.
+## Apa Itu Passive Recon
 
-## Tujuan Pembelajaran
+Passive recon adalah proses mengumpulkan informasi tentang target **tanpa menyentuh sistem target sama sekali**. Kamu menggunakan informasi yang sudah tersedia untuk umum — dokumentasi publik, catatan DNS, metadata dokumen — untuk membangun gambaran awal sebelum melakukan apapun ke sistem tersebut.
 
-- Memahami perbedaan passive recon dan active recon
-- Mengidentifikasi sumber informasi publik yang relevan
-- Mengumpulkan domain, subdomain, email pattern, metadata, dan technology footprint
-- Menyusun catatan recon yang rapi dan bisa diverifikasi
+Tujuannya bukan mengumpulkan informasi sebanyak mungkin, tapi membangun konteks yang cukup untuk membuat pengujian selanjutnya lebih terarah.
 
-## Kenapa Passive Recon Penting
-
-Sebelum melakukan scanning, peserta perlu punya tebakan awal tentang:
-
-- service apa yang mungkin ada
-- teknologi apa yang mungkin dipakai
-- area mana yang layak diuji lebih lanjut
-
-Passive recon membantu menghemat waktu dan mencegah peserta menguji target secara membabi buta.
+---
 
 ## Passive Recon vs Active Recon
 
-| Passive Recon | Active Recon |
-| --- | --- |
-| Tidak menyentuh target secara langsung | Menyentuh target secara langsung |
-| Fokus pada informasi publik | Fokus pada host, port, service, dan response nyata |
-| Cocok untuk membangun hipotesis | Cocok untuk memvalidasi keberadaan service |
+Ini perbedaan yang paling mendasar dan wajib kamu pahami sebelum lanjut.
 
-## Sumber OSINT yang Aman untuk Pemula
+| | Passive Recon | Active Recon |
+| --- | --- | --- |
+| Menyentuh target? | Tidak | Ya |
+| Sumber data | Informasi publik yang sudah ada | Response langsung dari sistem target |
+| Tujuan | Membangun hipotesis awal | Memverifikasi keberadaan service secara nyata |
+| Risiko terdeteksi | Sangat rendah | Lebih tinggi |
+| Contoh | Membaca dokumentasi publik, melihat metadata file | Port scanning, mengirim request ke server |
 
-- paket target yang disediakan mentor
-- dokumentasi publik dari organisasi yang memang diizinkan
-- screenshot atau materi tiruan
-- metadata dokumen latihan
-- petunjuk domain dan teknologi dari mentor
+Passive recon dilakukan **sebelum** active recon. Minggu ini hanya membahas passive recon — active recon ada di minggu berikutnya.
 
-:::warning Jangan Open-Ended
-Untuk kelas beginner, passive recon sebaiknya memakai mock target packet atau target demo yang sudah disiapkan. Hindari tugas OSINT yang terlalu terbuka karena bisa membuat peserta tersesat dan menyentuh target yang tidak tepat.
+---
+
+## Kenapa Ini Penting
+
+Tanpa passive recon, kamu masuk ke sistem tanpa konteks. Kamu tidak tahu teknologi apa yang dipakai, layanan apa yang mungkin ada, atau area mana yang layak diuji. Hasilnya kamu akan membuang waktu menguji hal yang salah.
+
+Passive recon yang baik membantu kamu:
+
+- Menebak teknologi yang dipakai target sebelum menyentuhnya
+- Menemukan titik-titik menarik seperti subdomain, portal login, atau panel admin
+- Membuat pengujian selanjutnya jauh lebih efisien
+
+---
+
+## Sumber Informasi
+
+:::warning
+Di kelas ini kita tidak melakukan OSINT terhadap target nyata. Semua praktikum menggunakan **mock target packet** yang sudah disiapkan mentor. Jangan keluar dari packet yang diberikan selama sesi berlangsung.
 :::
 
-## Format Catatan Recon Sederhana
+Di dunia nyata, sumber passive recon bisa berupa catatan WHOIS, DNS publik, arsip web, metadata dokumen, atau informasi dari situs resmi organisasi. Di kelas ini, semua itu disimulasikan dalam satu packet latihan.
+
+---
+
+## Confidence Level
+
+Setiap informasi yang kamu temukan harus diberi label seberapa yakin kamu dengan informasi tersebut. Ini bukan formalitas — ini yang membedakan catatan recon yang bisa dipercaya dari yang asal tulis.
+
+| Label | Artinya | Contoh |
+| --- | --- | --- |
+| **Confirmed** | Ada bukti langsung | Domain utama tercantum eksplisit di packet |
+| **Likely** | Ada indikasi yang mendukung, tapi belum pasti | Ekstensi `.php` muncul di beberapa URL contoh |
+| **Unknown** | Tidak ada cukup petunjuk | Tidak ada informasi apapun tentang database yang dipakai |
+
+:::info
+Kalau kamu belum memverifikasi langsung, jangan tulis "target **menggunakan** WordPress". Tulis "target **kemungkinan** menggunakan WordPress berdasarkan indikasi X". Kebiasaan ini penting untuk keandalan laporanmu ke depan.
+:::
+
+---
+
+## Format Catatan Recon
+
+Gunakan format ini setiap kali melakukan passive recon, baik di kelas maupun nanti di luar kelas.
 
 | Field | Isi |
 | --- | --- |
 | Target name | Nama target |
-| Known domains | Domain yang sudah diketahui |
-| Suspected subdomains | Dugaan subdomain |
-| Technology clues | Petunjuk stack seperti nginx, WordPress, React |
+| Known domains | Domain yang sudah dikonfirmasi |
+| Suspected subdomains | Subdomain yang diduga ada |
+| Technology clues | Petunjuk stack seperti Nginx, WordPress, React |
 | Email pattern | Dugaan format email |
-| Public services | Layanan yang mungkin tersedia |
-| Confidence | Confirmed / likely / unknown |
+| Public services | Layanan yang kemungkinan tersedia |
+| Confidence | Confirmed / Likely / Unknown untuk tiap informasi |
 
-## Format Pengajaran Minggu 2
+---
 
-- `Teori`: perbedaan passive recon dan active recon, sumber OSINT yang aman, dan cara membedakan fakta dari hipotesis
-- `Demo`: mentor menunjukkan passive recon terhadap target aman atau mock target packet
-- `Praktik`: peserta membaca target packet, mencatat temuan penting, lalu menyusun hipotesis awal
+## Menyusun Hipotesis
 
-## Praktikum Minggu 2
+Setelah informasi terkumpul, langkah selanjutnya adalah menyusun hipotesis — dugaan yang masuk akal berdasarkan bukti yang ada, dan bisa diverifikasi di fase berikutnya.
 
-### Langkah Praktikum
+Hipotesis yang baik memenuhi tiga syarat ini:
 
-1. Baca target packet dari mentor.
-2. Catat:
+1. Ada alasan yang bisa dijelaskan: *"karena saya melihat..."*
+2. Spesifik, bukan sekadar *"mungkin ada sesuatu"*
+3. Bisa diverifikasi lewat active recon
 
-- nama target
-- domain utama
-- dua petunjuk teknologi
-- pola email
-- subdomain hint
+**Contoh hipotesis yang baik:**
+- Target kemungkinan punya portal login di subdomain `admin.`, karena ada referensi ke *"dashboard management"* di dokumentasi publik mereka
+- Aplikasi target kemungkinan berbasis PHP, karena ekstensi `.php` muncul di beberapa contoh URL pada packet
+- Kemungkinan ada panel admin yang hanya bisa diakses internal, karena tidak ada link ke halaman tersebut di navigasi publik
 
-3. Kelompokkan tiap informasi sebagai:
+---
 
-- confirmed
-- likely
-- unknown
+## Praktikum
 
-4. Susun minimal tiga hipotesis.
+### Yang Kamu Butuhkan
+- Mock target packet dari mentor
+- Template catatan recon (terlampir)
+- Lembar kerja hipotesis (terlampir)
 
-Contoh hipotesis:
+### Langkah-langkah
 
-- target mungkin punya portal login pada subdomain
-- aplikasi mungkin berbasis PHP
-- mungkin ada panel admin yang hanya diketahui internal
+**1. Baca target packet dari awal sampai akhir**
+Jangan langsung mencatat. Baca dulu semuanya untuk mendapat gambaran besar sebelum mulai menganalisis.
+
+**2. Catat informasi dasar**
+Dari packet, identifikasi:
+- Nama target
+- Domain utama
+- Minimal dua petunjuk teknologi
+- Pola format email, kalau ada
+- Subdomain yang disebutkan atau dihintkan
+
+**3. Beri label confidence pada setiap informasi**
+Tandai setiap informasi dengan **Confirmed**, **Likely**, atau **Unknown**. Jangan lewatkan langkah ini.
+
+**4. Susun minimal tiga hipotesis**
+Tulis hipotesisnya, dasarnya dari mana, dan bagaimana cara memverifikasinya nanti.
+
+---
 
 ## Deliverables
 
-- satu halaman ringkasan passive recon yang memuat temuan utama dan hipotesis awal
+- Tabel catatan recon yang sudah terisi lengkap dengan label confidence
+- Minimal tiga hipotesis beserta alasannya
 
-## Output yang Diharapkan
+---
 
-- Peserta mampu membangun konteks target sebelum melakukan scanning
-- Peserta memahami pentingnya sumber dan evidencing pada fase recon
+## Kesalahan yang Sering Terjadi
 
-## Kesalahan Umum
+- Menyalin semua informasi dari packet tanpa memilah mana yang relevan
+- Menulis hipotesis sebagai fakta tanpa dasar yang jelas
+- Langsung pindah ke scanning sebelum konteks target cukup jelas
+- Tidak mencatat dari mana setiap informasi ditemukan
 
-- Menyalin semua informasi tanpa memilah mana yang confirmed dan mana yang asumsi
-- Menyebut hipotesis sebagai fakta
-- Langsung pindah ke scanning padahal konteks target belum jelas
+---
 
-## Catatan 2 Jam
+## Homework
 
-Gunakan mock target packet yang sudah dibatasi agar fokus sesi tetap pada teori, demo, dan praktik yang terarah, bukan pencarian internet yang terlalu luas.
+- Periksa kembali catatan recon yang sudah kamu buat — apakah semua label confidence sudah tepat?
+- Dari hipotesis yang kamu susun, cara apa yang paling logis untuk memverifikasinya di minggu berikutnya?
