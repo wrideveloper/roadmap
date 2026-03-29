@@ -34,4 +34,24 @@ export default [
       },
     ],
   },
+  {
+    text: "MVC",
+    collapsed: false,
+    items: [
+      {
+        text: "Apa itu MVC?",
+        link: "/miniclass/backend/mvc/apa-itu-mvc",
+      },
+      {
+        text: "Kenapa harus MVC?",
+        link: "/miniclass/backend/mvc/kenapa-mvc",
+      },
+      {
+        text: "Studi Kasus",
+        link: "/miniclass/backend/mvc/studikasus/studikasus-mvc",
+      },
+
+    ],
+  },
+
 ];
