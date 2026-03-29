@@ -26,7 +26,7 @@ Di dunia Backend Developer, MVC adalah Pemisahan Kekuasaan (*Separation of Conce
     * Controller membungkus data tersebut (bisa jadi dalam bentuk JSON atau dilempar ke file Blade/HTML).
 5. **View (The Result):** User menerima jawaban (Response) yang sudah cantik dan bisa dibaca di layar mereka.
 
-### Analogi Cepat
+## Analogi Cepat
 
 Bayangkan MVC adalah sebuah Restoran:
 

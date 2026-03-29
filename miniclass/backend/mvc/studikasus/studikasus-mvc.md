@@ -203,7 +203,7 @@ switch ($action) {
 ?>
 ```
 
-## Cara Menjalankan
+## Cara Menjalankan 🚀
 
 1. Pastikan kamu telah menginstal PHP di komputer kamu.
 

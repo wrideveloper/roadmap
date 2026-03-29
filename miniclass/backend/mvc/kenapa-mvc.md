@@ -2,17 +2,23 @@
 
 Sebagai Backend Developer, temen-temen mungkin berpikir: "Kenapa gak langsung tulis query database di satu file aja sih? Kan lebih cepat?"
 
-Berikut adalah alasannya:
+<img src="/miniclass/backend/assets/mvc/kenawhy.png" style="background-color: white; border-radius: 5px;" alt="Kenapa-mvc" width=600></img>
 
-1. **Kode Lebih Rapi & Terstruktur (Clean Code)**
+Ada beberapa alasan:
+
+1. **Kode Lebih Rapi & Terstruktur (Clean Code) 🧹**
     Bayangkan jika mempunyai 1.000 baris kode dalam satu file. Dengan MVC, kode dipisah berdasarkan fungsinya. Bila ada masalah di database, cek Model. Kalau ada masalah di alur logika, cek Controller. Tidak perlu bongkar seluruh file!
-2. **Kerja Tim Jadi Lebih Mudah (Collaboration)**
+
+2. **Kerja Tim Jadi Lebih Mudah (Collaboration) 🤝**
     Dalam tim besar, satu orang bisa fokus mengerjakan Logic (Controller), sementara yang lain fokus ke Database (Model) atau Tampilan (View) tanpa saling tabrakan (*conflict*).
-3. **Mudah Dirawat dalam Jangka Panjang (Maintainability)**
+
+3. **Mudah Dirawat dalam Jangka Panjang (Maintainability) 🛠️**
     Misalnya, 6 bulan lagi *lead programmer* meminta untuk mengganti database dari MySQL ke PostgreSQL. Karena sudah menerapkan MVC, cukup mengubah kodenya di bagian Model, sementara bagian Controller dan View tetap aman.
-4. **Standar Industri & Framework Besar**
+
+4. **Standar Industri & Framework Besar 🏗️**
     Hampir semua *framework* papan atas (Laravel, Django, Ruby on Rails, Spring, Express) menggunakan pola MVC. Jika sudah memahami konsep dasarnya, untuk berganti-ganti *framework* apapun akan sangat mudah di masa depan.
-5. **Keamanan yang Lebih Terjamin (Security)**
+
+5. **Keamanan yang Lebih Terjamin (Security) 🛡️**
     Seperti analogi pelayan tadi, MVC memisahkan *user* dari data mentah. Kamu punya tempat khusus (Controller) untuk melakukan validasi dan filtrasi sebelum data benar-benar diproses oleh Model.
 
 ## 🆚 Sebelum vs Sesudah ada MVC 🤔
