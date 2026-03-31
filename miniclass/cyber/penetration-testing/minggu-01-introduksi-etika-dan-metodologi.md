@@ -10,6 +10,12 @@ Tidak ada satu cara tunggal untuk mengelompokkan penetration testing. Dalam prak
 
 ### Berdasarkan Informasi Awal
 
+<div align="center">
+
+![CVE](/miniclass/cyber/assets/penetration-testing/types.webp)
+
+</div>
+
 | Tipe      | Deskripsi                                                                                                       |
 | --------- | --------------------------------------------------------------------------------------------------------------- |
 | Black Box | Tester hampir tidak diberi informasi awal tentang target dan harus membangun konteks dari nol                   |
