@@ -128,7 +128,7 @@ Berikut contoh bagaimana delapan tahap tadi bisa dipakai saat menguji website:
 | 7. Proof of Concept         | Menyusun PoC yang menunjukkan vulnerability benar-benar ada dan dapat dirangkai                                               |
 | 8. Post-Engagement          | Menyelesaikan laporan formal, melakukan walkthrough, dan mendukung proses remediasi                                           |
 
-## Praktik
+## Hands-on
 
 - Selesaikan setup environment merujuk pada [Tools dan Lab Platform](/miniclass/cyber/penetration-testing/tools-dan-lab-platform).
 - Test environment dengan mengerjakan [Starting Point HTB](https://app.hackthebox.com/starting-point?tab=1)

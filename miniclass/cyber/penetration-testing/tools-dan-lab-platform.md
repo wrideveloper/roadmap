@@ -1,21 +1,5 @@
 # Tools dan Lab Platform
 
-## Tool yang Digunakan di Kelas
-
-| Tool                                              | Fungsi Utama                                           | Dipakai di Minggu           |
-| ------------------------------------------------- | ------------------------------------------------------ | --------------------------- |
-| Kali Linux, Parrot OS, WSL, atau bare metal Linux | Attacker environment                                   | 1 sampai 10                 |
-| VirtualBox atau VMware                            | Menjalankan lab VM jika memilih pendekatan virtualized | 1 sampai 10                 |
-| Nmap                                              | Host discovery, port scan, service detection           | 3 sampai 5                  |
-| Wireshark                                         | Demonstrasi traffic analysis                           | 1, 3, atau sesuai kebutuhan |
-| Gobuster atau FFUF                                | Web content discovery                                  | 4, 6                        |
-| Burp Suite Community Edition                      | Intercept dan replay request web                       | 6                           |
-| Nikto                                             | Web server checks tingkat dasar                        | Opsional                    |
-| Searchsploit                                      | Mencari referensi exploit publik                       | 5                           |
-| Netcat                                            | Cek koneksi atau shell sederhana                       | 5, 8                        |
-| Metasploit                                        | Demonstrasi konsep, bukan jalur belajar utama          | Opsional                    |
-| Markdown atau aplikasi note-taking                | Menyusun finding dan report                            | 8 sampai 10                 |
-
 ## Opsi Attacker Environment
 
 Rekomendasi **VM tetap menjadi opsi default yang paling aman dan paling mudah dikelola**. Namun, peserta tidak harus selalu memakai VM. Beberapa opsi yang bisa dipakai:
