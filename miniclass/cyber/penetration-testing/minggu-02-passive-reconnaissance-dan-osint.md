@@ -1,145 +1,315 @@
-# Minggu 2: Passive Reconnaissance dan OSINT
+# Minggu 2: Passive Reconnaissance & OSINT
 
-## Apa Itu Passive Recon
+## 1. Pendahuluan
 
-Passive recon adalah proses mengumpulkan informasi tentang target **tanpa menyentuh sistem target sama sekali**. Kamu menggunakan informasi yang sudah tersedia untuk umum — dokumentasi publik, catatan DNS, metadata dokumen — untuk membangun gambaran awal sebelum melakukan apapun ke sistem tersebut.
+Passive Reconnaissance (Passive Recon) adalah proses pengumpulan informasi tentang target **tanpa melakukan interaksi langsung dengan sistem target**.
 
-Tujuannya bukan mengumpulkan informasi sebanyak mungkin, tapi membangun konteks yang cukup untuk membuat pengujian selanjutnya lebih terarah.
+Seluruh data yang digunakan berasal dari:
+
+- Sumber publik (publicly available data)
+- Arsip digital
+- Metadata
+- Infrastruktur terbuka (DNS, WHOIS, dll)
+
+Fokus utama bukan pada jumlah data, tetapi pada **kualitas informasi dan konteks** yang dapat digunakan untuk tahap selanjutnya.
 
 ---
 
-## Passive Recon vs Active Recon
+## 2. Passive vs Active Reconnaissance
 
-Ini perbedaan yang paling mendasar dan wajib kamu pahami sebelum lanjut.
-
-| | Passive Recon | Active Recon |
+| Aspek | Passive Recon | Active Recon |
 | --- | --- | --- |
-| Menyentuh target? | Tidak | Ya |
-| Sumber data | Informasi publik yang sudah ada | Response langsung dari sistem target |
-| Tujuan | Membangun hipotesis awal | Memverifikasi keberadaan service secara nyata |
-| Risiko terdeteksi | Sangat rendah | Lebih tinggi |
-| Contoh | Membaca dokumentasi publik, melihat metadata file | Port scanning, mengirim request ke server |
+| Interaksi dengan target | Tidak ada | Ada |
+| Sumber data | Informasi publik | Response sistem target |
+| Tujuan | Membangun konteks & hipotesis | Validasi teknis |
+| Risiko deteksi | Sangat rendah | Lebih tinggi |
+| Contoh | OSINT, metadata, Google dork | Port scanning, fuzzing |
 
-Passive recon dilakukan **sebelum** active recon. Minggu ini hanya membahas passive recon — active recon ada di minggu berikutnya.
-
----
-
-## Kenapa Ini Penting
-
-Tanpa passive recon, kamu masuk ke sistem tanpa konteks. Kamu tidak tahu teknologi apa yang dipakai, layanan apa yang mungkin ada, atau area mana yang layak diuji. Hasilnya kamu akan membuang waktu menguji hal yang salah.
-
-Passive recon yang baik membantu kamu:
-
-- Menebak teknologi yang dipakai target sebelum menyentuhnya
-- Menemukan titik-titik menarik seperti subdomain, portal login, atau panel admin
-- Membuat pengujian selanjutnya jauh lebih efisien
+> Passive recon selalu dilakukan terlebih dahulu sebelum active recon.
 
 ---
 
-## Sumber Informasi
+## 3. Tujuan Passive Recon
 
-:::warning
-Di kelas ini kita tidak melakukan OSINT terhadap target nyata. Semua praktikum menggunakan **mock target packet** yang sudah disiapkan mentor. Jangan keluar dari packet yang diberikan selama sesi berlangsung.
-:::
+Passive recon bertujuan untuk:
 
-Di dunia nyata, sumber passive recon bisa berupa catatan WHOIS, DNS publik, arsip web, metadata dokumen, atau informasi dari situs resmi organisasi. Di kelas ini, semua itu disimulasikan dalam satu packet latihan.
+- Mengidentifikasi teknologi yang digunakan target
+- Menemukan attack surface (subdomain, endpoint, portal)
+- Memahami struktur organisasi & sistem
+- Mengurangi blind testing saat active recon
 
----
-
-## Confidence Level
-
-Setiap informasi yang kamu temukan harus diberi label seberapa yakin kamu dengan informasi tersebut. Ini bukan formalitas — ini yang membedakan catatan recon yang bisa dipercaya dari yang asal tulis.
-
-| Label | Artinya | Contoh |
-| --- | --- | --- |
-| **Confirmed** | Ada bukti langsung | Domain utama tercantum eksplisit di packet |
-| **Likely** | Ada indikasi yang mendukung, tapi belum pasti | Ekstensi `.php` muncul di beberapa URL contoh |
-| **Unknown** | Tidak ada cukup petunjuk | Tidak ada informasi apapun tentang database yang dipakai |
-
-:::info
-Kalau kamu belum memverifikasi langsung, jangan tulis "target **menggunakan** WordPress". Tulis "target **kemungkinan** menggunakan WordPress berdasarkan indikasi X". Kebiasaan ini penting untuk keandalan laporanmu ke depan.
-:::
+Tanpa tahap ini, pengujian akan bersifat acak dan tidak efisien.
 
 ---
 
-## Format Catatan Recon
+## 4. Konsep Confidence Level
 
-Gunakan format ini setiap kali melakukan passive recon, baik di kelas maupun nanti di luar kelas.
+Setiap temuan harus memiliki tingkat keyakinan.
 
-| Field | Isi |
+| Label | Definisi |
 | --- | --- |
-| Target name | Nama target |
-| Known domains | Domain yang sudah dikonfirmasi |
-| Suspected subdomains | Subdomain yang diduga ada |
-| Technology clues | Petunjuk stack seperti Nginx, WordPress, React |
-| Email pattern | Dugaan format email |
-| Public services | Layanan yang kemungkinan tersedia |
-| Confidence | Confirmed / Likely / Unknown untuk tiap informasi |
+| **Confirmed** | Didukung bukti langsung |
+| **Likely** | Indikasi kuat namun belum pasti |
+| **Unknown** | Tidak cukup informasi |
+
+**Prinsip penting:** Jangan pernah menulis asumsi sebagai fakta.
+
+Contoh:
+
+- ❌ "Target menggunakan WordPress"
+- ✅ "Target kemungkinan menggunakan WordPress (indikasi: wp-content)"
 
 ---
 
-## Menyusun Hipotesis
+## 5. Format Catatan Recon
 
-Setelah informasi terkumpul, langkah selanjutnya adalah menyusun hipotesis — dugaan yang masuk akal berdasarkan bukti yang ada, dan bisa diverifikasi di fase berikutnya.
+Gunakan format berikut untuk menjaga konsistensi:
 
-Hipotesis yang baik memenuhi tiga syarat ini:
-
-1. Ada alasan yang bisa dijelaskan: *"karena saya melihat..."*
-2. Spesifik, bukan sekadar *"mungkin ada sesuatu"*
-3. Bisa diverifikasi lewat active recon
-
-**Contoh hipotesis yang baik:**
-- Target kemungkinan punya portal login di subdomain `admin.`, karena ada referensi ke *"dashboard management"* di dokumentasi publik mereka
-- Aplikasi target kemungkinan berbasis PHP, karena ekstensi `.php` muncul di beberapa contoh URL pada packet
-- Kemungkinan ada panel admin yang hanya bisa diakses internal, karena tidak ada link ke halaman tersebut di navigasi publik
+| Field | Deskripsi |
+| --- | --- |
+| Target Name | Nama organisasi |
+| Known Domains | Domain terverifikasi |
+| Suspected Subdomains | Subdomain dugaan |
+| Technology Clues | Indikasi teknologi |
+| Email Pattern | Pola email |
+| Source | Sumber informasi |
+| Confidence | Tingkat keyakinan |
 
 ---
 
-## Praktikum
+## 6. Workflow Passive Recon
 
-### Yang Kamu Butuhkan
-- Mock target packet dari mentor
-- Template catatan recon (terlampir)
-- Lembar kerja hipotesis (terlampir)
+> ⚠️ Semua aktivitas harus pasif — tidak ada request langsung ke server target.
 
-### Langkah-langkah
+---
 
-**1. Baca target packet dari awal sampai akhir**
-Jangan langsung mencatat. Baca dulu semuanya untuk mendapat gambaran besar sebelum mulai menganalisis.
+### 6.1 Target Definition
 
-**2. Catat informasi dasar**
-Dari packet, identifikasi:
+**Tujuan:** Menentukan scope sebelum memulai.
+
+Catat:
+
 - Nama target
 - Domain utama
-- Minimal dua petunjuk teknologi
-- Pola format email, kalau ada
-- Subdomain yang disebutkan atau dihintkan
-
-**3. Beri label confidence pada setiap informasi**
-Tandai setiap informasi dengan **Confirmed**, **Likely**, atau **Unknown**. Jangan lewatkan langkah ini.
-
-**4. Susun minimal tiga hipotesis**
-Tulis hipotesisnya, dasarnya dari mana, dan bagaimana cara memverifikasinya nanti.
+- Bidang organisasi
 
 ---
 
-## Deliverables
+### 6.2 Website Recon (Manual Inspection)
 
-- Tabel catatan recon yang sudah terisi lengkap dengan label confidence
-- Minimal tiga hipotesis beserta alasannya
+**Tools:** Browser (Chrome / Firefox)
+
+**Teknik:**
+
+- Observasi halaman utama
+- Periksa footer
+- Navigasi semua menu yang tersedia
+
+**Output:**
+
+- Known domains
+- Endpoint penting (login, dashboard)
+- Struktur URL
 
 ---
 
-## Kesalahan yang Sering Terjadi
+### 6.3 Technology Fingerprinting
 
-- Menyalin semua informasi dari packet tanpa memilah mana yang relevan
-- Menulis hipotesis sebagai fakta tanpa dasar yang jelas
-- Langsung pindah ke scanning sebelum konteks target cukup jelas
-- Tidak mencatat dari mana setiap informasi ditemukan
+**Tools:** Wappalyzer (extension), BuiltWith
+
+**Yang dicari:**
+
+- CMS (WordPress, Drupal)
+- Framework (React, Vue)
+- Web server (Nginx, Apache)
+
+**Analisis:**
+
+- Versi teknologi jika terlihat
+- Indikasi stack backend
 
 ---
 
-## Homework
+### 6.4 Source Code Analysis
 
-- Periksa kembali catatan recon yang sudah kamu buat — apakah semua label confidence sudah tepat?
-- Dari hipotesis yang kamu susun, cara apa yang paling logis untuk memverifikasinya di minggu berikutnya?
+**Tools:** Browser DevTools, View Source (`Ctrl+U`)
+
+**Yang dianalisis:**
+
+- Meta tags (`generator`)
+- Komentar HTML
+- Path file (`/wp-content/`, `/static/`)
+- Script JS yang dimuat
+
+**Output:**
+
+- Indikasi framework
+- Struktur aplikasi
+
+---
+
+### 6.5 Google Dorking
+
+**Tools:** Google Search
+
+**Query umum:**
+
+```
+site:target.com
+site:target.com login
+site:target.com admin
+site:target.com filetype:pdf
+cache:target.com
+```
+
+**Output:**
+
+- Halaman tersembunyi
+- Dokumen publik
+- Endpoint lama yang masih terindeks
+
+---
+
+### 6.6 Subdomain Enumeration (Passive)
+
+**Tools:** crt.sh, VirusTotal, SecurityTrails, DNSDumpster
+
+**Output:** Daftar subdomain historis
+
+**Catatan:** Subdomain yang ditemukan tidak langsung dianggap valid — beri label **Likely** sampai diverifikasi.
+
+---
+
+### 6.7 DNS & WHOIS Analysis
+
+**Tools:** whois lookup, dig, DNSDumpster
+
+**Yang dicari:**
+
+- MX record (email provider)
+- TXT record (verifikasi layanan)
+- IP / CDN yang digunakan
+
+**Insight:**
+
+- Infrastruktur cloud
+- Third-party services
+
+---
+
+### 6.8 Document Metadata Extraction
+
+**Tools:** ExifTool, FOCA
+
+**Command:**
+
+```
+exiftool file.pdf
+```
+
+**Output:**
+
+- Username internal
+- Software yang digunakan
+- File path tersembunyi
+
+---
+
+### 6.9 OSINT: People & Organization
+
+**Tools:** LinkedIn, Twitter/X, halaman karir website target
+
+**Yang dicari:**
+
+- Tech stack dari job posting
+- Struktur tim
+- Nama karyawan
+
+---
+
+### 6.10 Email Pattern Analysis
+
+**Sumber:** Kontak publik, metadata dokumen
+
+**Contoh pola:**
+
+- `firstname.lastname@domain.com`
+- `firstinitial.lastname@domain.com`
+
+---
+
+## 7. Penyusunan Data Recon
+
+Contoh tabel hasil recon:
+
+| Field | Data | Source | Confidence |
+| --- | --- | --- | --- |
+| Domain | example.com | Website resmi | Confirmed |
+| Subdomain | dev.example.com | crt.sh | Likely |
+| Teknologi | WordPress | HTML source | Likely |
+
+---
+
+## 8. Penyusunan Hipotesis
+
+Hipotesis yang baik harus:
+
+1. Berdasarkan bukti yang ditemukan
+2. Spesifik dan tidak ambigu
+3. Bisa diverifikasi di fase active recon
+
+**Format:**
+
+```
+Hipotesis : [pernyataan dugaan yang spesifik]
+Dasar     : [informasi apa yang ditemukan dan dari mana]
+Verifikasi: [cara membuktikannya saat active recon]
+```
+
+**Contoh:**
+
+```
+Hipotesis : Target kemungkinan menggunakan WordPress
+Dasar     : Ditemukan path /wp-content/ di HTML source
+Verifikasi: Cek endpoint WordPress saat active recon
+```
+
+```
+Hipotesis : Terdapat admin panel di subdomain admin.target.com
+Dasar     : Ada referensi "dashboard" di halaman About
+Verifikasi: Akses subdomain saat active recon
+```
+
+---
+
+## 9. Deliverables
+
+Setiap peserta wajib menghasilkan:
+
+1. **Tabel recon lengkap** — memuat data, source, dan confidence untuk setiap temuan
+2. **Minimal 3 hipotesis** — jelas, logis, dan bisa diverifikasi
+
+---
+
+## 10. Kesalahan Umum
+
+- Over-collecting tanpa analisis yang memadai
+- Tidak mencatat sumber temuan
+- Menganggap dugaan sebagai fakta
+- Tidak memberi confidence label
+- Single-source conclusion — tidak melakukan triangulasi dari beberapa sumber
+
+---
+
+## 11. Prinsip Penting
+
+**Passive Recon = Observasi, bukan interaksi.**
+
+Aktivitas berikut termasuk active recon dan tidak dilakukan pada tahap ini:
+
+- Port scanning
+- Request langsung ke server
+- Brute force
+- Directory fuzzing
+
+---
