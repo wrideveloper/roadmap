@@ -11,6 +11,7 @@ export default defineConfig({
   title: "WRI Roadmap",
   description: "A learning roadmap for Workshop Riset Informatika miniclass",
   lastUpdated: true,
+  head: [['link', { rel: 'icon', href: '/assets/wri-logo.png' }]],
   vue: {},
   themeConfig: {
     logo: {
@@ -44,7 +45,7 @@ export default defineConfig({
     ],
 
     sidebar: {
-      "/miniclass/frontend/web/":frontendWebSidebar,
+      "/miniclass/frontend/web/": frontendWebSidebar,
       "/miniclass/backend/": backendSidebar,
       "/miniclass/game/": gameSidebar,
       "/miniclass/frontend/mobile/": frontendMobileSidebar,
