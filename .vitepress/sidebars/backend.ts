@@ -53,5 +53,25 @@ export default [
 
     ],
   },
+  {
+    text: "Laravel & Web Framework",
+    collapsed: false,
+    items: [
+      {
+        text: "Apa itu Laravel?",
+        link: "/miniclass/backend/laravel/apa-itu-laravel",
+      },
+      {
+        text: "Instalasi Laravel",
+        link: "/miniclass/backend/laravel/instalasi-laravel",
+      },
+      {
+        text: "Studi Kasus",
+        link: "/miniclass/backend/laravel/studikasus/studikasus-01",
+      },
+
+    ],
+  },
+
 
 ];
