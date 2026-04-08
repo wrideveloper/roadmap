@@ -13,6 +13,20 @@ export default defineConfig({
   lastUpdated: true,
   head: [['link', { rel: 'icon', href: '/assets/wri-logo.png' }]],
   vue: {},
+
+  ignoreDeadLinks: [
+    // ignore exact url "/playground"
+    // '/playground',
+    // ignore all localhost links
+    /^https?:\/\/localhost/,
+    // ignore all links include "/repl/""
+    // /\/repl\//,
+    // custom function, ignore all links include "ignore"
+    // (url) => {
+    //   return url.toLowerCase().includes('ignore')
+    // }
+  ],
+
   themeConfig: {
     logo: {
       src: "/assets/wri-logo.png",
