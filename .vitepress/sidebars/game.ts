@@ -83,7 +83,7 @@ export default [
       },
       {
         text: "2024",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: "Pengenalan Unity",

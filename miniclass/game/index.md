@@ -11,8 +11,8 @@ Silabus utama merupakan materi yang disampaikan pada miniclass.
 | Kode                  | Hari ke | Materi                                       |
 | --------------------- | ------- | -------------------------------------------- |
 | ***Minggu ke-*** |       |                                            |
-| M-1                   | 1       | [Pengenalan Game Development, Industri dan One Page GDD](2026/D-1.md) |
-| M-2                   | 2       | [Petualangan Unity]                  |
+| M-1                   | 1       | [Pengenalan Game Development, Industri dan One Page GDD](2026//industri-game-dev-dan-one-page-gdd/M-1-industri-game-dev-dan-one-page-gdd.md) |
+| M-2                   | 2       | [Petualangan ](2026/pengenalan-unity/M-2-pengenalan-unity.md)                  |
 
 #### Perincian
 
