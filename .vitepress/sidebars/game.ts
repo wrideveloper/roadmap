@@ -86,8 +86,52 @@ export default [
         collapsed: false,
         items: [
           {
-            text: "Introduction to Game Development",
-            link: "/miniclass/game/2024/M-1-introduction-to-game-development.md",
+            text: "Pengenalan Unity",
+            collapsed: true,
+            items: [
+              {
+                text: "Penjelasan Unity",
+                link: "/miniclass/game/side-stream/pengenalan-unity/penjelasan-unity.md",
+              },
+              {
+                text: "Pengenalan Interface Unity",
+                link: "/miniclass/game/side-stream/pengenalan-unity/pengenalan-interface-unity.md",
+              },
+              {
+                text: "Game Object dan Component",
+                link: "/miniclass/game/side-stream/pengenalan-unity/game-object-component.md",
+              },
+              {
+                text: "2D Physics",
+                link: "/miniclass/game/side-stream/pengenalan-unity/physic2d.md",
+              },
+            ],
+          },
+          {
+            text: "Pengenalan C#",
+            collapsed: true,
+            items: [
+              {
+                text: "Pengenalan C#",
+                link: "/miniclass/game/side-stream/pengenalan-csharp/pengenalan-csharp.md",
+              },
+              {
+                text: "Fungsi",
+                link: "/miniclass/game/side-stream/pengenalan-csharp/fungsi.md",
+              },
+              {
+                text: "Constructor",
+                link: "/miniclass/game/side-stream/pengenalan-csharp/constructor.md",
+              },
+              {
+                text: "Getter dan Setter",
+                link: "/miniclass/game/side-stream/pengenalan-csharp/getter-dan-setter.md",
+              },
+              {
+                text: "Inheritance",
+                link: "/miniclass/game/side-stream/pengenalan-csharp/inheritance.md",
+              },
+            ],
           },
         ],
       },
