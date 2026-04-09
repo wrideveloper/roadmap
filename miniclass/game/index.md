@@ -10,8 +10,8 @@ Silabus utama merupakan materi yang disampaikan pada miniclass.
 
 | Kode                  | Hari ke | Materi                                       |
 | --------------------- | ------- | -------------------------------------------- |
-| ***Semester Ganjil*** | --      | --                                           |
-| D-1                   | 1       | [Pengenalan Game Development, Industri dan One Page GDD](D-1.md) |
+| ***Semester Genap*** |       |                                            |
+| D-1                   | 1       | [Pengenalan Game Development, Industri dan One Page GDD](2026/D-1.md) |
 | D-2                   | 2       | [Petualangan Unity]                  |
 
 #### Perincian
