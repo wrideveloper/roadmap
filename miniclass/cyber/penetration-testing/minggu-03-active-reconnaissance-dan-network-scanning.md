@@ -49,8 +49,6 @@ Respons target berdasarkan status port:
 - **Port Tertutup**: Target membalas dengan `RST` (Reset).
 - **Port Difilter**: Tidak ada balasan (paket dibuang oleh firewall).
 
-[gambar diagram TCP three-way handshake yang menunjukkan proses SYN, SYN-ACK, dan ACK]
-
 ### UDP: Si Cepat yang Pendiam
 Berbeda dengan TCP, UDP adalah protokol "tembak dan lupakan" tanpa mekanisme handshake.
 ```text
@@ -146,8 +144,6 @@ Selesaikan modul berikut untuk memperkuat pemahaman sebelum masuk ke Lab interna
 
 ### [Further Nmap](https://tryhackme.com/room/furthernmap) (Pengayaan)
 **Estimasi:** 1–2 jam | **Fokus:** NSE (Nmap Scripting Engine) dan deteksi sistem operasi.
-
-[gambar screenshot salah satu task di room TryHackMe Nmap]
 
 ---
 
