@@ -12,7 +12,8 @@ Silabus utama merupakan materi yang disampaikan pada miniclass.
 | --------------------- | ------- | -------------------------------------------- |
 | ***Minggu ke-*** |       |                                            |
 | M-1                   | 1       | [Pengenalan Game Development, Industri dan One Page GDD](2026//industri-game-dev-dan-one-page-gdd/M-1-industri-game-dev-dan-one-page-gdd.md) |
-| M-2                   | 2       | [Petualangan ](2026/pengenalan-unity/M-2-pengenalan-unity.md)                  |
+| M-2                   | 2       | [Pengenalan Unity](2026/pengenalan-unity/M-2-pengenalan-unity.md)                  |
+| M-3                   | 3       | [Mengatur Asset 2d dalam Game](2026/mengatur-asset-2d-dalam-game/M-3-mengatur-asset-2d-dalam-game.md)                  |
 
 #### Perincian
 

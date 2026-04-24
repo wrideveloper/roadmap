@@ -12,6 +12,10 @@ export default [
         text: "Pengenalan Unity",
         link: "/miniclass/game/2026/pengenalan-unity/M-2-pengenalan-unity.md",
       },
+      {
+        text: "Mengatur Asset 2D dalam Game",
+        link: "/miniclass/game/2026/mengatur-asset-2d-dalam-game/M-3-mengatur-asset-2d-dalam-game.md",
+      },
     ],
   },
   {
