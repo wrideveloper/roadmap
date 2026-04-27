@@ -66,12 +66,35 @@ export default [
         link: "/miniclass/backend/laravel/instalasi-laravel",
       },
       {
-        text: "Studi Kasus",
+        text: "Konsep MVC di Laravel",
+        link: "/miniclass/backend/laravel/konsep-mvc-laravel",
+      },
+      {
+        text: "Studi Kasus 1",
         link: "/miniclass/backend/laravel/studikasus/studikasus-01",
       },
-
     ],
   },
-
-
+  {
+    text: "RESTful API (Laravel)",
+    collapsed: false,
+    items: [
+      {
+        text: "Fondasi REST API",
+        link: "/miniclass/backend/laravel/rest-api-dasar",
+      },
+      {
+        text: "Setup API Laravel",
+        link: "/miniclass/backend/laravel/setup-api-laravel",
+      },
+      {
+        text: "Studi Kasus 2: Migration",
+        link: "/miniclass/backend/laravel/studikasus/studikasus-02-api-migration",
+      },
+      {
+        text: "Studi Kasus 2: API CRUD",
+        link: "/miniclass/backend/laravel/studikasus/studikasus-02-api-crud",
+      },
+    ],
+  },
 ];
