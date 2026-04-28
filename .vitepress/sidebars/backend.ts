@@ -66,8 +66,16 @@ export default [
         link: "/miniclass/backend/laravel/instalasi-laravel",
       },
       {
+        text: "Struktur & Konfigurasi",
+        link: "/miniclass/backend/laravel/struktur-dan-konfigurasi",
+      },
+      {
         text: "Konsep MVC di Laravel",
         link: "/miniclass/backend/laravel/konsep-mvc-laravel",
+      },
+      {
+        text: "Mengenal Eloquent ORM",
+        link: "/miniclass/backend/laravel/mengenal-eloquent-orm",
       },
       {
         text: "Studi Kasus 1",
@@ -88,12 +96,8 @@ export default [
         link: "/miniclass/backend/laravel/setup-api-laravel",
       },
       {
-        text: "Studi Kasus 2: Migration",
-        link: "/miniclass/backend/laravel/studikasus/studikasus-02-api-migration",
-      },
-      {
-        text: "Studi Kasus 2: API CRUD",
-        link: "/miniclass/backend/laravel/studikasus/studikasus-02-api-crud",
+        text: "Studi Kasus 2: Peak Writing",
+        link: "/miniclass/backend/laravel/studikasus/studikasus-02",
       },
     ],
   },
