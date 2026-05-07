@@ -66,12 +66,39 @@ export default [
         link: "/miniclass/backend/laravel/instalasi-laravel",
       },
       {
-        text: "Studi Kasus",
+        text: "Struktur & Konfigurasi",
+        link: "/miniclass/backend/laravel/struktur-dan-konfigurasi",
+      },
+      {
+        text: "Konsep MVC di Laravel",
+        link: "/miniclass/backend/laravel/konsep-mvc-laravel",
+      },
+      {
+        text: "Mengenal Eloquent ORM",
+        link: "/miniclass/backend/laravel/mengenal-eloquent-orm",
+      },
+      {
+        text: "Studi Kasus 1",
         link: "/miniclass/backend/laravel/studikasus/studikasus-01",
       },
-
     ],
   },
-
-
+  {
+    text: "RESTful API (Laravel)",
+    collapsed: false,
+    items: [
+      {
+        text: "Fondasi REST API",
+        link: "/miniclass/backend/laravel/rest-api-dasar",
+      },
+      {
+        text: "Setup API Laravel",
+        link: "/miniclass/backend/laravel/setup-api-laravel",
+      },
+      {
+        text: "Studi Kasus 2: Peak Writing",
+        link: "/miniclass/backend/laravel/studikasus/studikasus-02",
+      },
+    ],
+  },
 ];
