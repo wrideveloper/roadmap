@@ -1,6 +1,6 @@
 # 🍎 Instalasi & Setup Database (macOS)
 
-Panduan setup lingkungan Backend PHP + MySQL untuk pengguna **MacBook (macOS)** memakai **Homebrew** (disarankan) atau **XAMPP** (alternatif GUI). Pengguna Windows memakai Laragon sesuai [Pertemuan 1](./pertemuan-1-database-ddl).
+Panduan setup lingkungan Backend PHP + MySQL untuk pengguna **MacBook (macOS)** memakai **Homebrew** (disarankan) atau **XAMPP** (alternatif GUI). Pengguna Windows memakai Laragon sesuai [Database](/miniclass/backend/fundamental/database).
 
 ## Metode 1: Homebrew (Rekomendasi Utama)
 
@@ -49,7 +49,7 @@ Untuk menghentikannya: `brew services stop mysql`.
    EXIT;
    ```
 
-4. Buat tabelnya dengan isi `schema.sql` dari proyek (lihat [Kode Lengkap & PDO API](./kode-absensi)).
+4. Buat tabelnya dengan perintah `CREATE TABLE tb_absensi` di [Database](/miniclass/backend/fundamental/database) atau [MySQL](/miniclass/backend/fundamental/mysql).
 
 ## Metode 2: XAMPP for macOS (Alternatif GUI)
 
@@ -101,4 +101,4 @@ if (!$koneksi) {
 
 ## ➡️ Lanjut
 
-Kembali ke [Pertemuan 1](./pertemuan-1-database-ddl) untuk mulai membuat tabel `tb_absensi`.
+Kembali ke [Database](/miniclass/backend/fundamental/database) untuk mulai membuat tabel `tb_absensi`.

@@ -67,3 +67,19 @@ Saat kita mengunjungi sebuah situs, HTTP memungkinkan browser berkomunikasi deng
 :::tip 💡 Best Practice
 Selalu gunakan **HTTPS** untuk website yang menangani data sensitif pengguna!
 :::
+
+## 🔄 Alur Request: Contoh Absensi
+
+Teori request/response di atas terlihat konkret pada aplikasi absensi (`tb_absensi`):
+
+**Create (form → server → database):**
+
+1. 🖱️ User mengisi [form absensi](/miniclass/backend/fundamental/html) lalu klik Simpan → browser mengirim `POST` ke server.
+2. 🖥️ PHP di server membaca `$_POST`, menjalankan `INSERT` via `koneksi.php` (lihat [PHP](/miniclass/backend/fundamental/php)).
+3. 📤 Server menjawab dengan redirect (`header("Location: index.php")`) → browser memuat ulang daftar.
+
+**Read (server → database → tabel):**
+
+1. 🌐 Browser meminta halaman daftar (`GET`).
+2. 🖥️ PHP menjalankan `SELECT * FROM tb_absensi`, me-render tiap baris menjadi `<tr>` dalam tabel HTML.
+3. 📤 Server mengirim HTML jadi → browser menampilkannya. Tidak ada SQL yang terlihat klien — sesuai prinsip *Input Processing* → *Database Interaction* → *Response Handler* di tabel fungsi di atas.
