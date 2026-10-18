@@ -319,6 +319,10 @@ ALTER TABLE nama_tabel
 ADD kolom_baru Tipe_Data;
 ```
 
+:::tip 💡 Contoh Nyata
+Sintaks generik di atas dipakai langsung di [Pertemuan 1](/miniclass/backend/fundamental/proyek-absensi/pertemuan-1-database-ddl) (`tb_absensi`) dan [bedah `schema.sql`](/miniclass/backend/fundamental/proyek-absensi/kode-absensi). DML (`INSERT`/`SELECT`/`UPDATE`/`DELETE`) dipraktikkan di [Pertemuan 2](/miniclass/backend/fundamental/proyek-absensi/pertemuan-2-php-dml-koneksi).
+:::
+
 ### 📝 Data Manipulation Commands
 
 #### INSERT INTO

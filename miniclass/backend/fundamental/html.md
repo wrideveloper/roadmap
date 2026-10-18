@@ -332,3 +332,7 @@ HTML kita valid
 </body>
 </html>
 ```
+
+:::tip 💡 Lanjut ke Praktik
+Form login di atas polanya sama dengan form absensi (nama, NIM, status, tanggal + tabel `SELECT`): [Pertemuan 3: CRUD Read & Create](/miniclass/backend/fundamental/proyek-absensi/pertemuan-3-crud-read-create).
+:::

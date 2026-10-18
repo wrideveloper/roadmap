@@ -506,3 +506,7 @@ Gunakan fungsi untuk kode yang sering digunakan agar lebih efisien dan mudah di-
         echo "Finally block";
     }
    ```
+
+:::tip 💡 Lanjut ke Praktik
+PHP di atas berjalan tanpa database. Untuk menghubungkan PHP ke MySQL (`koneksi.php`, `$_POST`/`$_GET`, mysqli vs PDO), lanjut ke [Pertemuan 2](/miniclass/backend/fundamental/proyek-absensi/pertemuan-2-php-dml-koneksi) dan [Kode Lengkap & PDO API](/miniclass/backend/fundamental/proyek-absensi/kode-absensi).
+:::

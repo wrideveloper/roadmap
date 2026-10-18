@@ -111,3 +111,7 @@ Baik SQL maupun NoSQL menggunakan field yang sama (ISBN, title, author), namun d
 ```
 - `_id: 0` = Tidak menampilkan field _id
 - `title: 1` = Hanya menampilkan field title
+
+:::tip 💡 Lanjut ke Praktik
+Sudah paham konsepnya? Terapkan langsung di [Pertemuan 1: Database & DDL](/miniclass/backend/fundamental/proyek-absensi/pertemuan-1-database-ddl) — membuat database `db_absensi` dan tabel `tb_absensi` dengan `CREATE TABLE`.
+:::
