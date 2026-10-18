@@ -9,3 +9,4 @@ Miniclass ini mencakup:
 - Database management
 - Server-side programming
 - PHP programming
+- Proyek praktik: [aplikasi absensi PHP & database](/miniclass/backend/fundamental/proyek-absensi/) (4 pertemuan + panduan instalasi macOS + bedah kode PDO API)

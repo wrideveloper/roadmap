@@ -32,6 +32,40 @@ export default [
         text: "PHP",
         link: "/miniclass/backend/fundamental/php",
       },
+      {
+        text: "Proyek Absensi (PHP & Database)",
+        collapsed: false,
+        items: [
+          {
+            text: "Pendahuluan",
+            link: "/miniclass/backend/fundamental/proyek-absensi/",
+          },
+          {
+            text: "Instalasi (macOS)",
+            link: "/miniclass/backend/fundamental/proyek-absensi/instalasi",
+          },
+          {
+            text: "Pertemuan 1: Database & DDL",
+            link: "/miniclass/backend/fundamental/proyek-absensi/pertemuan-1-database-ddl",
+          },
+          {
+            text: "Pertemuan 2: PHP, DML & Koneksi",
+            link: "/miniclass/backend/fundamental/proyek-absensi/pertemuan-2-php-dml-koneksi",
+          },
+          {
+            text: "Pertemuan 3: CRUD Read & Create",
+            link: "/miniclass/backend/fundamental/proyek-absensi/pertemuan-3-crud-read-create",
+          },
+          {
+            text: "Pertemuan 4: CRUD Update & Delete",
+            link: "/miniclass/backend/fundamental/proyek-absensi/pertemuan-4-crud-update-delete",
+          },
+          {
+            text: "Kode Lengkap & PDO API",
+            link: "/miniclass/backend/fundamental/proyek-absensi/kode-absensi",
+          },
+        ],
+      },
     ],
   },
   {
