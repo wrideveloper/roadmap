@@ -17,9 +17,22 @@ Panduan setup lingkungan Backend PHP + MySQL untuk **Windows**, **macOS**, dan *
 | macOS | [Homebrew](#macos-homebrew-disarankan) atau XAMPP |
 | Linux (Ubuntu/Debian) | [Paket `apt`](#linux-paket-apt) |
 
+### 📚 Sumber & Unduhan Resmi
+
+| Perangkat | Situs resmi |
+|-----------|-------------|
+| Laragon | [laragon.org](https://laragon.org) |
+| Homebrew | [brew.sh](https://brew.sh/) |
+| XAMPP (Apache Friends) | [apachefriends.org](https://www.apachefriends.org/) |
+| PHP | [php.net](https://www.php.net/) |
+| MySQL | [dev.mysql.com](https://dev.mysql.com/downloads/) |
+| MariaDB | [mariadb.org](https://mariadb.org/) |
+| Apache HTTP Server | [httpd.apache.org](https://httpd.apache.org/) |
+| phpMyAdmin | [phpmyadmin.net](https://www.phpmyadmin.net/) |
+
 ## Windows: Laragon (Disarankan)
 
-1. **Download & instal Laragon** dari situs resminya (pilih versi Full agar sudah termasuk Apache, MySQL, PHP, dan phpMyAdmin).
+1. **Download & instal Laragon** dari [situs resminya](https://laragon.org) (pilih versi Full agar sudah termasuk Apache, MySQL, PHP, dan phpMyAdmin).
 2. **Nyalakan layanan** — buka control panel Laragon, klik **Start All** (menyalakan Apache + MySQL/MariaDB).
 3. **Buka phpMyAdmin** di browser: `http://localhost/phpmyadmin/`
 4. **Buat database** `db_absensi` (klik *New* → isi nama → *Create*).
@@ -27,7 +40,7 @@ Panduan setup lingkungan Backend PHP + MySQL untuk **Windows**, **macOS**, dan *
 
 ## macOS: Homebrew (Disarankan)
 
-Homebrew adalah *package manager* paling populer di macOS untuk menginstal perangkat lunak lewat Terminal.
+Homebrew adalah *package manager* paling populer di macOS untuk menginstal perangkat lunak lewat Terminal — lihat [brew.sh](https://brew.sh/).
 
 ### Langkah 1: Install Homebrew (jika belum ada)
 
@@ -101,7 +114,7 @@ sudo mysql -u root -p -e "CREATE DATABASE db_absensi;"
 ```
 
 :::tip 💡 MariaDB vs MySQL
-Di distro Linux modern, paket `mysql-server` sering berupa **MariaDB** — sepenuhnya kompatibel untuk materi ini (perintah SQL-nya sama).
+Di distro Linux modern, paket `mysql-server` sering berupa **[MariaDB](https://mariadb.org/)** — sepenuhnya kompatibel untuk materi ini (perintah SQL-nya sama).
 :::
 
 ## ✅ Verifikasi Instalasi
