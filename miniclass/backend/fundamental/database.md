@@ -116,13 +116,9 @@ Baik SQL maupun NoSQL menggunakan field yang sama (ISBN, title, author), namun d
 
 Teori di atas cukup — sekarang praktik. Sepanjang sisa fundamental, kita memakai **satu contoh berjalan**: aplikasi absensi mahasiswa (`db_absensi` / `tb_absensi`).
 
-### Setup Database di Laragon (phpMyAdmin)
+### Setup Database (Semua OS)
 
-Langkah ini untuk pengguna **Windows**. Pengguna macOS lihat [Instalasi (macOS)](/miniclass/backend/fundamental/instalasi-macos).
-
-1. **Nyalakan layanan MySQL/MariaDB** melalui control panel Laragon (klik tombol Start).
-2. **Buka phpMyAdmin** di browser: `http://localhost/phpmyadmin/`
-3. **Buat database baru** bernama `db_absensi` (klik *New* → isi nama → *Create*).
+Siapkan server + database `db_absensi` mengikuti [Instalasi & Setup Lingkungan](/miniclass/backend/fundamental/instalasi) (Windows/Laragon, macOS/Homebrew/XAMPP, atau Linux) — intinya: nyalakan MySQL, buka `http://localhost/phpmyadmin/`, buat database `db_absensi`.
 
 ### DDL: `CREATE TABLE`
 

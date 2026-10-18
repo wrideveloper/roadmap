@@ -33,8 +33,8 @@ export default [
         link: "/miniclass/backend/fundamental/php",
       },
       {
-        text: "Instalasi (macOS)",
-        link: "/miniclass/backend/fundamental/instalasi-macos",
+        text: "Instalasi & Setup",
+        link: "/miniclass/backend/fundamental/instalasi",
       },
     ],
   },

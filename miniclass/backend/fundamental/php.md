@@ -532,7 +532,7 @@ if (!$koneksi) {
 
 | Baris | Fungsi |
 |-------|--------|
-| `$host`, `$user`, `$pass`, `$db` | Kredensial server — sesuaikan dengan setup Laragon/XAMPP/Homebrew ([Instalasi macOS](/miniclass/backend/fundamental/instalasi-macos)) |
+| `$host`, `$user`, `$pass`, `$db` | Kredensial server — sesuaikan dengan setup Laragon/XAMPP/Homebrew/Linux ([Instalasi & Setup](/miniclass/backend/fundamental/instalasi)) |
 | `mysqli_connect(...)` | Membuka koneksi, hasilnya disimpan di `$koneksi` |
 | `if (!$koneksi)` | Pengecekan error — program berhenti dengan pesan jika koneksi gagal |
 

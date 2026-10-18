@@ -319,7 +319,7 @@ CREATE TABLE tb_absensi (
 ```
 
 :::tip 💡 File `schema.sql`
-Perintah di atas juga tersedia sebagai file `schema.sql` yang bisa dijalankan sekaligus (`mysql -u root < schema.sql`). Pengguna macOS: lihat [Instalasi](/miniclass/backend/fundamental/instalasi-macos).
+Perintah di atas juga tersedia sebagai file `schema.sql` yang bisa dijalankan sekaligus (`mysql -u root < schema.sql`). Belum punya server database? Lihat [Instalasi](/miniclass/backend/fundamental/instalasi).
 :::
 
 #### DROP TABLE
