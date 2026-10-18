@@ -532,11 +532,11 @@ if (!$koneksi) {
 
 | Baris | Fungsi |
 |-------|--------|
-| `$host`, `$user`, `$pass`, `$db` | Kredensial server — sesuaikan dengan setup Laragon/XAMPP/Homebrew/Linux ([Instalasi & Setup](/miniclass/backend/fundamental/instalasi)) |
+| `$host`, `$user`, `$pass`, `$db` | Kredensial server: sesuaikan dengan setup Laragon/XAMPP/Homebrew/Linux ([Instalasi & Setup](/miniclass/backend/fundamental/instalasi)) |
 | `mysqli_connect(...)` | Membuka koneksi, hasilnya disimpan di `$koneksi` |
-| `if (!$koneksi)` | Pengecekan error — program berhenti dengan pesan jika koneksi gagal |
+| `if (!$koneksi)` | Pengecekan error: program berhenti dengan pesan jika koneksi gagal |
 
-Contoh pakai — simpan data form ke `tb_absensi`:
+Contoh pakai: simpan data form ke `tb_absensi`:
 
 ```php
 <?php
@@ -558,10 +558,10 @@ if (isset($_POST['simpan'])) {
 
 ## 📥 Superglobals (`$_GET` / `$_POST`)
 
-**Superglobals** adalah variabel bawaan PHP yang selalu tersedia — dua yang paling sering dipakai:
+**Superglobals** adalah variabel bawaan PHP yang selalu tersedia. Dua yang paling sering dipakai:
 
-- `$_POST['nama']` — data dari form `method="POST"` (tambah/edit data).
-- `$_GET['id']` — data dari URL (misalnya `edit.php?id=3`).
+- `$_POST['nama']`: data dari form `method="POST"` (tambah/edit data).
+- `$_GET['id']`: data dari URL (misalnya `edit.php?id=3`).
 
 Pola edit data: tangkap ID dari URL, tarik data lama untuk form, tulis data baru saat submit:
 
@@ -607,7 +607,7 @@ header("Location: index.php");
 
 ## 🚀 Lanjutan: PDO & Prepared Statements
 
-Contoh mysqli di atas menggabungkan input langsung ke string query — mudah dibaca untuk belajar, tapi rentan **SQL injection**. Untuk proyek nyata, pakai **PDO + prepared statements**:
+Contoh mysqli di atas menggabungkan input langsung ke string query. Ini mudah dibaca untuk belajar, tapi rentan **SQL injection**. Untuk proyek nyata, pakai **PDO + prepared statements**:
 
 ```php
 <?php
@@ -631,7 +631,7 @@ try {
 Query dengan parameter terpisah dari perintah SQL (aman by default):
 
 ```php
-// READ satu data — :id tidak pernah ditafsirkan sebagai SQL
+// READ satu data: :id tidak pernah ditafsirkan sebagai SQL
 $stmt = $pdo->prepare(
     'SELECT id, nama, nim, status, tanggal
      FROM tb_absensi
@@ -640,7 +640,7 @@ $stmt = $pdo->prepare(
 $stmt->execute(['id' => $id]);
 $data = $stmt->fetch();
 
-// CREATE — respons JSON + status code
+// CREATE: respons JSON + status code
 $stmt = $pdo->prepare(
     'INSERT INTO tb_absensi (nama, nim, status, tanggal)
      VALUES (:nama, :nim, :status, :tanggal)'
@@ -669,5 +669,5 @@ echo json_encode(['status' => 'success', 'id' => $pdo->lastInsertId()]);
 </div>
 
 :::tip 💡 Rekomendasi belajar
-Kuasai alur mysqli dulu agar paham konsepnya, lalu **pakai pola PDO untuk proyek nyata**. Validasi input tetap wajib di server (field wajib, panjang maks, `status` salah satu dari Hadir/Izin/Sakit/Alpa, `tanggal` format `YYYY-MM-DD`) — atribut `required` di browser saja tidak cukup.
+Kuasai alur mysqli dulu agar paham konsepnya, lalu **pakai pola PDO untuk proyek nyata**. Validasi input tetap wajib di server (field wajib, panjang maks, `status` salah satu dari Hadir/Izin/Sakit/Alpa, `tanggal` format `YYYY-MM-DD`). Atribut `required` di browser saja tidak cukup.
 :::

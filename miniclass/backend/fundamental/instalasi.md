@@ -33,14 +33,14 @@ Panduan setup lingkungan Backend PHP + MySQL untuk **Windows**, **macOS**, dan *
 ## Windows: Laragon (Disarankan)
 
 1. **Download & instal Laragon** dari [situs resminya](https://laragon.org) (pilih versi Full agar sudah termasuk Apache, MySQL, PHP, dan phpMyAdmin).
-2. **Nyalakan layanan** — buka control panel Laragon, klik **Start All** (menyalakan Apache + MySQL/MariaDB).
+2. **Nyalakan layanan**: buka control panel Laragon, klik **Start All** (menyalakan Apache + MySQL/MariaDB).
 3. **Buka phpMyAdmin** di browser: `http://localhost/phpmyadmin/`
 4. **Buat database** `db_absensi` (klik *New* → isi nama → *Create*).
 5. File PHP diletakkan di folder root Laragon (misalnya `D:\laragon\www\`) dan diakses via `http://localhost/nama-folder/`.
 
 ## macOS: Homebrew (Disarankan)
 
-Homebrew adalah *package manager* paling populer di macOS untuk menginstal perangkat lunak lewat Terminal — lihat [brew.sh](https://brew.sh/).
+Homebrew adalah *package manager* paling populer di macOS untuk menginstal perangkat lunak lewat Terminal. Lihat [brew.sh](https://brew.sh/).
 
 ### Langkah 1: Install Homebrew (jika belum ada)
 
@@ -82,7 +82,7 @@ EXIT;
 
 Jika lebih nyaman dengan panel grafis (mirip Laragon di Windows):
 
-1. **Download** installer XAMPP untuk macOS dari [Apache Friends](https://www.apachefriends.org/) — pilih arsitektur yang sesuai (Intel atau Apple Silicon M1/M2/M3).
+1. **Download** installer XAMPP untuk macOS dari [Apache Friends](https://www.apachefriends.org/). Pilih arsitektur yang sesuai (Intel atau Apple Silicon M1/M2/M3).
 2. **Instalasi:** buka file `.dmg`, geser ikon XAMPP ke folder **Applications**.
 3. **Nyalakan server:** buka XAMPP → tab **Manage Servers** → Start **Apache Web Server** dan **MySQL Database**.
 4. **Buat database:** buka `http://localhost/phpmyadmin/` di browser, buat database `db_absensi`.
@@ -114,7 +114,7 @@ sudo mysql -u root -p -e "CREATE DATABASE db_absensi;"
 ```
 
 :::tip 💡 MariaDB vs MySQL
-Di distro Linux modern, paket `mysql-server` sering berupa **[MariaDB](https://mariadb.org/)** — sepenuhnya kompatibel untuk materi ini (perintah SQL-nya sama).
+Di distro Linux modern, paket `mysql-server` sering berupa **[MariaDB](https://mariadb.org/), sepenuhnya kompatibel untuk materi ini (perintah SQL-nya sama).
 :::
 
 ## ✅ Verifikasi Instalasi
@@ -156,20 +156,20 @@ if (!$koneksi) {
 
 ## Troubleshooting Umum
 
-- **`Access denied for user 'root'@'localhost'`** — password salah atau root memakai plugin `auth_socket` (umum di Linux/Homebrew):
+- **`Access denied for user 'root'@'localhost'`**: password salah atau root memakai plugin `auth_socket` (umum di Linux/Homebrew):
   - Linux: masuk via `sudo mysql`, lalu atur password atau buat user khusus:
     ```sql
     ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password-baru';
     FLUSH PRIVILEGES;
     ```
   - Homebrew (lupa password): `brew services stop mysql`, lalu `mysqld_safe --skip-grant-tables &` dan `mysql -u root` untuk reset.
-- **Perintah `php`/`mysql` tidak dikenali** — pastikan direktori instalasi masuk PATH:
+- **Perintah `php`/`mysql` tidak dikenali**: pastikan direktori instalasi masuk PATH:
   - macOS (Homebrew, `~/.zshrc`): `export PATH="/opt/homebrew/bin:$PATH"`, lalu `source ~/.zshrc`.
   - Windows: tambahkan folder `php`/`mysql/bin` Laragon atau XAMPP ke *Environment Variables → Path*.
-  - Linux: instalasi via `apt` sudah masuk PATH otomatis — jika tidak ketemu, pastikan paketnya terinstal (`php -v`).
-- **Port bentrok (Apache tidak mau start)** — port 80/443 dipakai aplikasi lain (umum di Windows/XAMPP): hentikan aplikasi tersebut atau ganti port Apache di konfigurasi.
-- **Port 3306 bentrok (MySQL tidak mau start)** — dua server MySQL berjalan bersamaan (misalnya Laragon + XAMPP, atau service + manual): matikan salah satunya.
-- **Layanan mati setelah restart (Linux)** — pastikan *enabled*: `sudo systemctl enable apache2 mysql`.
+  - Linux: instalasi via `apt` sudah masuk PATH otomatis. Jika tidak ketemu, pastikan paketnya terinstal (`php -v`).
+- **Port bentrok (Apache tidak mau start)**: port 80/443 dipakai aplikasi lain (umum di Windows/XAMPP): hentikan aplikasi tersebut atau ganti port Apache di konfigurasi.
+- **Port 3306 bentrok (MySQL tidak mau start)**: dua server MySQL berjalan bersamaan (misalnya Laragon + XAMPP, atau service + manual): matikan salah satunya.
+- **Layanan mati setelah restart (Linux)**: pastikan *enabled*: `sudo systemctl enable apache2 mysql`.
 
 ## ➡️ Lanjut
 

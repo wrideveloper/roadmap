@@ -304,7 +304,7 @@ CREATE TABLE nama_tabel (
 );
 ```
 
-Contoh nyata — tabel absensi dari [Database](/miniclass/backend/fundamental/database):
+Contoh nyata: tabel absensi dari [Database](/miniclass/backend/fundamental/database):
 
 ```sql
 USE db_absensi;
@@ -347,7 +347,7 @@ INSERT INTO nama_tabel (kolom1, kolom2)
 VALUES (nilai1, nilai2);
 ```
 
-Contoh — mencatat kehadiran ke `tb_absensi`:
+Contoh: mencatat kehadiran ke `tb_absensi`:
 
 ```sql
 INSERT INTO tb_absensi (nama, nim, status, tanggal)
@@ -362,7 +362,7 @@ SELECT kolom1, kolom2
 FROM nama_tabel;
 ```
 
-Contoh — membaca data absensi (dengan `WHERE` untuk filter):
+Contoh: membaca data absensi (dengan `WHERE` untuk filter):
 
 ```sql
 -- Semua data
@@ -381,7 +381,7 @@ SET kolom1 = nilai1
 WHERE kondisi;
 ```
 
-Contoh — mengubah status satu mahasiswa (berdasarkan `id`):
+Contoh: mengubah status satu mahasiswa (berdasarkan `id`):
 
 ```sql
 UPDATE tb_absensi
@@ -397,7 +397,7 @@ DELETE FROM nama_tabel
 WHERE kondisi;
 ```
 
-Contoh — menghapus satu baris absensi:
+Contoh: menghapus satu baris absensi:
 
 ```sql
 DELETE FROM tb_absensi WHERE id = 1;

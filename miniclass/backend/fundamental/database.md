@@ -114,11 +114,11 @@ Baik SQL maupun NoSQL menggunakan field yang sama (ISBN, title, author), namun d
 
 ## 🛠️ Setup Praktik & DDL: Studi Kasus Absensi
 
-Teori di atas cukup — sekarang praktik. Sepanjang sisa fundamental, kita memakai **satu contoh berjalan**: aplikasi absensi mahasiswa (`db_absensi` / `tb_absensi`).
+Teori di atas cukup. Sekarang praktik. Sepanjang sisa fundamental, kita memakai **satu contoh berjalan**: aplikasi absensi mahasiswa (`db_absensi` / `tb_absensi`).
 
 ### Setup Database (Semua OS)
 
-Siapkan server + database `db_absensi` mengikuti [Instalasi & Setup Lingkungan](/miniclass/backend/fundamental/instalasi) (Windows/Laragon, macOS/Homebrew/XAMPP, atau Linux) — intinya: nyalakan MySQL, buka `http://localhost/phpmyadmin/`, buat database `db_absensi`.
+Siapkan server + database `db_absensi` mengikuti [Instalasi & Setup Lingkungan](/miniclass/backend/fundamental/instalasi) (Windows/Laragon, macOS/Homebrew/XAMPP, atau Linux). Intinya: nyalakan MySQL, buka `http://localhost/phpmyadmin/`, buat database `db_absensi`.
 
 ### DDL: `CREATE TABLE`
 
@@ -144,7 +144,7 @@ CREATE TABLE tb_absensi (
 | `status` | `ENUM(...)` | Hanya boleh Hadir/Izin/Sakit/Alpa |
 | `tanggal` | `DATE NOT NULL` | Format `YYYY-MM-DD` |
 
-Konsep `PRIMARY KEY`, `NOT NULL`, `AUTO_INCREMENT`, dan tipe data lengkapnya dibahas di [Pengenalan MySQL](/miniclass/backend/fundamental/mysql) — di bawah ini versi praktiknya.
+Konsep `PRIMARY KEY`, `NOT NULL`, `AUTO_INCREMENT`, dan tipe data lengkapnya dibahas di [Pengenalan MySQL](/miniclass/backend/fundamental/mysql). Di bawah ini versi praktiknya.
 
 ### DDL: `ALTER TABLE`
 

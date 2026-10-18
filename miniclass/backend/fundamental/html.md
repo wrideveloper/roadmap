@@ -373,13 +373,13 @@ Pola form login di atas dipakai langsung untuk aplikasi absensi (`tb_absensi` da
 | Atribut | Fungsi |
 |---------|--------|
 | `action=""` | Data dikirim ke halaman yang sama (diproses PHP di atas form) |
-| `method="POST"` | Data dikirim via body request — cocok untuk create/update |
+| `method="POST"` | Data dikirim via body request. Cocok untuk create/update |
 | `name="..."` | Nama variabel yang dibaca PHP lewat `$_POST['nama']`, dst. (lihat [PHP](/miniclass/backend/fundamental/php)) |
-| `required` | Validasi sisi klien — browser menolak submit jika ada field kosong |
+| `required` | Validasi sisi klien: browser menolak submit jika ada field kosong |
 
 ### Tabel + render dinamis dengan PHP
 
-Struktur tabel memakai `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`. Isinya diisi dari database memakai perulangan `while` (lihat perulangan di [PHP](/miniclass/backend/fundamental/php)) — **satu query → satu loop → satu `<tr>` per baris**:
+Struktur tabel memakai `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`. Isinya diisi dari database memakai perulangan `while` (lihat perulangan di [PHP](/miniclass/backend/fundamental/php)). Polanya: **satu query → satu loop → satu `<tr>` per baris**:
 
 ```php
 <table>
@@ -419,5 +419,5 @@ Untuk form edit, data lama ditarik dulu lalu dimasukkan ke `value="..."` agar te
 ```
 
 :::tip 💡 Dua lapis validasi
-`required` hanya validasi di browser (bisa dilewati). Validasi sesungguhnya tetap di server sebelum `INSERT`/`UPDATE` — lihat bagian PDO di [PHP](/miniclass/backend/fundamental/php).
+`required` hanya validasi di browser (bisa dilewati). Validasi sesungguhnya tetap di server sebelum `INSERT`/`UPDATE`. Lihat bagian PDO di [PHP](/miniclass/backend/fundamental/php).
 :::

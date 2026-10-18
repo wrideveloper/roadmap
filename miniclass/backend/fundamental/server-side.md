@@ -82,4 +82,4 @@ Teori request/response di atas terlihat konkret pada aplikasi absensi (`tb_absen
 
 1. 🌐 Browser meminta halaman daftar (`GET`).
 2. 🖥️ PHP menjalankan `SELECT * FROM tb_absensi`, me-render tiap baris menjadi `<tr>` dalam tabel HTML.
-3. 📤 Server mengirim HTML jadi → browser menampilkannya. Tidak ada SQL yang terlihat klien — sesuai prinsip *Input Processing* → *Database Interaction* → *Response Handler* di tabel fungsi di atas.
+3. 📤 Server mengirim HTML jadi → browser menampilkannya. Tidak ada SQL yang terlihat klien. Ini sesuai prinsip *Input Processing* → *Database Interaction* → *Response Handler* di tabel fungsi di atas.
