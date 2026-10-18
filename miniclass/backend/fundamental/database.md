@@ -111,3 +111,69 @@ Baik SQL maupun NoSQL menggunakan field yang sama (ISBN, title, author), namun d
 ```
 - `_id: 0` = Tidak menampilkan field _id
 - `title: 1` = Hanya menampilkan field title
+
+## 🛠️ Setup Praktik & DDL: Studi Kasus Absensi
+
+Teori di atas cukup. Sekarang praktik. Sepanjang sisa fundamental, kita memakai **satu contoh berjalan**: aplikasi absensi mahasiswa (`db_absensi` / `tb_absensi`).
+
+### Setup Database (Semua OS)
+
+Siapkan server + database `db_absensi` mengikuti [Instalasi & Setup Lingkungan](/miniclass/backend/fundamental/instalasi) (Windows/Laragon, macOS/Homebrew/XAMPP, atau Linux). Intinya: nyalakan MySQL, buka `http://localhost/phpmyadmin/`, buat database `db_absensi`.
+
+### DDL: `CREATE TABLE`
+
+**DDL** (*Data Definition Language*) mendefinisikan struktur database/tabel. Buat tabel absensi beserta kolom dan tipe datanya:
+
+```sql
+USE db_absensi;
+
+CREATE TABLE tb_absensi (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    nim VARCHAR(20) NOT NULL,
+    status ENUM('Hadir', 'Izin', 'Sakit', 'Alpa') NOT NULL,
+    tanggal DATE NOT NULL
+);
+```
+
+| Kolom | Tipe | Keterangan |
+|-------|------|------------|
+| `id` | `INT AUTO_INCREMENT PRIMARY KEY` | Identitas unik, terisi otomatis (1, 2, 3, ...) |
+| `nama` | `VARCHAR(100) NOT NULL` | Nama mahasiswa, wajib diisi |
+| `nim` | `VARCHAR(20) NOT NULL` | Nomor induk mahasiswa, wajib diisi |
+| `status` | `ENUM(...)` | Hanya boleh Hadir/Izin/Sakit/Alpa |
+| `tanggal` | `DATE NOT NULL` | Format `YYYY-MM-DD` |
+
+Konsep `PRIMARY KEY`, `NOT NULL`, `AUTO_INCREMENT`, dan tipe data lengkapnya dibahas di [Pengenalan MySQL](/miniclass/backend/fundamental/mysql). Di bawah ini versi praktiknya.
+
+### DDL: `ALTER TABLE`
+
+Memodifikasi struktur tabel yang sudah ada:
+
+```sql
+-- Menambah kolom keterangan
+ALTER TABLE tb_absensi
+ADD keterangan TEXT;
+
+-- Mengubah panjang kolom nama
+ALTER TABLE tb_absensi
+MODIFY nama VARCHAR(150) NOT NULL;
+```
+
+### DDL: `DROP TABLE`
+
+Menghapus tabel secara permanen:
+
+```sql
+DROP TABLE tb_absensi;
+```
+
+:::warning ⚠️ Hati-hati!
+`DROP TABLE` menghapus tabel **beserta seluruh datanya** dan tidak bisa di-undo. Pastikan nama tabel sudah benar.
+:::
+
+## ✅ Checklist
+
+- [ ] Bisa menjelaskan database, tabel, baris, kolom, dan tipe data dasar
+- [ ] Laragon berjalan dan database `db_absensi` terbuat
+- [ ] Tabel `tb_absensi` terbuat via `CREATE TABLE`, pernah mencoba `ALTER TABLE`

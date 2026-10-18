@@ -332,3 +332,92 @@ HTML kita valid
 </body>
 </html>
 ```
+
+## 💻 Contoh Kasus: Form & Tabel Absensi
+
+Pola form login di atas dipakai langsung untuk aplikasi absensi (`tb_absensi` dari [Database](/miniclass/backend/fundamental/database)): form untuk input, tabel untuk menampilkan data.
+
+### Form input (nama, NIM, status, tanggal)
+
+```html
+<form action="" method="POST">
+    <label>
+        Nama Mahasiswa:
+        <input type="text" name="nama" required>
+    </label>
+
+    <label>
+        NIM:
+        <input type="text" name="nim" required>
+    </label>
+
+    <label>
+        Status:
+        <select name="status" required>
+            <option value="Hadir">Hadir</option>
+            <option value="Izin">Izin</option>
+            <option value="Sakit">Sakit</option>
+            <option value="Alpa">Alpa</option>
+        </select>
+    </label>
+
+    <label>
+        Tanggal:
+        <input type="date" name="tanggal" required>
+    </label>
+
+    <input type="submit" name="simpan" value="Simpan">
+</form>
+```
+
+| Atribut | Fungsi |
+|---------|--------|
+| `action=""` | Data dikirim ke halaman yang sama (diproses PHP di atas form) |
+| `method="POST"` | Data dikirim via body request. Cocok untuk create/update |
+| `name="..."` | Nama variabel yang dibaca PHP lewat `$_POST['nama']`, dst. (lihat [PHP](/miniclass/backend/fundamental/php)) |
+| `required` | Validasi sisi klien: browser menolak submit jika ada field kosong |
+
+### Tabel + render dinamis dengan PHP
+
+Struktur tabel memakai `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`. Isinya diisi dari database memakai perulangan `while` (lihat perulangan di [PHP](/miniclass/backend/fundamental/php)). Polanya: **satu query → satu loop → satu `<tr>` per baris**:
+
+```php
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Status</th>
+            <th>Tanggal</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php while ($row = mysqli_fetch_assoc($data_query)) : ?>
+        <tr>
+            <td><?= $row['id']; ?></td>
+            <td><?= $row['nama']; ?></td>
+            <td><?= $row['nim']; ?></td>
+            <td><?= $row['status']; ?></td>
+            <td><?= $row['tanggal']; ?></td>
+            <td>
+                <a href="edit.php?id=<?= $row['id']; ?>">Edit</a>
+                <a href="hapus.php?id=<?= $row['id']; ?>"
+                   onclick="return confirm('Hapus data ini?');">Hapus</a>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </tbody>
+</table>
+```
+
+Untuk form edit, data lama ditarik dulu lalu dimasukkan ke `value="..."` agar terisi otomatis (*pre-filled*):
+
+```html
+<input type="text" name="nama" value="<?= $data['nama']; ?>" required>
+```
+
+:::tip 💡 Dua lapis validasi
+`required` hanya validasi di browser (bisa dilewati). Validasi sesungguhnya tetap di server sebelum `INSERT`/`UPDATE`. Lihat bagian PDO di [PHP](/miniclass/backend/fundamental/php).
+:::

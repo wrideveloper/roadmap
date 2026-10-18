@@ -304,6 +304,24 @@ CREATE TABLE nama_tabel (
 );
 ```
 
+Contoh nyata: tabel absensi dari [Database](/miniclass/backend/fundamental/database):
+
+```sql
+USE db_absensi;
+
+CREATE TABLE tb_absensi (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    nim VARCHAR(20) NOT NULL,
+    status ENUM('Hadir', 'Izin', 'Sakit', 'Alpa') NOT NULL,
+    tanggal DATE NOT NULL
+);
+```
+
+:::tip 💡 File `schema.sql`
+Perintah di atas juga tersedia sebagai file `schema.sql` yang bisa dijalankan sekaligus (`mysql -u root < schema.sql`). Belum punya server database? Lihat [Instalasi](/miniclass/backend/fundamental/instalasi).
+:::
+
 #### DROP TABLE
 Menghapus tabel.
 
@@ -329,12 +347,29 @@ INSERT INTO nama_tabel (kolom1, kolom2)
 VALUES (nilai1, nilai2);
 ```
 
+Contoh: mencatat kehadiran ke `tb_absensi`:
+
+```sql
+INSERT INTO tb_absensi (nama, nim, status, tanggal)
+VALUES ('Andi', '12345', 'Hadir', '2026-10-19');
+```
+
 #### SELECT
 Menampilkan data dari tabel.
 
 ```sql
 SELECT kolom1, kolom2
 FROM nama_tabel;
+```
+
+Contoh: membaca data absensi (dengan `WHERE` untuk filter):
+
+```sql
+-- Semua data
+SELECT * FROM tb_absensi;
+
+-- Hanya yang hadir
+SELECT * FROM tb_absensi WHERE status = 'Hadir';
 ```
 
 #### UPDATE
@@ -346,12 +381,26 @@ SET kolom1 = nilai1
 WHERE kondisi;
 ```
 
+Contoh: mengubah status satu mahasiswa (berdasarkan `id`):
+
+```sql
+UPDATE tb_absensi
+SET status = 'Sakit'
+WHERE id = 1;
+```
+
 #### DELETE
 Menghapus data dari tabel.
 
 ```sql
 DELETE FROM nama_tabel
 WHERE kondisi;
+```
+
+Contoh: menghapus satu baris absensi:
+
+```sql
+DELETE FROM tb_absensi WHERE id = 1;
 ```
 
 ### 🔍 Index Commands

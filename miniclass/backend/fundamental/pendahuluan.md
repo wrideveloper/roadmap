@@ -44,6 +44,10 @@ PHP (Hypertext Preprocessor) adalah bahasa pemrograman open-source yang umumnya 
 
 SQL merupakan domain-specific language yang digunakan untuk mengolah data dalam **Relational Database Management System (RDBMS)**. Aplikasi RDBMS yang populer adalah MySQL.
 
+:::info 📝 Contoh berjalan
+Sepanjang fundamental ini, semua teknologi di atas dipraktikkan pada **satu studi kasus yang sama**: aplikasi absensi mahasiswa (`db_absensi` / `tb_absensi`) di [Database](/miniclass/backend/fundamental/database), [MySQL](/miniclass/backend/fundamental/mysql), [PHP](/miniclass/backend/fundamental/php), sampai [HTML](/miniclass/backend/fundamental/html).
+:::
+
 <div align="center">
 
 ![Web Technologies](/miniclass/backend/assets/jees.png)

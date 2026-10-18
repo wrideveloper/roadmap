@@ -506,3 +506,168 @@ Gunakan fungsi untuk kode yang sering digunakan agar lebih efisien dan mudah di-
         echo "Finally block";
     }
    ```
+
+:::tip 💡 Lanjut ke Praktik
+PHP di atas berjalan tanpa database. Tiga bagian di bawah menghubungkan PHP ke MySQL memakai studi kasus `tb_absensi` (database `db_absensi` dari [Database](/miniclass/backend/fundamental/database) dan [MySQL](/miniclass/backend/fundamental/mysql)).
+:::
+
+## 🔌 Koneksi Database (mysqli)
+
+PHP terhubung ke MySQL memakai fungsi bawaan `mysqli_connect()`. Buat satu file khusus (`koneksi.php`) agar bisa dipakai ulang via `include` (lihat bagian Include dan Require di atas):
+
+```php
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "db_absensi";
+
+$koneksi = mysqli_connect($host, $user, $pass, $db);
+
+if (!$koneksi) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
+?>
+```
+
+| Baris | Fungsi |
+|-------|--------|
+| `$host`, `$user`, `$pass`, `$db` | Kredensial server: sesuaikan dengan setup Laragon/XAMPP/Homebrew/Linux ([Instalasi & Setup](/miniclass/backend/fundamental/instalasi)) |
+| `mysqli_connect(...)` | Membuka koneksi, hasilnya disimpan di `$koneksi` |
+| `if (!$koneksi)` | Pengecekan error: program berhenti dengan pesan jika koneksi gagal |
+
+Contoh pakai: simpan data form ke `tb_absensi`:
+
+```php
+<?php
+include 'koneksi.php';
+
+if (isset($_POST['simpan'])) {
+    $nama    = $_POST['nama'];
+    $nim     = $_POST['nim'];
+    $status  = $_POST['status'];
+    $tanggal = $_POST['tanggal'];
+
+    $query = "INSERT INTO tb_absensi (nama, nim, status, tanggal)
+              VALUES ('$nama', '$nim', '$status', '$tanggal')";
+    mysqli_query($koneksi, $query);
+    header("Location: index.php");
+}
+?>
+```
+
+## 📥 Superglobals (`$_GET` / `$_POST`)
+
+**Superglobals** adalah variabel bawaan PHP yang selalu tersedia. Dua yang paling sering dipakai:
+
+- `$_POST['nama']`: data dari form `method="POST"` (tambah/edit data).
+- `$_GET['id']`: data dari URL (misalnya `edit.php?id=3`).
+
+Pola edit data: tangkap ID dari URL, tarik data lama untuk form, tulis data baru saat submit:
+
+```php
+<?php
+include 'koneksi.php';
+
+$id = $_GET['id']; // dari edit.php?id=3
+$data_query = mysqli_query($koneksi, "SELECT * FROM tb_absensi WHERE id = '$id'");
+$data = mysqli_fetch_assoc($data_query);
+
+if (isset($_POST['update'])) {
+    $nama    = $_POST['nama'];
+    $nim     = $_POST['nim'];
+    $status  = $_POST['status'];
+    $tanggal = $_POST['tanggal'];
+
+    $query = "UPDATE tb_absensi
+              SET nama='$nama', nim='$nim', status='$status', tanggal='$tanggal'
+              WHERE id='$id'";
+    mysqli_query($koneksi, $query);
+    header("Location: index.php");
+}
+?>
+```
+
+Dan pola hapus (`hapus.php?id=...`):
+
+```php
+<?php
+include 'koneksi.php';
+
+$id = $_GET['id'];
+mysqli_query($koneksi, "DELETE FROM tb_absensi WHERE id = '$id'");
+
+header("Location: index.php");
+?>
+```
+
+:::warning ⚠️ Jangan lupa `WHERE`!
+`UPDATE`/`DELETE` tanpa `WHERE id = ...` mengubah/menghapus **seluruh baris** tabel.
+:::
+
+## 🚀 Lanjutan: PDO & Prepared Statements
+
+Contoh mysqli di atas menggabungkan input langsung ke string query. Ini mudah dibaca untuk belajar, tapi rentan **SQL injection**. Untuk proyek nyata, pakai **PDO + prepared statements**:
+
+```php
+<?php
+$dsn = "mysql:host=localhost;dbname=db_absensi;charset=utf8mb4";
+
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+    $pdo = new PDO($dsn, "root", "", $options);
+} catch (PDOException $e) {
+    error_log("[Database Connection Error] " . $e->getMessage());
+    http_response_code(500);
+    exit;
+}
+```
+
+Query dengan parameter terpisah dari perintah SQL (aman by default):
+
+```php
+// READ satu data: :id tidak pernah ditafsirkan sebagai SQL
+$stmt = $pdo->prepare(
+    'SELECT id, nama, nim, status, tanggal
+     FROM tb_absensi
+     WHERE id = :id'
+);
+$stmt->execute(['id' => $id]);
+$data = $stmt->fetch();
+
+// CREATE: respons JSON + status code
+$stmt = $pdo->prepare(
+    'INSERT INTO tb_absensi (nama, nim, status, tanggal)
+     VALUES (:nama, :nim, :status, :tanggal)'
+);
+$stmt->execute($data);
+http_response_code(201);
+echo json_encode(['status' => 'success', 'id' => $pdo->lastInsertId()]);
+```
+
+| Aspek | mysqli (bagian di atas) | PDO (lanjutan) |
+|-------|------------------------|----------------|
+| Koneksi | `mysqli_connect(...)` → `$koneksi` | `new PDO($dsn, ...)` → `$pdo` |
+| Query | String digabung (`"... '$id'"`) | Prepared statements (`:id` + `execute()`) |
+| Keamanan | Rentan SQL injection jika tidak di-escape | Aman by default |
+| Respons | Halaman HTML + redirect | JSON + HTTP status code (200/201/400/404/422) |
+| Cocok untuk | Belajar alur CRUD pertama kali | API production |
+
+<div align="center">
+
+<img src="/miniclass/backend/assets/rest-api-illustration.webp" style="border-radius: 10px;" alt="ilustrasi-rest-api" width=600></img>
+
+*Pola API modern: HTTP method (GET/POST/PUT/DELETE) ↔ JSON. Uji endpoint-nya di Postman dengan header `Content-Type: application/json`:*
+
+<img src="/miniclass/backend/assets/postman_header.webp" style="border-radius: 10px;" alt="postman-headers" width=600></img>
+
+</div>
+
+:::tip 💡 Rekomendasi belajar
+Kuasai alur mysqli dulu agar paham konsepnya, lalu **pakai pola PDO untuk proyek nyata**. Validasi input tetap wajib di server (field wajib, panjang maks, `status` salah satu dari Hadir/Izin/Sakit/Alpa, `tanggal` format `YYYY-MM-DD`). Atribut `required` di browser saja tidak cukup.
+:::
