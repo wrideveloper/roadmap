@@ -36,6 +36,10 @@ export default [
         text: "Instalasi & Setup",
         link: "/miniclass/backend/fundamental/instalasi",
       },
+      {
+        text: "Studi Kasus: Mini Proyek Absensi",
+        link: "/miniclass/backend/fundamental/studi-kasus-absensi",
+      },
     ],
   },
   {
