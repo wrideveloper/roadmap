@@ -31,18 +31,11 @@ Seluruh pembahasan di roadmap ini ditujukan hanya untuk lingkungan belajar yang 
 
 ## Halaman Materi
 
+Saat ini hanya Chapter 1 yang tersedia. Materi Chapter 2–10 akan dipublikasikan secara bertahap.
+
 | Chapter | Halaman                                                                                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1       | [Introduksi, Etika, dan Metodologi](/miniclass/cyber/penetration-testing/minggu-01-introduksi-etika-dan-metodologi)                                   |
-| 2       | [Passive Reconnaissance dan OSINT](/miniclass/cyber/penetration-testing/minggu-02-passive-reconnaissance-dan-osint)                                   |
-| 3       | [Active Reconnaissance dan Network Scanning](/miniclass/cyber/penetration-testing/minggu-03-active-reconnaissance-dan-network-scanning)               |
-| 4       | [Enumeration dan Attack Surface Mapping](/miniclass/cyber/penetration-testing/minggu-04-enumeration-dan-attack-surface-mapping)                       |
-| 5       | [Vulnerability Assessment](/miniclass/cyber/penetration-testing/minggu-05-vulnerability-assessment)                                                   |
-| 6       | [Web Application Pentesting Basics](/miniclass/cyber/penetration-testing/minggu-06-web-application-pentesting-basics)                                 |
-| 7       | [Password Attacks dan Credential Abuse](/miniclass/cyber/penetration-testing/minggu-07-password-attacks-dan-credential-abuse)                         |
-| 8       | [Post-Exploitation dan Privilege Escalation Basics](/miniclass/cyber/penetration-testing/minggu-08-post-exploitation-dan-privilege-escalation)        |
-| 9       | [Evidence Handling, Risk Rating, dan Report Writing](/miniclass/cyber/penetration-testing/minggu-09-evidence-handling-risk-rating-dan-report-writing) |
-| 10      | [Mini Capstone](/miniclass/cyber/penetration-testing/minggu-10-mini-capstone)                                                                         |
 
 ## Halaman Pendukung
 
