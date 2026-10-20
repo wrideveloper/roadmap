@@ -147,5 +147,18 @@ export default [
       },
     ],
   },
-
+  {
+    text: "Advance: System Design",
+    collapsed: false,
+    items: [
+      {
+        text: "Mindset & Pengenalan System Design",
+        link: "/miniclass/backend/system-design/01-pengenalan-system-design",
+      },
+      {
+        text: "Core Building Blocks Arsitektur",
+        link: "/miniclass/backend/system-design/02-building-blocks-arsitektur",
+      },
+    ],
+  },
 ];
