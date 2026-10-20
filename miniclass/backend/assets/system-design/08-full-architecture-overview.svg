@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="860" height="400" rx="14" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5"/>
+
+  <text x="430" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">
+    Arsitektur Skalabilitas Backend Modern
+  </text>
+  <text x="430" y="58" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">
+    Gambaran besar integrasi Load Balancer, Stateless App, Caching, DB Replica, dan Asynchronous Queue
+  </text>
+
+  <!-- 1. Clients Layer -->
+  <g transform="translate(30, 90)" filter="url(#shadow)">
+    <rect width="100" height="230" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="50" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#38bdf8">CLIENTS</text>
+    
+    <g transform="translate(10, 45)" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#cbd5e1">
+      <rect x="0" y="0" width="80" height="45" rx="4" fill="#0f172a"/>
+      <text x="40" y="22" text-anchor="middle">Web</text>
+      <text x="40" y="36" text-anchor="middle" fill="#94a3b8">React/Vue</text>
+
+      <rect x="0" y="55" width="80" height="45" rx="4" fill="#0f172a"/>
+      <text x="40" y="77" text-anchor="middle">Mobile</text>
+      <text x="40" y="91" text-anchor="middle" fill="#94a3b8">Flutter/iOS</text>
+
+      <rect x="0" y="110" width="80" height="45" rx="4" fill="#0f172a"/>
+      <text x="40" y="132" text-anchor="middle">Public</text>
+      <text x="40" y="146" text-anchor="middle" fill="#94a3b8">3rd Party API</text>
+    </g>
+  </g>
+
+  <!-- Line to DNS/CDN -->
+  <line x1="130" y1="205" x2="165" y2="205" stroke="#38bdf8" stroke-width="1.5"/>
+  <polygon points="165,201 175,205 165,209" fill="#38bdf8"/>
+
+  <!-- 2. Gateway / CDN & Reverse Proxy -->
+  <g transform="translate(175, 90)" filter="url(#shadow)">
+    <rect width="130" height="230" rx="8" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="65" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f0f9ff">GATEWAY</text>
+
+    <g transform="translate(10, 45)" font-family="system-ui, -apple-system, sans-serif" font-size="10">
+      <rect x="0" y="0" width="110" height="45" rx="4" fill="#075985"/>
+      <text x="55" y="22" text-anchor="middle" fill="#f8fafc" font-weight="600">CDN &amp; DNS</text>
+      <text x="55" y="36" text-anchor="middle" fill="#bae6fd">Cloudflare (Edge)</text>
+
+      <rect x="0" y="55" width="110" height="45" rx="4" fill="#075985"/>
+      <text x="55" y="77" text-anchor="middle" fill="#f8fafc" font-weight="600">Rate Limiter</text>
+      <text x="55" y="91" text-anchor="middle" fill="#bae6fd">Cegah Spam/Bot</text>
+
+      <rect x="0" y="110" width="110" height="55" rx="4" fill="#075985"/>
+      <text x="55" y="130" text-anchor="middle" fill="#f8fafc" font-weight="600">Load Balancer</text>
+      <text x="55" y="145" text-anchor="middle" fill="#bae6fd">Nginx (Round Robin)</text>
+      <text x="55" y="157" text-anchor="middle" fill="#a7f3d0">SSL Termination</text>
+    </g>
+  </g>
+
+  <!-- Line to App Servers -->
+  <line x1="305" y1="205" x2="340" y2="205" stroke="#38bdf8" stroke-width="1.5"/>
+  <polygon points="340,201 350,205 340,209" fill="#38bdf8"/>
+
+  <!-- 3. App Servers (Stateless Cluster) -->
+  <g transform="translate(350, 90)" filter="url(#shadow)">
+    <rect width="140" height="230" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="70" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34d399">APP SERVERS</text>
+    <text x="70" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">(Stateless)</text>
+
+    <g transform="translate(10, 50)" font-family="system-ui, -apple-system, sans-serif" font-size="10">
+      <rect x="0" y="0" width="120" height="40" rx="4" fill="#0f172a" stroke="#10b981"/>
+      <text x="60" y="24" text-anchor="middle" fill="#f8fafc">Instance Node 1</text>
+
+      <rect x="0" y="50" width="120" height="40" rx="4" fill="#0f172a" stroke="#10b981"/>
+      <text x="60" y="74" text-anchor="middle" fill="#f8fafc">Instance Node 2</text>
+
+      <rect x="0" y="100" width="120" height="40" rx="4" fill="#0f172a" stroke="#10b981"/>
+      <text x="60" y="124" text-anchor="middle" fill="#f8fafc">Instance Node 3</text>
+    </g>
+    <text x="70" y="210" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">No session stored</text>
+  </g>
+
+  <!-- Connectors from App Servers to Backend Services -->
+  <!-- Top: To Cache -->
+  <path d="M 490 130 L 535 130" stroke="#10b981" stroke-width="1.5" fill="none"/>
+  <polygon points="535,126 545,130 535,134" fill="#10b981"/>
+
+  <!-- Mid: To Queue -->
+  <path d="M 490 205 L 535 205" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+  <polygon points="535,201 545,205 535,209" fill="#f59e0b"/>
+
+  <!-- Bot: To DB -->
+  <path d="M 490 270 L 535 270" stroke="#ef4444" stroke-width="1.5" fill="none"/>
+  <polygon points="535,266 545,270 535,274" fill="#ef4444"/>
+
+  <!-- 4. Caching & Queue Column -->
+  <!-- Redis Cache -->
+  <g transform="translate(545, 90)" filter="url(#shadow)">
+    <rect width="130" height="80" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="65" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#a7f3d0">REDIS CACHE</text>
+    <text x="65" y="42" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#cbd5e1">In-Memory RAM</text>
+    <text x="65" y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">Hot queries &amp; Session</text>
+  </g>
+
+  <!-- Message Queue -->
+  <g transform="translate(545, 185)" filter="url(#shadow)">
+    <rect width="130" height="60" rx="8" fill="#78350f" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="65" y="24" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fde68a">MESSAGE QUEUE</text>
+    <text x="65" y="44" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#fef3c7">RabbitMQ / Redis Queue</text>
+  </g>
+
+  <!-- Arrow Queue to Workers -->
+  <path d="M 675 215 L 700 215" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+  <polygon points="700,211 710,215 700,219" fill="#f59e0b"/>
+
+  <!-- Background Workers -->
+  <g transform="translate(710, 185)" filter="url(#shadow)">
+    <rect width="120" height="60" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="60" y="24" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#fde68a">WORKERS</text>
+    <text x="60" y="44" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#cbd5e1">PDF, Email, Async</text>
+  </g>
+
+  <!-- 5. Database Layer (Primary + Replicas) -->
+  <g transform="translate(545, 260)" filter="url(#shadow)">
+    <rect width="285" height="100" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="142" y="20" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fca5a5">DATABASE CLUSTER</text>
+    
+    <g transform="translate(10, 30)" font-family="system-ui, -apple-system, sans-serif" font-size="10">
+      <!-- Primary -->
+      <rect x="0" y="5" width="120" height="50" rx="4" fill="#0f172a" stroke="#ef4444"/>
+      <text x="60" y="25" text-anchor="middle" fill="#fca5a5" font-weight="600">Primary (Master)</text>
+      <text x="60" y="42" text-anchor="middle" fill="#94a3b8">Writes (INSERT/UPDATE)</text>
+
+      <!-- Sync line -->
+      <line x1="120" y1="30" x2="145" y2="30" stroke="#f59e0b" stroke-dasharray="2,2"/>
+
+      <!-- Replicas -->
+      <rect x="145" y="5" width="120" height="50" rx="4" fill="#0f172a" stroke="#10b981"/>
+      <text x="205" y="25" text-anchor="middle" fill="#a7f3d0" font-weight="600">Replicas (Slaves)</text>
+      <text x="205" y="42" text-anchor="middle" fill="#94a3b8">Reads (SELECT queries)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Summary -->
+  <text x="430" y="380" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">
+    Setiap komponen punya tanggung jawab spesifik (Separation of Concerns). Jika salah satu layer overload, bisa di-scale secara independen.
+  </text>
+</svg>

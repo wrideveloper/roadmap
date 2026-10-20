@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="860" height="380" rx="14" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5"/>
+
+  <text x="430" y="38" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">
+    Cache-Aside Pattern dengan Redis
+  </text>
+  <text x="430" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">
+    Simpan data panas di In-Memory Cache (RAM) untuk melindungi Database dari query berulang
+  </text>
+
+  <!-- Client -->
+  <g transform="translate(40, 130)" filter="url(#shadow)">
+    <rect width="130" height="130" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="65" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Client</text>
+    <text x="65" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Web / Mobile</text>
+    <text x="65" y="105" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#38bdf8">GET /articles/1</text>
+  </g>
+
+  <!-- Arrow Client <-> App Server -->
+  <g stroke="#38bdf8" stroke-width="1.5" fill="none">
+    <line x1="170" y1="180" x2="250" y2="180"/>
+    <polygon points="250,176 260,180 250,184" fill="#38bdf8"/>
+    <line x1="260" y1="210" x2="180" y2="210"/>
+    <polygon points="180,206 170,210 180,214" fill="#38bdf8"/>
+  </g>
+  <text x="215" y="172" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">1. Request</text>
+  <text x="215" y="226" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">Response</text>
+
+  <!-- App Server -->
+  <g transform="translate(260, 115)" filter="url(#shadow)">
+    <rect width="180" height="160" rx="10" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5"/>
+    <rect x="15" y="15" width="150" height="26" rx="6" fill="#334155"/>
+    <text x="90" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">
+      App Server
+    </text>
+    <text x="90" y="70" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Logika Aplikasi</text>
+    <text x="90" y="95" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">1. Cek Cache</text>
+    <text x="90" y="115" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">2. Jika miss, query DB</text>
+    <text x="90" y="135" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">3. Write to Cache</text>
+  </g>
+
+  <!-- Flow to Redis (Top Path) -->
+  <g stroke="#10b981" stroke-width="1.5" fill="none">
+    <path d="M 440 150 Q 520 110 590 110"/>
+    <polygon points="590,106 600,110 590,114" fill="#10b981"/>
+  </g>
+  <text x="520" y="115" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#34d399">
+    A. Cek Redis (~1-2 ms)
+  </text>
+
+  <!-- Redis Cache Box -->
+  <g transform="translate(600, 80)" filter="url(#shadow)">
+    <rect width="210" height="100" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <rect x="15" y="12" width="180" height="24" rx="4" fill="#064e3b"/>
+    <text x="105" y="28" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#a7f3d0">
+      REDIS (IN-MEMORY CACHE)
+    </text>
+    <text x="15" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">
+      • Cache Hit: Kembalikan data!
+    </text>
+    <text x="15" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">
+      • Super cepat (tersimpan di RAM)
+    </text>
+  </g>
+
+  <!-- Flow to Database (Bottom Path) -->
+  <g stroke="#f59e0b" stroke-width="1.5" fill="none">
+    <path d="M 440 240 Q 520 270 590 270"/>
+    <polygon points="590,266 600,270 590,274" fill="#f59e0b"/>
+  </g>
+  <text x="520" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#fbbf24">
+    B. Cache Miss: Query DB
+  </text>
+
+  <!-- Database Box -->
+  <g transform="translate(600, 220)" filter="url(#shadow)">
+    <rect width="210" height="100" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="15" y="12" width="180" height="24" rx="4" fill="#78350f"/>
+    <text x="105" y="28" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#fde68a">
+      DATABASE (DISK I/O)
+    </text>
+    <text x="15" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#cbd5e1">
+      • Latensi lebih lambat (~100-300ms)
+    </text>
+    <text x="15" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">
+      • Data disimpan permanen ke disk
+    </text>
+  </g>
+
+  <!-- Bottom Tip -->
+  <text x="430" y="350" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">
+    Ketika Cache Miss terjadi, App Server akan query DB sekali, menyimpannya di Redis dengan TTL (misal 1 jam), sehingga 99% request berikutnya langsung kena Cache Hit.
+  </text>
+</svg>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="860" height="380" rx="14" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5"/>
+
+  <text x="430" y="38" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">
+    Asynchronous Processing via Message Queue
+  </text>
+  <text x="430" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">
+    Jangan biarkan user menunggu berputar-putar untuk pekerjaan berat yang bisa dikerjakan di balik layar
+  </text>
+
+  <!-- Top Bad: Synchronous Flow -->
+  <g transform="translate(40, 90)">
+    <rect width="780" height="100" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="15" y="-10" width="160" height="20" rx="10" fill="#7f1d1d"/>
+    <text x="95" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#fca5a5">
+      SYNCHRONOUS (BURUK)
+    </text>
+
+    <!-- Steps -->
+    <g transform="translate(20, 25)" font-family="system-ui, -apple-system, sans-serif" font-size="11">
+      <!-- Step 1 -->
+      <rect x="0" y="10" width="120" height="45" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="60" y="30" text-anchor="middle" fill="#f8fafc" font-weight="600">User Checkout</text>
+      <text x="60" y="46" text-anchor="middle" fill="#94a3b8">Klik tombol</text>
+
+      <line x1="120" y1="32" x2="160" y2="32" stroke="#ef4444" stroke-width="1.5"/>
+      <polygon points="160,28 168,32 160,36" fill="#ef4444"/>
+
+      <!-- Step 2 -->
+      <rect x="170" y="10" width="130" height="45" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="235" y="30" text-anchor="middle" fill="#f8fafc" font-weight="600">Update Stock DB</text>
+      <text x="235" y="46" text-anchor="middle" fill="#fde68a">(0.2 detik)</text>
+
+      <line x1="300" y1="32" x2="340" y2="32" stroke="#ef4444" stroke-width="1.5"/>
+      <polygon points="340,28 348,32 340,36" fill="#ef4444"/>
+
+      <!-- Step 3 -->
+      <rect x="350" y="10" width="130" height="45" rx="6" fill="#0f172a" stroke="#ef4444"/>
+      <text x="415" y="30" text-anchor="middle" fill="#fca5a5" font-weight="600">Generate PDF</text>
+      <text x="415" y="46" text-anchor="middle" fill="#f87171">(3 detik berat)</text>
+
+      <line x1="480" y1="32" x2="520" y2="32" stroke="#ef4444" stroke-width="1.5"/>
+      <polygon points="520,28 528,32 520,36" fill="#ef4444"/>
+
+      <!-- Step 4 -->
+      <rect x="530" y="10" width="130" height="45" rx="6" fill="#0f172a" stroke="#ef4444"/>
+      <text x="595" y="30" text-anchor="middle" fill="#fca5a5" font-weight="600">Send Email SMTP</text>
+      <text x="595" y="46" text-anchor="middle" fill="#f87171">(2 detik lemot)</text>
+
+      <line x1="660" y1="32" x2="690" y2="32" stroke="#ef4444" stroke-width="1.5"/>
+      <polygon points="690,28 698,32 690,36" fill="#ef4444"/>
+
+      <circle cx="725" cy="32" r="16" fill="#7f1d1d"/>
+      <text x="725" y="37" text-anchor="middle" fill="#fca5a5" font-weight="700">5.2s</text>
+    </g>
+    <text x="390" y="90" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#f87171">
+      User harus menatap loading spinner 5+ detik! Jika SMTP email timeout, transaksi ikut dianggap gagal.
+    </text>
+  </g>
+
+  <!-- Bottom Good: Asynchronous Flow -->
+  <g transform="translate(40, 220)">
+    <rect width="780" height="135" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="15" y="-10" width="180" height="20" rx="10" fill="#064e3b"/>
+    <text x="105" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#a7f3d0">
+      ASYNCHRONOUS (REKOMENDASI)
+    </text>
+
+    <!-- App Flow -->
+    <g transform="translate(20, 20)" font-family="system-ui, -apple-system, sans-serif" font-size="11">
+      <!-- User Checkout -->
+      <rect x="0" y="10" width="115" height="42" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="57" y="30" text-anchor="middle" fill="#f8fafc" font-weight="600">User Checkout</text>
+      <text x="57" y="44" text-anchor="middle" fill="#94a3b8">Klik tombol</text>
+
+      <!-- Arrow to Server -->
+      <line x1="115" y1="31" x2="150" y2="31" stroke="#10b981" stroke-width="1.5"/>
+      <polygon points="150,27 158,31 150,35" fill="#10b981"/>
+
+      <!-- Web Server -->
+      <rect x="160" y="10" width="130" height="42" rx="6" fill="#0f172a" stroke="#10b981"/>
+      <text x="225" y="28" text-anchor="middle" fill="#f8fafc" font-weight="600">Web Server</text>
+      <text x="225" y="43" text-anchor="middle" fill="#a7f3d0">Push Job ke Queue</text>
+
+      <!-- Arrow Server back to User (Instant) -->
+      <path d="M 225 52 L 225 80 L 60 80 L 60 52" stroke="#10b981" stroke-width="1.5" fill="none"/>
+      <polygon points="56,55 60,47 64,55" fill="#10b981"/>
+      <text x="145" y="93" text-anchor="middle" fill="#34d399" font-weight="600">Respons: "Pesanan Diterima!" (100ms)</text>
+
+      <!-- Arrow Server to Queue -->
+      <line x1="290" y1="31" x2="340" y2="31" stroke="#f59e0b" stroke-width="1.5"/>
+      <polygon points="340,27 348,31 340,35" fill="#f59e0b"/>
+
+      <!-- Message Queue -->
+      <rect x="350" y="5" width="140" height="52" rx="6" fill="#78350f" stroke="#f59e0b"/>
+      <text x="420" y="26" text-anchor="middle" fill="#fde68a" font-weight="700">MESSAGE QUEUE</text>
+      <text x="420" y="44" text-anchor="middle" fill="#fef3c7">(RabbitMQ / Redis)</text>
+
+      <!-- Arrow Queue to Workers -->
+      <line x1="490" y1="31" x2="540" y2="31" stroke="#38bdf8" stroke-width="1.5"/>
+      <polygon points="540,27 548,31 540,35" fill="#38bdf8"/>
+
+      <!-- Background Workers -->
+      <rect x="550" y="5" width="190" height="85" rx="6" fill="#0f172a" stroke="#38bdf8"/>
+      <text x="645" y="24" text-anchor="middle" fill="#38bdf8" font-weight="700">BACKGROUND WORKERS</text>
+      <text x="560" y="46" fill="#cbd5e1">• Tarik tugas satu persatu</text>
+      <text x="560" y="64" fill="#cbd5e1">• Generate PDF di belakang layar</text>
+      <text x="560" y="82" fill="#cbd5e1">• Kirim Email dengan retry otomatis</text>
+    </g>
+  </g>
+</svg>

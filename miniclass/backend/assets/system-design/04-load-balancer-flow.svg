@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="860" height="380" rx="14" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5"/>
+
+  <text x="430" y="38" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">
+    Reverse Proxy &amp; Load Balancing Flow
+  </text>
+  <text x="430" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">
+    Membagi ribuan request ke beberapa server aplikasi secara merata dan aman
+  </text>
+
+  <!-- Clients -->
+  <g transform="translate(40, 110)" filter="url(#shadow)">
+    <rect width="140" height="180" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="70" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">CLIENTS</text>
+    
+    <g transform="translate(15, 55)" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">
+      <rect x="0" y="0" width="110" height="28" rx="4" fill="#0f172a"/>
+      <text x="55" y="18" text-anchor="middle" fill="#cbd5e1">Web Browser</text>
+
+      <rect x="0" y="38" width="110" height="28" rx="4" fill="#0f172a"/>
+      <text x="55" y="56" text-anchor="middle" fill="#cbd5e1">Mobile App</text>
+
+      <rect x="0" y="76" width="110" height="28" rx="4" fill="#0f172a"/>
+      <text x="55" y="94" text-anchor="middle" fill="#cbd5e1">Third-party API</text>
+    </g>
+  </g>
+
+  <!-- Arrow Client to LB -->
+  <g stroke="#38bdf8" stroke-width="2" fill="none">
+    <line x1="180" y1="200" x2="270" y2="200"/>
+    <polygon points="270,195 280,200 270,205" fill="#38bdf8"/>
+  </g>
+  <text x="230" y="190" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#bae6fd">
+    https://api.wri.id
+  </text>
+
+  <!-- Load Balancer -->
+  <g transform="translate(280, 95)" filter="url(#shadow)">
+    <rect width="230" height="210" rx="10" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2"/>
+    <text x="115" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#f0f9ff">
+      LOAD BALANCER
+    </text>
+    <text x="115" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#7dd3fc">
+      (Nginx / HAProxy / AWS ALB)
+    </text>
+
+    <!-- Functions inside LB -->
+    <g transform="translate(15, 75)" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#e0f2fe">
+      <rect x="0" y="0" width="200" height="26" rx="4" fill="#075985"/>
+      <text x="100" y="17" text-anchor="middle">SSL / TLS Termination</text>
+
+      <rect x="0" y="34" width="200" height="26" rx="4" fill="#075985"/>
+      <text x="100" y="51" text-anchor="middle">Health Check (Deteksi Server Mati)</text>
+
+      <rect x="0" y="68" width="200" height="26" rx="4" fill="#075985"/>
+      <text x="100" y="85" text-anchor="middle">Algoritma: Round Robin / Least Conn</text>
+
+      <rect x="0" y="102" width="200" height="26" rx="4" fill="#075985"/>
+      <text x="100" y="119" text-anchor="middle">Reverse Proxy: Sembunyikan IP Asli</text>
+    </g>
+  </g>
+
+  <!-- Arrows from LB to Servers -->
+  <g stroke="#38bdf8" stroke-width="1.5" fill="none">
+    <path d="M 510 150 L 590 125"/>
+    <polygon points="590,121 599,123 592,129" fill="#38bdf8"/>
+
+    <path d="M 510 200 L 590 200"/>
+    <polygon points="590,196 600,200 590,204" fill="#38bdf8"/>
+
+    <path d="M 510 250 L 590 275"/>
+    <polygon points="592,271 599,277 590,279" fill="#38bdf8"/>
+  </g>
+
+  <!-- App Servers Group -->
+  <g transform="translate(600, 95)" filter="url(#shadow)">
+    <!-- Server 1 -->
+    <rect x="0" y="0" width="210" height="58" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="15" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">App Server 1</text>
+    <text x="15" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Port :8001 | Healthy (33% load)</text>
+    <circle cx="190" cy="29" r="6" fill="#10b981"/>
+
+    <!-- Server 2 -->
+    <rect x="0" y="76" width="210" height="58" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="15" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">App Server 2</text>
+    <text x="15" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Port :8002 | Healthy (33% load)</text>
+    <circle cx="190" cy="105" r="6" fill="#10b981"/>
+
+    <!-- Server 3 -->
+    <rect x="0" y="152" width="210" height="58" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="15" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">App Server 3</text>
+    <text x="15" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Port :8003 | Healthy (34% load)</text>
+    <circle cx="190" cy="181" r="6" fill="#10b981"/>
+  </g>
+
+  <!-- Note -->
+  <text x="430" y="345" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">
+    Jika Server 2 tiba-tiba mati, Load Balancer otomatis mengalihkan traffic hanya ke Server 1 dan Server 3.
+  </text>
+</svg>

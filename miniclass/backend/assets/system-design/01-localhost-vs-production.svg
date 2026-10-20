@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="380" rx="14" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Main Title -->
+  <text x="430" y="38" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">
+    Localhost Mindset vs Production Reality
+  </text>
+  <text x="430" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">
+    Kenapa kodingan yang lancar di laptop dev bisa mendadak tumbang saat dipakai ribuan pengguna?
+  </text>
+
+  <!-- Left Card: Localhost -->
+  <g transform="translate(40, 85)" filter="url(#shadow)">
+    <rect width="360" height="260" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    
+    <rect x="20" y="18" width="130" height="24" rx="12" fill="#064e3b"/>
+    <text x="85" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34d399">
+      LOCAL ENVIRONMENT
+    </text>
+
+    <text x="20" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#f8fafc">
+      "It Works on My Machine!"
+    </text>
+
+    <!-- Details -->
+    <g transform="translate(20, 95)" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#cbd5e1">
+      <circle cx="6" cy="6" r="4" fill="#10b981"/>
+      <text x="20" y="10">User: 1 orang (Developer sendiri)</text>
+
+      <circle cx="6" cy="38" r="4" fill="#10b981"/>
+      <text x="20" y="42">Traffic: 1 - 2 request / detik</text>
+
+      <circle cx="6" cy="70" r="4" fill="#10b981"/>
+      <text x="20" y="74">Latency Jaringan: ~0 ms (Loopback)</text>
+
+      <circle cx="6" cy="102" r="4" fill="#10b981"/>
+      <text x="20" y="106">Resource: CPU &amp; RAM laptop nganggur</text>
+    </g>
+
+    <rect x="20" y="215" width="320" height="30" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="180" y="235" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34d399">
+      Status: Response 200 OK (2ms)
+    </text>
+  </g>
+
+  <!-- VS Badge -->
+  <circle cx="430" cy="215" r="22" fill="#334155" stroke="#475569" stroke-width="2"/>
+  <text x="430" y="221" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#f8fafc">
+    VS
+  </text>
+
+  <!-- Right Card: Production Crash -->
+  <g transform="translate(460, 85)" filter="url(#shadow)">
+    <rect width="360" height="260" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+    
+    <rect x="20" y="18" width="140" height="24" rx="12" fill="#7f1d1d"/>
+    <text x="90" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#f87171">
+      PRODUCTION REALITY
+    </text>
+
+    <text x="20" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#f8fafc">
+      War Tiket / Flash Sale
+    </text>
+
+    <!-- Details -->
+    <g transform="translate(20, 95)" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#cbd5e1">
+      <circle cx="6" cy="6" r="4" fill="#ef4444"/>
+      <text x="20" y="10">User: 5.000+ serbuan serentak</text>
+
+      <circle cx="6" cy="38" r="4" fill="#ef4444"/>
+      <text x="20" y="42">Traffic: 2.000+ request / detik</text>
+
+      <circle cx="6" cy="70" r="4" fill="#ef4444"/>
+      <text x="20" y="74">DB Connection: Pool habis / lock</text>
+
+      <circle cx="6" cy="102" r="4" fill="#ef4444"/>
+      <text x="20" y="106">Resource: CPU 100%, RAM OOM Crash</text>
+    </g>
+
+    <rect x="20" y="215" width="320" height="30" rx="6" fill="#0f172a" stroke="#7f1d1d"/>
+    <text x="180" y="235" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#f87171">
+      Status: 504 Gateway Timeout / Crash
+    </text>
+  </g>
+</svg>
