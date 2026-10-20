@@ -154,10 +154,10 @@ Sebagai penutup modul Advance Backend ini, ujilah pemahaman arsitekturmu dengan 
 
 ### Deskripsi Masalah
 Kampus menyelenggarakan PEMIRA serentak untuk memilih pimpinan organisasi mahasiswa. Sistem ini bersifat **Multi-Tenant** karena digunakan bersama oleh berbagai entitas organisasi kampus dengan cakupan hak pilih yang berbeda:
-1. **Tenant Kampus (Global)**: Pemilihan Presiden BEM dan perwakilan DPM — dapat dilihat dan dipilih oleh **seluruh mahasiswa aktif lintas jurusan** (~15.000 mahasiswa).
-2. **Tenant Jurusan (Spesifik)**: Pemilihan Ketua Himpunan Mahasiswa Jurusan (HMJ) — seperti HMTI (Teknologi Informasi), HMM (Mesin), HME (Elektro), dll. — yang **hanya boleh diakses dan dipilih oleh mahasiswa dari jurusan terkait**.
+1. **Tenant Kampus (Global)**: Pemilihan Presiden BEM dan perwakilan DPM. Pemilihan ini bisa diikuti oleh **seluruh mahasiswa aktif lintas jurusan** (sekitar 15.000 mahasiswa).
+2. **Tenant Jurusan (Spesifik)**: Pemilihan Ketua Himpunan Mahasiswa Jurusan (HMJ) seperti HMTI (Teknologi Informasi), HMM (Mesin), atau HME (Elektro). Kategori ini **hanya boleh diakses dan dipilih oleh mahasiswa dari jurusan terkait**.
 
-Sistem dibuka serentak dari pukul 08.00 hingga 15.00, dengan lonjakan traffic masif di jam-jam tertentu (misalnya pukul 12.00 saat jam istirahat kuliah).
+Sistem dibuka serentak dari pukul 08.00 sampai 15.00, dengan lonjakan traffic paling padat di jam istirahat kuliah (pukul 12.00).
 
 ---
 
