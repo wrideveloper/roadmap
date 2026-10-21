@@ -1,6 +1,6 @@
 # Mengatur Komponen Sprite Renderer
 
-![Enter image alt description](../../assets/M-3(2026)/YS3_Image_1.png)
+![Enter image alt description](../../../assets/M-3(2026)/YS3_Image_1.png)
 
 # Perbedaan Pada Sprite Pixel dan non-Pixel
 
@@ -22,7 +22,7 @@ Unity secara default menganggap semua gambar yang masuk adalah gambar resolusi t
 
 # Slicing dan Nine-Slice
 
-![Enter image alt description](../../assets/M-3(2026)/Utb_Image_3.png)
+![Enter image alt description](../../../assets/M-3(2026)/Utb_Image_3.png)
 
 Dalam pembuatan game (terutama 2D atau pixel art), gambar yang dimasukkan ke dalam mesin game (seperti Unity) sering kali tidak dimasukkan satu per satu, melainkan digabung dalam satu gambar besar. Inilah yang disebut **Sprite Sheet**.
 
@@ -60,7 +60,7 @@ Bayangkan sebuah gambar kotak dialog yang memiliki bingkai hiasan cantik di keem
 
 # Aturan Khusus Pixel Art
 
-![Enter image alt description](../../assets/M-3(2026)/kgi_Image_4.png)
+![Enter image alt description](../../../assets/M-3(2026)/kgi_Image_4.png)
 
 ### **Tidak disarankan menggunakan Transform.Scale di Pixel Art, kenapa?**
 
@@ -78,7 +78,7 @@ Oleh karena itu, cara yang benar untuk membuat objek pixel art lebih besar/kecil
 
 # Tilemaps
 
-![Enter image alt description](../../assets/M-3(2026)/jBg_Image_5.png)
+![Enter image alt description](../../../assets/M-3(2026)/jBg_Image_5.png)
 
 Bayangkan Tilemap seperti **bermain Lego** atau **menggunakan stempel**. Daripada kamu menaruh gambar tanah, rumput, dan dinding satu per satu secara manual ke dalam layar, kamu membuat sebuah "Buku Stempel" (Tile Palette). Nanti, kamu tinggal memilih gambar tanah di buku itu, lalu men-stempelnya berkali-kali ke layar (Kanvas/Tilemap) untuk membentuk sebuah dunia.
 
@@ -134,69 +134,69 @@ Ini bagian yang paling menyenangkan:
 
 1. Buat scene baru di Unity kamu, caranya ? klik kanan di folder scenes -> create -> scenes
 
-![Enter image alt description](../../assets/M-3(2026)/lk4_Image_6.png)
+![Enter image alt description](../../../assets/M-3(2026)/lk4_Image_6.png)
 
 2. Lalu kita butuh aset untuk mulai implementasi UI. Ini adalah resource utama kalian. Export jadi PNG. Untuk ukuran button biasanya aku pake 64 x 64, dan ukuran icon 32 x 32.
 
-![Enter image alt description](../../assets/M-3(2026)/Sgm_Image_7.png)
+![Enter image alt description](../../../assets/M-3(2026)/Sgm_Image_7.png)
 
 3. Back to unity. Buat folder baru di unity. Biar apa? Biar rapi cuy
 
-![Enter image alt description](../../assets/M-3(2026)/Kut_Image_8.png)
+![Enter image alt description](../../../assets/M-3(2026)/Kut_Image_8.png)
 
-![Enter image alt description](../../assets/M-3(2026)/22o_Image_9.png)
+![Enter image alt description](../../../assets/M-3(2026)/22o_Image_9.png)
 
 4. Dah masukin asset UI kalian di folder UI. Jadikan single karena mereka sendirian. Bukan animasi
 
-![Enter image alt description](../../assets/M-3(2026)/4Rb_Image_10.png)
+![Enter image alt description](../../../assets/M-3(2026)/4Rb_Image_10.png)
 
 5. Lalu untuk button kita akan melakukan slicing. Caranya klik button
 
-![Enter image alt description](../../assets/M-3(2026)/sm0_Image_11.png)
+![Enter image alt description](../../../assets/M-3(2026)/sm0_Image_11.png)
 
 6. Terus di inspector tekan sprite editor
 
-![Enter image alt description](../../assets/M-3(2026)/XVC_Image_12.png)
+![Enter image alt description](../../../assets/M-3(2026)/XVC_Image_12.png)
 
 7. Nanti muncul seperti ini
 
-![Enter image alt description](../../assets/M-3(2026)/28s_Image_13.png)
+![Enter image alt description](../../../assets/M-3(2026)/28s_Image_13.png)
 
 8. Border nya set seperti ini ½ dari tinggi / panjang PNG
 
-![Enter image alt description](../../assets/M-3(2026)/HMs_Image_14.png)
+![Enter image alt description](../../../assets/M-3(2026)/HMs_Image_14.png)
 
 9. Kalo sudah pencet apply
 
-![Enter image alt description](../../assets/M-3(2026)/1Zj_Image_15.png)
+![Enter image alt description](../../../assets/M-3(2026)/1Zj_Image_15.png)
 
 10. Oke sekarang buat game object baru untuk wadah kita menata UI. Klik kanan di scene -> UI (Canvas) -> Canvas
 
-![Enter image alt description](../../assets/M-3(2026)/tMQ_Image_16.png)
+![Enter image alt description](../../../assets/M-3(2026)/tMQ_Image_16.png)
 
 11. Setelah itu akan muncul Canvas
 
-![Enter image alt description](../../assets/M-3(2026)/WeQ_Image_17.png)
+![Enter image alt description](../../../assets/M-3(2026)/WeQ_Image_17.png)
 
 12. Lihat di inspector ganti scale mode menjadi scale with screen size dan ubah reference solution nya menjadi 1920 x 1080
 
-![Enter image alt description](../../assets/M-3(2026)/S3c_Image_18.png)
+![Enter image alt description](../../../assets/M-3(2026)/S3c_Image_18.png)
 
-![Enter image alt description](../../assets/M-3(2026)/VhU_Image_19.png)
+![Enter image alt description](../../../assets/M-3(2026)/VhU_Image_19.png)
 
 13. Di dalam canvas_template buat empty game object bernama container
 
-![Enter image alt description](../../assets/M-3(2026)/D6D_Image_20.png)
+![Enter image alt description](../../../assets/M-3(2026)/D6D_Image_20.png)
 
 14. Lihat lagi di inspector ubah anchor preset nya menjadi stretch
 
 Tips : biar langsung berubah tekan shift + alt
 
-![Enter image alt description](../../assets/M-3(2026)/YmW_Image_21.png)
+![Enter image alt description](../../../assets/M-3(2026)/YmW_Image_21.png)
 
 15. Boleh ditambahkan padding dengan edit Left Right Top Bottom di container
 
-![Enter image alt description](../../assets/M-3(2026)/yyd_Image_22.png)
+![Enter image alt description](../../../assets/M-3(2026)/yyd_Image_22.png)
 
 ## Komponen Minimal
 
@@ -212,85 +212,85 @@ Kalo ga pake kita harus stretch manual cuy
 
 2. Horizontal layout group ya sesuai namanya nata object biar otomatis horizontal gausah nata2 in satu2 
 
-![Enter image alt description](../../assets/M-3(2026)/0C2_Image_23.png)
+![Enter image alt description](../../../assets/M-3(2026)/0C2_Image_23.png)
 
 3. Vertical layout group nata object otomatis horizontal
 
-![Enter image alt description](../../assets/M-3(2026)/19i_Image_24.png)
+![Enter image alt description](../../../assets/M-3(2026)/19i_Image_24.png)
 
 ## Menata Time
 
 1. Duplikat canvas template dan rename jadi canvas_main_menu
 
-![Enter image alt description](../../assets/M-3(2026)/qdO_Image_25.png)
+![Enter image alt description](../../../assets/M-3(2026)/qdO_Image_25.png)
 
 2. Di dalam container buat canvas (ui) -> button
 
-![Enter image alt description](../../assets/M-3(2026)/WEH_Image_26.png)
+![Enter image alt description](../../../assets/M-3(2026)/WEH_Image_26.png)
 
 3. Di inspector ganti ke sprite button yang kita punya
 
-![Enter image alt description](../../assets/M-3(2026)/Ef3_Image_27.png)
+![Enter image alt description](../../../assets/M-3(2026)/Ef3_Image_27.png)
 
 4. Nah button kita akan terlihat seperti ini
 
-![Enter image alt description](../../assets/M-3(2026)/B24_Image_28.png)
+![Enter image alt description](../../../assets/M-3(2026)/B24_Image_28.png)
 
 5. Untuk mengganti teks klik teks pada hirarki button_play
 
-![Enter image alt description](../../assets/M-3(2026)/z82_Image_29.png)
+![Enter image alt description](../../../assets/M-3(2026)/z82_Image_29.png)
 
 6. Lalu ganti teks nya , kalian juga bisa mengatur besar kecil teks, dll
 
-![Enter image alt description](../../assets/M-3(2026)/1JI_Image_30.png)
+![Enter image alt description](../../../assets/M-3(2026)/1JI_Image_30.png)
 
 7. Untuk mengganti warna klik button_play dan mengganti warna nya di color
 
-![Enter image alt description](../../assets/M-3(2026)/jt6_Image_31.png)
+![Enter image alt description](../../../assets/M-3(2026)/jt6_Image_31.png)
 
 8. Tadaa button nya sumdah
 
-![Enter image alt description](../../assets/M-3(2026)/zbR_Image_32.png)
+![Enter image alt description](../../../assets/M-3(2026)/zbR_Image_32.png)
 
 **Kita lanjut membuat button setting di bawahnya play. ****Ingat tadi kita punya component vertical layout group.**
 
 9. Pertama tama kita buat parent dulu di button_play , namain dengan button_grid
 
-![Enter image alt description](../../assets/M-3(2026)/i8T_Image_33.png)
+![Enter image alt description](../../../assets/M-3(2026)/i8T_Image_33.png)
 
 10. Di button_grid tambahkan component vertical alyout group uncheck semuanya
 
-![Enter image alt description](../../assets/M-3(2026)/sdK_Image_34.png)
+![Enter image alt description](../../../assets/M-3(2026)/sdK_Image_34.png)
 
 11. Tambahkan juga content size fitter dan ubah menjadi preferred size
 
-![Enter image alt description](../../assets/M-3(2026)/RG1_Image_35.png)
+![Enter image alt description](../../../assets/M-3(2026)/RG1_Image_35.png)
 
 12. Lalu yaudah tinggal di copy aja
 
-![Enter image alt description](../../assets/M-3(2026)/Drk_Image_37.png)
+![Enter image alt description](../../../assets/M-3(2026)/Drk_Image_37.png)
 
 13. Nah coba atur agar jadi seperti ini
 
-![Enter image alt description](../../assets/M-3(2026)/eRX_Image_39.png)
+![Enter image alt description](../../../assets/M-3(2026)/eRX_Image_39.png)
 
 ## Sambungkan ke Scene GamePlay
 
 1. Add scene UI dan game play. Drag scene gameplay ke hierarchy
 
-![Enter image alt description](../../assets/M-3(2026)/2AF_Image_40.png)
+![Enter image alt description](../../../assets/M-3(2026)/2AF_Image_40.png)
 
 2. FIle -. Build profile -> scene list -> add open scene
 
-![Enter image alt description](../../assets/M-3(2026)/UQf_Image_42.png)
+![Enter image alt description](../../../assets/M-3(2026)/UQf_Image_42.png)
 
 3. Create empty game dan namai dengan game manager ini kaya folder gitu , semua game manager taruh situ
 
-![Enter image alt description](../../assets/M-3(2026)/f9m_Image_43.png)
+![Enter image alt description](../../../assets/M-3(2026)/f9m_Image_43.png)
 
 4. Crate empty di dalam game manager namai dengan button_manager atau terserahlah dan new script
 
-![Enter image alt description](../../assets/M-3(2026)/mXQ_Image_45.png)
+![Enter image alt description](../../../assets/M-3(2026)/mXQ_Image_45.png)
 
 5. Nih script buat button play
 
@@ -308,16 +308,16 @@ public class buttonManager : MonoBehaviour
 ```
 6. Oke sekarang ke button_play lagi lalu tambah on clik
 
-![Enter image alt description](../../assets/M-3(2026)/p3d_Image_46.png)
+![Enter image alt description](../../../assets/M-3(2026)/p3d_Image_46.png)
 
-![Enter image alt description](../../assets/M-3(2026)/Sj3_Image_47.png)
+![Enter image alt description](../../../assets/M-3(2026)/Sj3_Image_47.png)
 
 7. Drag game object button manager ke none (object)
 
-![Enter image alt description](../../assets/M-3(2026)/YRw_Image_48.png)
+![Enter image alt description](../../../assets/M-3(2026)/YRw_Image_48.png)
 
 8. Lalu buttonmanager -> play
 
-![Enter image alt description](../../assets/M-3(2026)/vSF_Image_49.png)
+![Enter image alt description](../../../assets/M-3(2026)/vSF_Image_49.png)
 
 # 

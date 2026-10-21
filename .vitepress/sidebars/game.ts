@@ -5,16 +5,8 @@ export default [
     collapsed: false,
     items: [
       {
-        text: "Game Development,Industri, dan One Page GDD",
-        link: "/miniclass/game/2026/industri-game-dev-dan-one-page-gdd/M-1-industri-game-dev-dan-one-page-gdd.md",
-      },
-      {
-        text: "Pengenalan Unity",
-        link: "/miniclass/game/2026/pengenalan-unity/M-2-pengenalan-unity.md",
-      },
-      {
-        text: "Mengatur Asset 2D dalam Game",
-        link: "/miniclass/game/2026/mengatur-asset-2d-dalam-game/M-3-mengatur-asset-2d-dalam-game.md",
+        text: "Minggu 1 — Orientasi dan Ekspektasi",
+        link: "/miniclass/game/",
       },
     ],
   },
@@ -22,12 +14,30 @@ export default [
     text: "Archive",
     items: [
       {
+        text: "2026",
+        collapsed: true,
+        items: [
+          {
+            text: "Industri Game Dev dan One Page GDD",
+            link: "/miniclass/game/archive/2026/industri-game-dev-dan-one-page-gdd/M-1-industri-game-dev-dan-one-page-gdd.md",
+          },
+          {
+            text: "Pengenalan Unity",
+            link: "/miniclass/game/archive/2026/pengenalan-unity/M-2-pengenalan-unity.md",
+          },
+          {
+            text: "Mengatur Asset 2D dalam Game",
+            link: "/miniclass/game/archive/2026/mengatur-asset-2d-dalam-game/M-3-mengatur-asset-2d-dalam-game.md",
+          },
+        ],
+      },
+      {
         text: "2025",
         collapsed: true,
         items: [
           {
             text: "selamat datang di kelas game development",
-            link: "miniclass/game/archive/2025/M-1.md",
+            link: "/miniclass/game/archive/2025/M-1.md",
           },
           {
             text: "Game Proggramming",
@@ -95,19 +105,19 @@ export default [
             items: [
               {
                 text: "Penjelasan Unity",
-                link: "/miniclass/game/side-stream/pengenalan-unity/penjelasan-unity.md",
+                link: "/miniclass/game/archive/2024/pengenalan-unity/penjelasan-unity.md",
               },
               {
                 text: "Pengenalan Interface Unity",
-                link: "/miniclass/game/side-stream/pengenalan-unity/pengenalan-interface-unity.md",
+                link: "/miniclass/game/archive/2024/pengenalan-unity/pengenalan-interface-unity.md",
               },
               {
                 text: "Game Object dan Component",
-                link: "/miniclass/game/side-stream/pengenalan-unity/game-object-component.md",
+                link: "/miniclass/game/archive/2024/pengenalan-unity/game-object-component.md",
               },
               {
                 text: "2D Physics",
-                link: "/miniclass/game/side-stream/pengenalan-unity/physic2d.md",
+                link: "/miniclass/game/archive/2024/pengenalan-unity/physic2d.md",
               },
             ],
           },
@@ -117,23 +127,23 @@ export default [
             items: [
               {
                 text: "Pengenalan C#",
-                link: "/miniclass/game/side-stream/pengenalan-csharp/pengenalan-csharp.md",
+                link: "/miniclass/game/archive/2024/pengenalan-csharp/pengenalan-csharp.md",
               },
               {
                 text: "Fungsi",
-                link: "/miniclass/game/side-stream/pengenalan-csharp/fungsi.md",
+                link: "/miniclass/game/archive/2024/pengenalan-csharp/fungsi.md",
               },
               {
                 text: "Constructor",
-                link: "/miniclass/game/side-stream/pengenalan-csharp/constructor.md",
+                link: "/miniclass/game/archive/2024/pengenalan-csharp/constructor.md",
               },
               {
                 text: "Getter dan Setter",
-                link: "/miniclass/game/side-stream/pengenalan-csharp/getter-dan-setter.md",
+                link: "/miniclass/game/archive/2024/pengenalan-csharp/getter-dan-setter.md",
               },
               {
                 text: "Inheritance",
-                link: "/miniclass/game/side-stream/pengenalan-csharp/inheritance.md",
+                link: "/miniclass/game/archive/2024/pengenalan-csharp/inheritance.md",
               },
             ],
           },

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 384" width="720" height="384" role="img" aria-labelledby="pasar-game-indonesia-title pasar-game-indonesia-desc">
+  <title id="pasar-game-indonesia-title">Pasar game Indonesia dan pangsa pengembang lokal</title>
+  <desc id="pasar-game-indonesia-desc">Empat game yang paling sering dimainkan di Indonesia, dan batang yang menunjukkan pengembang lokal hanya meraih 0,5 persen pasar domestik.</desc>
+  <rect width="720" height="384" fill="#f5f5f5"/>
+<text x="24" y="26" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" font-weight="500" letter-spacing="0.16em" fill="#5a6580">POTRET DATA · OKTOBER 2026</text>
+<text x="24" y="52" font-family="'Instrument Serif', 'Liberation Serif', Georgia, serif" font-size="22" fill="#2d3142">Yang dimainkan orang Indonesia</text>
+<text x="24" y="72" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="10" fill="#4f5d75">Survei APJII 2026 · 8.700 responden · 38 provinsi</text>
+<line x1="196.0" y1="94" x2="196.0" y2="254" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+<text x="196.0" y="268" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#5a6580">0%</text>
+<line x1="307.6" y1="94" x2="307.6" y2="254" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+<text x="307.6" y="268" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#5a6580">10%</text>
+<line x1="419.2" y1="94" x2="419.2" y2="254" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+<text x="419.2" y="268" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#5a6580">20%</text>
+<line x1="530.8" y1="94" x2="530.8" y2="254" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+<text x="530.8" y="268" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#5a6580">30%</text>
+<line x1="642.4" y1="94" x2="642.4" y2="254" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+<text x="642.4" y="268" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#5a6580">40%</text>
+<text x="184" y="123" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" fill="#2d3142" text-anchor="end">Mobile Legends: Bang Bang</text>
+<rect x="196" y="104" width="452.0" height="26" rx="2" fill="#bf4520"/>
+<text x="656.0" y="122" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" fill="#4f5d75">40.5%</text>
+<text x="184" y="163" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" fill="#2d3142" text-anchor="end">Free Fire</text>
+<rect x="196" y="144" width="270.1" height="26" rx="2" fill="#c9cfd8"/>
+<text x="474.1" y="162" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" fill="#4f5d75">24.2%</text>
+<text x="184" y="203" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" fill="#2d3142" text-anchor="end">Roblox</text>
+<rect x="196" y="184" width="126.1" height="26" rx="2" fill="#c9cfd8"/>
+<text x="330.1" y="202" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" fill="#4f5d75">11.3%</text>
+<text x="184" y="243" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" fill="#2d3142" text-anchor="end">PUBG Mobile</text>
+<rect x="196" y="224" width="103.8" height="26" rx="2" fill="#c9cfd8"/>
+<text x="307.8" y="242" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" fill="#4f5d75">9.3%</text>
+<line x1="24" y1="286" x2="696" y2="286" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+<text x="24" y="304" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" fill="#5a6580">PANGSA PASAR DOMESTIK PENGEMBANG LOKAL · ESTIMASI 2025</text>
+<rect x="24" y="314" width="672" height="22" rx="2" fill="#ebecec"/>
+<rect x="24" y="314" width="4" height="22" fill="#bf4520"/>
+<text x="38" y="330" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="11" font-weight="500" fill="#bf4520">0,5%</text>
+<text x="24" y="362" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" fill="#5a6580">Sumber: APJII 2026; Agate 2025. Angka adalah potret, bukan angka tetap.</text>
+</svg>

@@ -4,3 +4,25 @@
     --vp-c-brand-3: var(--vp-c-yellow-3);
     --vp-c-brand-soft: var(--vp-c-yellow-soft);
 }
+
+/* Gambar materi: beri sudut dan garis tipis agar gambar berlatarbelakang
+   terang tetap terlihat sebagai kartu saat mode gelap aktif. */
+.vp-doc img {
+    border-radius: 8px;
+}
+
+html.dark .vp-doc img {
+    outline: 1px solid var(--vp-c-divider);
+    outline-offset: -1px;
+}
+
+/* Diagram materi minggu 1: di layar sempit, biarkan bisa digeser
+   horizontal daripada mengecil sampai teksnya tidak terbaca. */
+.vp-doc p:has(> img[src*="m1-"]) {
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.vp-doc p:has(> img[src*="m1-"]) > img {
+    min-width: 620px;
+}

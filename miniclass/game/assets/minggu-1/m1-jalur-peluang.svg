@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" width="720" height="240" role="img" aria-labelledby="jalur-peluang-title jalur-peluang-desc">
+  <title id="jalur-peluang-title">Lima tahap jalur peluang dari artefak sampai industri</title>
+  <desc id="jalur-peluang-desc">Alur lima kotak: artefak, lomba kampus, game jam, inkubasi, lalu industri.</desc>
+  <rect width="720" height="240" fill="#f5f5f5"/>
+<text x="24" y="26" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" font-weight="500" letter-spacing="0.16em" fill="#5a6580">JALUR PELUANG</text>
+<text x="24" y="52" font-family="'Instrument Serif', 'Liberation Serif', Georgia, serif" font-size="22" fill="#2d3142">Dari satu artefak ke panggung lebih besar</text>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker></defs>
+<line x1="147" y1="123.0" x2="155" y2="123.0" stroke="#4f5d75" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="279" y1="123.0" x2="287" y2="123.0" stroke="#4f5d75" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="411" y1="123.0" x2="419" y2="123.0" stroke="#4f5d75" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="543" y1="123.0" x2="551" y2="123.0" stroke="#4f5d75" stroke-width="1" marker-end="url(#arrow)"/>
+<rect x="24" y="86" width="122" height="74" rx="6" fill="#f5f5f5"/>
+<rect x="24" y="86" width="122" height="74" rx="6" fill="#f1e7e4" stroke="#bf4520" stroke-width="1"/>
+<text x="85.0" y="118" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#2d3142">Artefak</text>
+<text x="85.0" y="136" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#4f5d75">satu hasil nyata</text>
+<rect x="156" y="86" width="122" height="74" rx="6" fill="#f5f5f5"/>
+<rect x="156" y="86" width="122" height="74" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+<text x="217.0" y="118" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#2d3142">Lomba kampus</text>
+<text x="217.0" y="136" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#4f5d75">GEMASTIK, KMIPN</text>
+<rect x="288" y="86" width="122" height="74" rx="6" fill="#f5f5f5"/>
+<rect x="288" y="86" width="122" height="74" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+<text x="349.0" y="118" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#2d3142">Game jam</text>
+<text x="349.0" y="136" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#4f5d75">48–72 jam</text>
+<rect x="420" y="86" width="122" height="74" rx="6" fill="#f5f5f5"/>
+<rect x="420" y="86" width="122" height="74" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+<text x="481.0" y="118" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#2d3142">Inkubasi</text>
+<text x="481.0" y="136" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#4f5d75">Gameseed</text>
+<rect x="552" y="86" width="122" height="74" rx="6" fill="#f5f5f5"/>
+<rect x="552" y="86" width="122" height="74" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+<text x="613.0" y="118" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#2d3142">Industri</text>
+<text x="613.0" y="136" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" text-anchor="middle" fill="#4f5d75">studio, IGDX</text>
+<line x1="24" y1="186" x2="696" y2="186" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+<text x="24" y="204" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" fill="#5a6580">Tidak harus melewati semuanya. Satu artefak selesai cukup untuk tahap pertama.</text>
+<text x="24" y="218" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" fill="#5a6580">Nama program berganti tiap tahun; polanya tidak.</text>
+</svg>
