@@ -73,7 +73,13 @@ Kenapa bisa begitu? Ada tiga alasan yang sering muncul.
 | Distribusi  | Menjangkau pasar global butuh pemasaran, lokalisasi, dan kualitas produksi      | Hal ini tidak selalu diajarkan di kampus                                        |
 
 
-Namun, ada juga karya Indonesia yang berhasil. *A Space for the Unbound* (Mojiken Studio, 2023) memenangkan kategori Best Storytelling di SEA Game Awards dan masuk nominasi Games for Impact di The Game Awards 2023. Ceritanya berlatar kota kecil di Indonesia pada tahun 1990-an. *Coffee Talk* (Toge Productions, 2020) mencatat pendapatan kotor sekitar Rp7,6 miliar pada Februari 2020. *DreadOut* (Digital Happiness, 2014) menembus Steam dan kemudian diadaptasi menjadi film.
+Namun, ada juga karya Indonesia yang berhasil.
+
+![Tiga kartu karya: Coffee Talk, A Space for the Unbound, dan DreadOut](./assets/minggu-1/m1-karya-indonesia.png)
+
+- **[Coffee Talk](https://togeproductions.com/games/coffee-talk/)** (Toge Productions, 2020) mencatat pendapatan kotor sekitar Rp7,6 miliar pada Februari 2020. Visual novel tentang barista yang mendengarkan pelanggannya.
+- **[A Space for the Unbound](https://togeproductions.com/games/a-space-for-the-unbound/)** (Mojiken Studio, 2023) memenangkan Best Storytelling di SEA Game Awards dan masuk nominasi Games for Impact di The Game Awards 2023. Latarnya kota kecil di Indonesia pada tahun 1990-an.
+- **[DreadOut](https://store.steampowered.com/app/269790/DreadOut/)** (Digital Happiness, 2014) menembus Steam dan kemudian diadaptasi menjadi film pada 2019. Horor yang mengambil latar sekolah dan mitos lokal.
 
 Ketiganya bukan produk studio raksasa. Dua di antaranya bahkan dikembangkan oleh tim yang jauh lebih kecil daripada yang mungkin kamu bayangkan.
 
