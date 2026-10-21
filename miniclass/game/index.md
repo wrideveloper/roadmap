@@ -81,7 +81,7 @@ Pada minggu 1–4, semua peserta mengikuti sesi bersama. Kelompok kecil baru dib
 | 7 | Mengerjakan bagian inti | Bagian inti berjalan |
 | 8 | Menguji, merapikan, dan mengemas | Artefak + README |
 
-**Apa itu gate.** Gate adalah tugas kecil di minggu 4 untuk memisahkan yang siap ikut kelas aktif dari yang belum. Bukan ujian kemampuan. Yang dilihat hanya tiga hal: alat sudah siap, kamu mau mengerjakan, dan kamu bisa mengirim hasil sebelum tenggat. Kalau belum lolos, kamu tidak dikeluarkan — ada jalur **Self-Paced Observer**, yaitu tetap bisa mengakses materi tanpa kewajiban mengikuti kelompok.
+**Apa itu gate.** Gate adalah tugas kecil di minggu 4 untuk memisahkan yang siap ikut kelas aktif dari yang belum. Bukan ujian kemampuan. Yang dilihat hanya tiga hal: alat sudah siap, kamu mau mengerjakan, dan kamu bisa mengirim hasil sebelum tenggat. Kalau belum lolos, kamu tidak dikeluarkan — ada jalur **Self-Paced Observer**, yaitu tetap bisa mengakses materi tanpa kewajiban mengikuti kelompok. Bedanya dengan peserta aktif bukan cuma soal kewajiban; ada beberapa hal yang hanya ditawarkan ke kelompok, dan daftarnya ada di bagian pertanyaan di bawah.
 
 Kenapa kelompok baru dibentuk setelah gate? Karena peserta yang mendaftar belum tentu bisa bertahan sampai akhir. Kalau kelompok dibentuk terlalu awal, pendamping bisa menghabiskan waktu untuk kelompok yang anggotanya banyak berkurang, sementara peserta yang tetap aktif mendapat lebih sedikit perhatian. Gate membantu kami membentuk kelompok berdasarkan kesiapan untuk mengerjakan, bukan hanya berdasarkan pendaftaran.
 
@@ -285,6 +285,16 @@ Yang menentukan diterima atau tidak bukan gamenya, melainkan pertanyaan peneliti
 **Kalau bukan untuk menjadi jago, buat apa ikut?** Kamu akan pulang dengan satu artefak, cara kerja yang bisa diulang, dan orang yang masih bisa kamu tanyai setelah program selesai.
 
 **Berarti peserta dibiarkan?** Tidak. Ada gate, kelompok, tenggat, dan checklist. Lingkungan yang mendukung bukan berarti programnya tanpa tuntutan.
+
+**Apa untungnya masuk kelompok dibanding jadi Observer?** Observer tetap dapat materi, tapi tidak dapat pendampingan. Yang didapat peserta aktif, antara lain:
+
+- Topik di luar silabus lebih diprioritaskan untuk dicarikan materinya.
+- Sumber belajar yang ditemukan pengurus dibagikan lebih dulu ke kelompok.
+- Event seperti playtest, kunjungan studio, atau sesi tamu ditawarkan ke kelompok lebih dulu.
+- Rekomendasi tempat magang di studio game.
+- CV atau portofolio direview, kalau memungkinkan oleh orang yang sudah bekerja di industri.
+
+Ini bukan janji tertulis, dan pelaksanaannya tergantung kesempatan yang ada. Tapi arahnya jelas: yang mengerjakan, didahulukan.
 
 **Apa bedanya dengan tutorial YouTube?** Tutorial memberi langkah-langkah. Program ini juga memberi tenggat, umpan balik, dan orang yang membantu memantau progresmu.
 
