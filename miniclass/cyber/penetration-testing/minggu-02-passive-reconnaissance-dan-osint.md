@@ -17,6 +17,8 @@ Fokus utama bukan pada jumlah data, tetapi pada **kualitas informasi, validitas 
 
 OSINT (Open-Source Intelligence) merupakan pendekatan yang lebih luas, meliputi pengumpulan, verifikasi, analisis, dan interpretasi informasi dari sumber terbuka. Passive reconnaissance dapat menggunakan teknik OSINT, tetapi keduanya tidak sepenuhnya identik.
 
+Sebagian aset organisasi sering luput dari inventaris: subdomain staging lama, server uji yang tidak lagi dipakai, DNS record basi, atau dokumen publik yang masih menyimpan metadata. Passive recon membantu menemukan jejak tersebut sebelum dipakai penyerang.
+
 > Catatan: Passive reconnaissance tidak selalu berarti anonim atau tanpa jejak. Aktivitas pencarian melalui layanan pihak ketiga tetap dapat tercatat oleh layanan tersebut.
 
 ---
@@ -186,7 +188,15 @@ Ganti target.com dengan domain lab atau domain yang telah disetujui.
 
 ### 6.6 Subdomain Enumeration (Passive)
 
-**Tools:** crt.sh, VirusTotal, SecurityTrails, DNSDumpster
+**Tools:** crt.sh, VirusTotal, SecurityTrails, DNSDumpster, Amass (passive mode)
+
+**Command (Amass passive):**
+
+```text
+amass enum -passive -d example.com
+```
+
+Mode passive menggabungkan beberapa sumber publik tanpa melakukan brute force. Detail mode aktif dan opsi lanjutan dibahas pada week 4.
 
 **Output:**
 
@@ -215,11 +225,42 @@ Ganti target.com dengan domain lab atau domain yang telah disetujui.
 **Insight:**
 
 - Infrastruktur cloud
-- Third-party services
+- Layanan pihak ketiga
 
 ---
 
-### 6.8 Document Metadata Extraction
+### 6.8 Pencarian Layanan Terekspos (Shodan & Censys)
+
+**Tools:** Shodan, Censys
+
+Shodan dan Censys adalah mesin pencari untuk perangkat dan layanan yang terhubung ke internet. Keduanya menampilkan data hasil pemindaian pihak ketiga, bukan hasil request langsung ke target.
+
+**Yang dicari:**
+
+- Port dan service yang terbuka
+- Nama host, organisasi, dan sertifikat TLS
+- Teknologi atau versi service yang terdeteksi
+- Panel administrasi atau perangkat yang tidak seharusnya publik
+
+**Contoh query Shodan:**
+
+```text
+hostname:example.com
+org:"Example Inc"
+ssl:"example.com"
+```
+
+Censys menyediakan fungsi serupa dengan filter dan data yang sedikit berbeda. Gunakan sebagai pembanding, bukan bukti tunggal.
+
+**Catatan:**
+
+- Data dapat basi, tidak lengkap, atau berasal dari host yang sudah berganti pemilik
+- Exposure belum berarti vulnerable; validasi dilakukan pada active recon
+- Jangan mengakses panel atau service yang ditemukan hanya karena terlihat publik
+
+---
+
+### 6.9 Document Metadata Extraction
 
 **Tools:** ExifTool, FOCA
 
@@ -245,21 +286,30 @@ exiftool file.pdf
 
 ---
 
-### 6.9 OSINT: People & Organization
+### 6.10 OSINT: People & Organization
 
-**Tools:** LinkedIn, Twitter/X, halaman karier website target
+**Tools:** theHarvester, LinkedIn, Twitter/X, halaman karier website target
 
 **Yang dicari:**
 
 - Tech stack dari job posting
 - Struktur tim
 - Nama karyawan
+- Email dan username yang dipublikasikan
+
+**Command (theHarvester, opsional):**
+
+```text
+theHarvester -d example.com -b bing,duckduckgo,crtsh -l 100
+```
+
+Sumber dan hasil bergantung pada API key serta kebijakan tiap layanan. Kumpulkan hanya informasi yang relevan dengan scope pengujian.
 
 ---
 
-### 6.10 Email Pattern Analysis
+### 6.11 Email Pattern Analysis
 
-**Sumber:** Kontak publik, metadata dokumen
+**Sumber:** Kontak publik, metadata dokumen, hasil theHarvester
 
 **Contoh pola:**
 
@@ -272,11 +322,12 @@ exiftool file.pdf
 
 Contoh tabel hasil recon:
 
-| Field     | Data            | Source        | Confidence |
-| --------- | --------------- | ------------- | ---------- |
-| Domain    | example.com     | Website resmi | Confirmed  |
-| Subdomain | dev.example.com | crt.sh        | Likely     |
-| Teknologi | WordPress       | HTML source   | Likely     |
+| Field     | Data              | Source        | Confidence |
+| --------- | ----------------- | ------------- | ---------- |
+| Domain    | example.com       | Website resmi | Confirmed  |
+| Subdomain | dev.example.com   | crt.sh        | Likely     |
+| Teknologi | WordPress         | HTML source   | Likely     |
+| Layanan   | 203.0.113.10:8443 | Shodan        | Likely     |
 
 ---
 
@@ -334,6 +385,7 @@ Setiap peserta wajib menghasilkan:
 - Tidak memberi confidence label
 - Single-source conclusion — tidak melakukan triangulasi dari beberapa sumber
 - Mencampurkan passive reconnaissance dengan direct web inspection atau active enumeration
+- Menganggap temuan Shodan atau Censys sebagai bukti langsung tanpa validasi
 - Mengumpulkan informasi pribadi yang tidak relevan dengan tujuan pengujian
 
 ---
