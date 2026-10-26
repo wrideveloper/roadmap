@@ -10,20 +10,28 @@ Seluruh data yang digunakan berasal dari:
 - Arsip digital
 - Metadata
 - Infrastruktur terbuka (DNS, WHOIS, dll)
+- Basis data domain, DNS, dan sertifikat digital
+- Informasi organisasi dan teknologi yang dipublikasikan
 
-Fokus utama bukan pada jumlah data, tetapi pada **kualitas informasi dan konteks** yang dapat digunakan untuk tahap selanjutnya.
+Fokus utama bukan pada jumlah data, tetapi pada **kualitas informasi, validitas bukti, dan konteks** yang dapat digunakan untuk memahami attack surface dan menyusun hipotesis pada tahap selanjutnya.
+
+OSINT (Open-Source Intelligence) merupakan pendekatan yang lebih luas, meliputi pengumpulan, verifikasi, analisis, dan interpretasi informasi dari sumber terbuka. Passive reconnaissance dapat menggunakan teknik OSINT, tetapi keduanya tidak sepenuhnya identik.
+
+Sebagian aset organisasi sering luput dari inventaris: subdomain staging lama, server uji yang tidak lagi dipakai, DNS record basi, atau dokumen publik yang masih menyimpan metadata. Passive recon membantu menemukan jejak tersebut sebelum dipakai penyerang.
+
+> Catatan: Passive reconnaissance tidak selalu berarti anonim atau tanpa jejak. Aktivitas pencarian melalui layanan pihak ketiga tetap dapat tercatat oleh layanan tersebut.
 
 ---
 
 ## 2. Passive vs Active Reconnaissance
 
-| Aspek                   | Passive Recon                 | Active Recon           |
-| ----------------------- | ----------------------------- | ---------------------- |
-| Interaksi dengan target | Tidak ada                     | Ada                    |
-| Sumber data             | Informasi publik              | Response sistem target |
-| Tujuan                  | Membangun konteks & hipotesis | Validasi teknis        |
-| Risiko deteksi          | Sangat rendah                 | Lebih tinggi           |
-| Contoh                  | OSINT, metadata, Google dork  | Port scanning, fuzzing |
+| Aspek                   | Passive Recon                                        | Active Recon           |
+| ----------------------- | ---------------------------------------------------- | ---------------------- |
+| Interaksi dengan target | Tidak berinteraksi langsung dengan target            | Ada                    |
+| Sumber data             | Informasi publik, arsip, dan basis data pihak ketiga | Respons sistem target  |
+| Tujuan                  | Membangun konteks dan hipotesis                      | Validasi teknis        |
+| Risiko deteksi          | Sangat rendah                                        | Lebih tinggi           |
+| Contoh                  | OSINT, metadata, Google dork                         | Port scanning, fuzzing |
 
 > Passive recon selalu dilakukan terlebih dahulu sebelum active recon.
 
@@ -34,7 +42,7 @@ Fokus utama bukan pada jumlah data, tetapi pada **kualitas informasi dan konteks
 Passive recon bertujuan untuk:
 
 - Mengidentifikasi teknologi yang digunakan target
-- Menemukan attack surface (subdomain, endpoint, portal)
+- Mengidentifikasi domain, subdomain historis, dan aset digital yang terindikasi berkaitan dengan target
 - Memahami struktur organisasi & sistem
 - Mengurangi blind testing saat active recon
 
@@ -44,20 +52,26 @@ Tanpa tahap ini, pengujian akan bersifat acak dan tidak efisien.
 
 ## 4. Konsep Confidence Level
 
-Setiap temuan harus memiliki tingkat keyakinan.
+Setiap temuan harus memiliki tingkat keyakinan yang menggambarkan kekuatan bukti dan kepastian interpretasi.
 
-| Label               | Definisi                        |
-| ------------------- | ------------------------------- |
-| **Confirmed** | Didukung bukti langsung         |
-| **Likely**    | Indikasi kuat namun belum pasti |
-| **Unknown**   | Tidak cukup informasi           |
+| Label         | Definisi                                 |
+| ------------- | ---------------------------------------- |
+| **Confirmed** | Didukung bukti langsung                  |
+| **Likely**    | Indikasi kuat namun belum pasti          |
+| **Unknown**   | Informasi belum cukup untuk menyimpulkan |
 
-**Prinsip penting:** Jangan pernah menulis asumsi sebagai fakta.
+**Prinsip penting:** Jangan pernah menulis asumsi sebagai fakta. Bedakan apa yang benar-benar diamati dengan interpretasi atas observasi tersebut.
 
 Contoh:
 
 - ❌ "Target menggunakan WordPress"
 - ✅ "Target kemungkinan menggunakan WordPress (indikasi: wp-content)"
+
+Contoh lainnya:
+
+- **Observasi:** dev.example.com tercatat pada Certificate Transparency.
+- **Kesimpulan:** Nama host tersebut tercatat dalam sumber Certificate Transparency.
+- **Status:** Belum diketahui apakah host masih aktif atau masih digunakan oleh organisasi.
 
 ---
 
@@ -79,7 +93,7 @@ Gunakan format berikut untuk menjaga konsistensi:
 
 ## 6. Workflow Passive Recon
 
-> ⚠️ Semua aktivitas harus pasif — tidak ada request langsung ke server target.
+> ⚠️ Seluruh aktivitas dalam bagian ini dibatasi pada pengumpulan informasi melalui sumber publik, arsip, dan layanan pihak ketiga. Jangan mengirim request langsung ke infrastruktur target sebagai bagian dari passive recon.
 
 ---
 
@@ -97,7 +111,7 @@ Catat:
 
 ### 6.2 Website Recon (Manual Inspection)
 
-**Tools:** Browser (Chrome / Firefox)
+**Tools:** Browser (Chrome, Firefox, dll)
 
 **Teknik:**
 
@@ -115,7 +129,7 @@ Catat:
 
 ### 6.3 Technology Fingerprinting
 
-**Tools:** Wappalyzer (extension), BuiltWith
+**Tools:** Wappalyzer (extension)
 
 **Yang dicari:**
 
@@ -154,29 +168,47 @@ Catat:
 
 **Query umum:**
 
-```
+```text
 site:target.com
 site:target.com login
 site:target.com admin
 site:target.com filetype:pdf
-cache:target.com
 ```
+
+Ganti target.com dengan domain lab atau domain yang telah disetujui.
 
 **Output:**
 
 - Halaman tersembunyi
 - Dokumen publik
+- Referensi endpoint yang terlihat pada hasil pencarian
 - Endpoint lama yang masih terindeks
 
 ---
 
 ### 6.6 Subdomain Enumeration (Passive)
 
-**Tools:** crt.sh, VirusTotal, SecurityTrails, DNSDumpster
+**Tools:** crt.sh, VirusTotal, DNSDumpster, Amass (passive mode)
 
-**Output:** Daftar subdomain historis
+**Command (Amass passive):**
 
-**Catatan:** Subdomain yang ditemukan tidak langsung dianggap valid — beri label **Likely** sampai diverifikasi.
+```text
+amass enum -passive -d example.com
+```
+
+Mode passive menggabungkan beberapa sumber publik tanpa melakukan brute force. Detail mode aktif dan opsi lanjutan dibahas pada week 4.
+
+**Output:**
+
+- Daftar subdomain historis
+- Waktu atau konteks data jika tersedia
+- Confidence level dan catatan status verifikasi
+
+**Catatan:**
+
+- Subdomain yang ditemukan belum tentu masih aktif
+- Nama host yang mirip belum tentu dimiliki oleh target
+- Beri label Likely hanya jika bukti mendukung keterkaitannya, jika belum cukup gunakan Unknown.
 
 ---
 
@@ -193,19 +225,58 @@ cache:target.com
 **Insight:**
 
 - Infrastruktur cloud
-- Third-party services
+- Layanan pihak ketiga
 
 ---
 
-### 6.8 Document Metadata Extraction
+### 6.8 Pencarian Layanan Terekspos (Shodan & Censys)
+
+**Tools:** Shodan, Censys
+
+Shodan dan Censys adalah mesin pencari untuk perangkat dan layanan yang terhubung ke internet. Keduanya menampilkan data hasil pemindaian pihak ketiga, bukan hasil request langsung ke target.
+
+**Yang dicari:**
+
+- Port dan service yang terbuka
+- Nama host, organisasi, dan sertifikat TLS
+- Teknologi atau versi service yang terdeteksi
+- Panel administrasi atau perangkat yang tidak seharusnya publik
+
+**Contoh query Shodan:**
+
+```text
+hostname:example.com
+org:"Example Inc"
+ssl:"example.com"
+```
+
+Censys menyediakan fungsi serupa dengan filter dan data yang sedikit berbeda. Gunakan sebagai pembanding, bukan bukti tunggal.
+
+**Catatan:**
+
+- Data dapat basi, tidak lengkap, atau berasal dari host yang sudah berganti pemilik
+- Exposure belum berarti vulnerable; validasi dilakukan pada active recon
+- Jangan mengakses panel atau service yang ditemukan hanya karena terlihat publik
+
+---
+
+### 6.9 Document Metadata Extraction
 
 **Tools:** ExifTool, FOCA
 
 **Command:**
 
-```
+```text
 exiftool file.pdf
 ```
+
+**Metadata yang dapat diperiksa:**
+
+- Nama aplikasi pembuat dokumen
+- Waktu pembuatan atau modifikasi
+- Nama author jika tersedia
+- Informasi perangkat lunak yang digunakan
+- Properti dan metadata dokumen lainnya
 
 **Output:**
 
@@ -215,21 +286,30 @@ exiftool file.pdf
 
 ---
 
-### 6.9 OSINT: People & Organization
+### 6.10 OSINT: People & Organization
 
-**Tools:** LinkedIn, Twitter/X, halaman karir website target
+**Tools:** theHarvester, LinkedIn, Twitter/X, halaman karier website target
 
 **Yang dicari:**
 
 - Tech stack dari job posting
 - Struktur tim
 - Nama karyawan
+- Email dan username yang dipublikasikan
+
+**Command (theHarvester, opsional):**
+
+```text
+theHarvester -d example.com -b bing,duckduckgo,crtsh -l 100
+```
+
+Sumber dan hasil bergantung pada API key serta kebijakan tiap layanan. Kumpulkan hanya informasi yang relevan dengan scope pengujian.
 
 ---
 
-### 6.10 Email Pattern Analysis
+### 6.11 Email Pattern Analysis
 
-**Sumber:** Kontak publik, metadata dokumen
+**Sumber:** Kontak publik, metadata dokumen, hasil theHarvester
 
 **Contoh pola:**
 
@@ -242,11 +322,12 @@ exiftool file.pdf
 
 Contoh tabel hasil recon:
 
-| Field     | Data            | Source        | Confidence |
-| --------- | --------------- | ------------- | ---------- |
-| Domain    | example.com     | Website resmi | Confirmed  |
-| Subdomain | dev.example.com | crt.sh        | Likely     |
-| Teknologi | WordPress       | HTML source   | Likely     |
+| Field     | Data              | Source        | Confidence |
+| --------- | ----------------- | ------------- | ---------- |
+| Domain    | example.com       | Website resmi | Confirmed  |
+| Subdomain | dev.example.com   | crt.sh        | Likely     |
+| Teknologi | WordPress         | HTML source   | Likely     |
+| Layanan   | 203.0.113.10:8443 | Shodan        | Likely     |
 
 ---
 
@@ -256,28 +337,32 @@ Hipotesis yang baik harus:
 
 1. Berdasarkan bukti yang ditemukan
 2. Spesifik dan tidak ambigu
-3. Bisa diverifikasi di fase active recon
+3. Memiliki confidence level yang sesuai
+4. Bisa diverifikasi di fase active recon
 
 **Format:**
 
-```
-Hipotesis : [pernyataan dugaan yang spesifik]
-Dasar     : [informasi apa yang ditemukan dan dari mana]
-Verifikasi: [cara membuktikannya saat active recon]
+```text
+Hipotesis  : [pernyataan dugaan yang spesifik]
+Dasar      : [informasi apa yang ditemukan dan dari mana]
+Confidence : [Confirmed / Likely / Unknown]
+Verifikasi : [cara membuktikannya saat active recon]
 ```
 
 **Contoh:**
 
-```
-Hipotesis : Target kemungkinan menggunakan WordPress
-Dasar     : Ditemukan path /wp-content/ di HTML source
-Verifikasi: Cek endpoint WordPress saat active recon
+```text
+Hipotesis  : Target kemungkinan menggunakan WordPress
+Dasar      : Ditemukan path /wp-content/ di HTML source
+Confidence : Likely
+Verifikasi : Cek endpoint WordPress saat active recon
 ```
 
-```
-Hipotesis : Terdapat admin panel di subdomain admin.target.com
-Dasar     : Ada referensi "dashboard" di halaman About
-Verifikasi: Akses subdomain saat active recon
+```text
+Hipotesis  : Terdapat admin panel di subdomain admin.target.com
+Dasar      : Ada referensi "dashboard" di halaman About
+Confidence : Likely
+Verifikasi : Akses subdomain saat active recon
 ```
 
 ---
@@ -296,8 +381,12 @@ Setiap peserta wajib menghasilkan:
 - Over-collecting tanpa analisis yang memadai
 - Tidak mencatat sumber temuan
 - Menganggap dugaan sebagai fakta
+- Menganggap semua subdomain yang ditemukan masih aktif
 - Tidak memberi confidence label
 - Single-source conclusion — tidak melakukan triangulasi dari beberapa sumber
+- Mencampurkan passive reconnaissance dengan direct web inspection atau active enumeration
+- Menganggap temuan Shodan atau Censys sebagai bukti langsung tanpa validasi
+- Mengumpulkan informasi pribadi yang tidak relevan dengan tujuan pengujian
 
 ---
 
