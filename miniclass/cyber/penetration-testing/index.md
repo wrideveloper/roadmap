@@ -31,11 +31,12 @@ Seluruh pembahasan di roadmap ini ditujukan hanya untuk lingkungan belajar yang 
 
 ## Halaman Materi
 
-Saat ini hanya Chapter 1 yang tersedia. Materi Chapter 2–10 akan dipublikasikan secara bertahap.
+Saat ini Chapter 1 dan Chapter 2 telah tersedia. Materi Chapter 3–10 akan dipublikasikan secara bertahap.
 
 | Chapter | Halaman                                                                                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1       | [Introduksi, Etika, dan Metodologi](/miniclass/cyber/penetration-testing/minggu-01-introduksi-etika-dan-metodologi)                                   |
+| 2       | [Passive Reconnaissance dan OSINT](/miniclass/cyber/penetration-testing/minggu-02-passive-reconnaissance-dan-osint)                                   |
 
 ## Halaman Pendukung
 

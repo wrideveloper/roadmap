@@ -26,6 +26,10 @@ export default [
         text: "Chapter 1: Introduksi, Etika, dan Metodologi",
         link: "/miniclass/cyber/penetration-testing/minggu-01-introduksi-etika-dan-metodologi",
       },
+      {
+        text: "Chapter 2: Passive Recon dan OSINT",
+        link: "/miniclass/cyber/penetration-testing/minggu-02-passive-reconnaissance-dan-osint",
+      },
     ],
   },
 ];
