@@ -13,7 +13,7 @@ export default defineConfig({
   lastUpdated: true,
   // Keep unreleased cybersecurity chapters out of published pages and search.
   srcExclude: [
-    "miniclass/cyber/penetration-testing/minggu-0[2-9]-*.md",
+    "miniclass/cyber/penetration-testing/minggu-0[3-9]-*.md",
     "miniclass/cyber/penetration-testing/minggu-10-*.md",
   ],
   head: [['link', { rel: 'icon', href: '/assets/wri-logo.png' }]],

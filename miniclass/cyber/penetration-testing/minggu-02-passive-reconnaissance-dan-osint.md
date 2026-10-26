@@ -111,7 +111,7 @@ Catat:
 
 ### 6.2 Website Recon (Manual Inspection)
 
-**Tools:** Browser (Chrome / Firefox)
+**Tools:** Browser (Chrome, Firefox, dll)
 
 **Teknik:**
 
@@ -129,7 +129,7 @@ Catat:
 
 ### 6.3 Technology Fingerprinting
 
-**Tools:** Wappalyzer (extension), BuiltWith
+**Tools:** Wappalyzer (extension)
 
 **Yang dicari:**
 
@@ -188,7 +188,7 @@ Ganti target.com dengan domain lab atau domain yang telah disetujui.
 
 ### 6.6 Subdomain Enumeration (Passive)
 
-**Tools:** crt.sh, VirusTotal, SecurityTrails, DNSDumpster, Amass (passive mode)
+**Tools:** crt.sh, VirusTotal, DNSDumpster, Amass (passive mode)
 
 **Command (Amass passive):**
 
