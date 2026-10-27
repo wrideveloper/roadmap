@@ -11,6 +11,17 @@ Miniclass ini mencakup:
 - **Advance: System Design & Architecture**:
   - [Mindset & Pengenalan System Design](/miniclass/backend/system-design/01-pengenalan-system-design)
   - [Core Building Blocks Arsitektur](/miniclass/backend/system-design/02-building-blocks-arsitektur)
+- **Advance: Docker & Container**:
+  - [Kenapa Container Ada](/miniclass/backend/docker/01-kenapa-container)
+  - [Instalasi Docker](/miniclass/backend/docker/02-instalasi-docker)
+  - [Image, Container, dan CLI](/miniclass/backend/docker/03-image-container-cli)
+  - [Dockerfile](/miniclass/backend/docker/04-dockerfile)
+  - [Docker Compose](/miniclass/backend/docker/05-docker-compose)
+  - [Volume dan Network](/miniclass/backend/docker/06-volume-dan-network)
+  - [chroot](/miniclass/backend/docker/07-chroot)
+  - [Namespaces](/miniclass/backend/docker/08-namespaces)
+  - [cgroups](/miniclass/backend/docker/09-cgroups)
+  - [Docker Itu Sebenarnya Apa](/miniclass/backend/docker/10-docker-itu-apa)
 
 ### Panduan Belajar
 
