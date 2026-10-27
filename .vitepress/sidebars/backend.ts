@@ -161,4 +161,62 @@ export default [
       },
     ],
   },
+  {
+    text: "Advance: Docker & Container",
+    collapsed: false,
+    items: [
+      {
+        text: "Docker dari Nol",
+        collapsed: false,
+        items: [
+          {
+            text: "Kenapa Container Ada",
+            link: "/miniclass/backend/docker/01-kenapa-container",
+          },
+          {
+            text: "Instalasi Docker",
+            link: "/miniclass/backend/docker/02-instalasi-docker",
+          },
+          {
+            text: "Image, Container, dan CLI",
+            link: "/miniclass/backend/docker/03-image-container-cli",
+          },
+          {
+            text: "Dockerfile",
+            link: "/miniclass/backend/docker/04-dockerfile",
+          },
+          {
+            text: "Docker Compose",
+            link: "/miniclass/backend/docker/05-docker-compose",
+          },
+          {
+            text: "Volume dan Network",
+            link: "/miniclass/backend/docker/06-volume-dan-network",
+          },
+        ],
+      },
+      {
+        text: "Di Balik Layar Container",
+        collapsed: false,
+        items: [
+          {
+            text: "chroot",
+            link: "/miniclass/backend/docker/07-chroot",
+          },
+          {
+            text: "Namespaces",
+            link: "/miniclass/backend/docker/08-namespaces",
+          },
+          {
+            text: "cgroups",
+            link: "/miniclass/backend/docker/09-cgroups",
+          },
+          {
+            text: "Docker Itu Sebenarnya Apa",
+            link: "/miniclass/backend/docker/10-docker-itu-apa",
+          },
+        ],
+      },
+    ],
+  },
 ];
