@@ -8,6 +8,10 @@ export default [
         text: "Minggu 1 — Orientasi dan Ekspektasi",
         link: "/miniclass/game/",
       },
+      {
+        text: "Role Programmer — Batas, Cabang, Demo",
+        link: "/miniclass/game/programmer/",
+      },
     ],
   },
   {
