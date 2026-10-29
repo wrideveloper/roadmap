@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392 470" width="392" height="470" role="img" aria-labelledby="role-design-cabang-title role-design-cabang-desc">
+  <title id="role-design-cabang-title">Lima cabang pekerjaan game designer beserta artefak yang diserahkan</title>
+  <desc id="role-design-cabang-desc">Enam kotak dua kolom: systems dan economy designer, level designer, narrative designer, UX designer, technical designer, dan pekerjaan di luar game.</desc>
+  <rect width="392" height="470" fill="#f5f5f5"/>
+  <text x="16" y="22" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="8" font-weight="500" letter-spacing="0.14em" fill="#5a6580">CABANG PEKERJAAN</text>
+  <text x="16" y="46" font-family="'Instrument Serif', 'Liberation Serif', Georgia, serif" font-size="18" fill="#2d3142">Satu kemampuan, lima bentuk hasil</text>
+
+  <rect x="16" y="66" width="172" height="96" rx="6" fill="#f1e7e4" stroke="#bf4520" stroke-width="1"/>
+  <text x="102" y="96" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#2d3142">Systems &amp; Economy</text>
+  <text x="102" y="116" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" text-anchor="middle" fill="#4f5d75">diagram &amp; tabel angka</text>
+  <text x="102" y="134" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" text-anchor="middle" fill="#5a6580">artefak: diagram + tuning</text>
+
+  <rect x="204" y="66" width="172" height="96" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+  <text x="290" y="96" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#2d3142">Level Designer</text>
+  <text x="290" y="116" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" text-anchor="middle" fill="#4f5d75">layout &amp; blockout</text>
+  <text x="290" y="134" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" text-anchor="middle" fill="#5a6580">artefak: satu level utuh</text>
+
+  <rect x="16" y="174" width="172" height="96" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+  <text x="102" y="204" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#2d3142">Narrative Designer</text>
+  <text x="102" y="224" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" text-anchor="middle" fill="#4f5d75">dialogue tree &amp; naskah</text>
+  <text x="102" y="242" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" text-anchor="middle" fill="#5a6580">artefak: cerita bercabang</text>
+
+  <rect x="204" y="174" width="172" height="96" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+  <text x="290" y="204" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#2d3142">UX Designer</text>
+  <text x="290" y="224" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" text-anchor="middle" fill="#4f5d75">alur pemain &amp; aksesibilitas</text>
+  <text x="290" y="242" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" text-anchor="middle" fill="#5a6580">artefak: wireframe + checklist</text>
+
+  <rect x="16" y="282" width="172" height="96" rx="6" fill="#ffffff" stroke="rgba(45,49,66,0.35)" stroke-width="1"/>
+  <text x="102" y="312" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#2d3142">Technical Designer</text>
+  <text x="102" y="332" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" text-anchor="middle" fill="#4f5d75">konfigurasi sistem</text>
+  <text x="102" y="350" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" text-anchor="middle" fill="#5a6580">artefak: graph + nilai</text>
+
+  <rect x="204" y="282" width="172" height="96" rx="6" fill="#f5f5f5" stroke="rgba(45,49,66,0.2)" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="290" y="312" font-family="'Geist', 'Inter', 'Liberation Sans', system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#2d3142">Di luar game</text>
+  <text x="290" y="332" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="10" text-anchor="middle" fill="#4f5d75">product &amp; system design</text>
+  <text x="290" y="350" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" text-anchor="middle" fill="#5a6580">artefak: studi kasus</text>
+
+  <line x1="16" y1="398" x2="376" y2="398" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+  <text x="16" y="416" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" fill="#5a6580">Satu cabang yang benar-benar jalan lebih berguna</text>
+  <text x="16" y="430" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" fill="#5a6580">daripada lima yang setengah jadi.</text>
+  <text x="16" y="450" font-family="'Geist Mono', 'Liberation Mono', ui-monospace, monospace" font-size="9" fill="#5a6580">Nama jabatan berbeda antar-studio; bentuknya tidak.</text>
+</svg>
