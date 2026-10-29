@@ -9,8 +9,28 @@ export default [
         link: "/miniclass/game/",
       },
       {
-        text: "Role Programmer — Batas, Cabang, Demo",
-        link: "/miniclass/game/programmer/",
+        text: "Minggu 2 — 3 Pilar Utama Game Development",
+        link: "/miniclass/game/minggu-2-pengenalan-unity/",
+      },
+      {
+        text: "Programmer",
+        collapsed: true,
+        items: [
+          {
+            text: "Role Programmer — Batas, Cabang, Demo",
+            link: "/miniclass/game/programmer/",
+          }
+        ]
+      },
+      {
+        text: "Artist",
+        collapsed: true,
+        items: [
+          {
+            text: "Role Artist — Batas, Cabang, Bukti",
+            link: "/miniclass/game/artist/",
+          }
+        ]
       },
     ],
   },
