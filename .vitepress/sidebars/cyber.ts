@@ -30,6 +30,10 @@ export default [
         text: "Chapter 2: Passive Recon dan OSINT",
         link: "/miniclass/cyber/penetration-testing/minggu-02-passive-reconnaissance-dan-osint",
       },
+      {
+        text: "Chapter 3: Active Recon dan Network Scanning",
+        link: "/miniclass/cyber/penetration-testing/minggu-03-active-reconnaissance-dan-network-scanning",
+      },
     ],
   },
 ];
