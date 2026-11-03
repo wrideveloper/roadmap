@@ -8,7 +8,7 @@ Di pertemuan sebelumnya kita sepakat bahwa container adalah cara membungkus apli
 
 <img width="480" src="/miniclass/backend/assets/docker/choosing-an-os-meme.jpeg">
 
-Aku sengaja menaruh instalasi di awal, bukan di akhir, supaya setiap konsep berikutnya bisa langsung dicoba. Modul ini jauh lebih enak dipahami kalau kamu ikut mengetik perintahnya, bukan cuma membaca.
+Aku sengaja menaruh instalasi di awal, bukan di akhir, supaya setiap konsep berikutnya bisa langsung dicoba. Modul ini jauh lebih enak dipahami kalau kamu ikut mengetik perintahnya, bukan hanya membaca.
 
 ---
 

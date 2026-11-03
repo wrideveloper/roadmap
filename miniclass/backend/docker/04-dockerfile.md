@@ -241,7 +241,7 @@ Dockerfile
 Manfaatnya tiga:
 
 1. Build lebih cepat karena konteks lebih kecil.
-2. Image lebih kecil karena sampah tidak ikut masuk.
+2. Image lebih kecil karena junk files tidak ikut masuk.
 3. Rahasia seperti `.env` tidak bocor ke dalam image.
 
 ::: danger Jangan Copy `.env` ke Image

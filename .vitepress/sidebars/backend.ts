@@ -219,4 +219,38 @@ export default [
       },
     ],
   },
+  {
+    text: "Advance: Object Storage",
+    collapsed: false,
+    items: [
+      {
+        text: "Apa itu Object Storage",
+        link: "/miniclass/backend/object-storage/01-apa-itu-object-storage",
+      },
+      {
+        text: "Model Data dan Request S3",
+        link: "/miniclass/backend/object-storage/02-model-data-dan-request-s3",
+      },
+      {
+        text: "Lab: RustFS sebagai S3 Lokal",
+        link: "/miniclass/backend/object-storage/03-lab-rustfs-s3-lokal",
+      },
+      {
+        text: "Operasi S3 lewat HTTP",
+        link: "/miniclass/backend/object-storage/04-operasi-s3-lewat-http",
+      },
+      {
+        text: "CLI dan SDK",
+        link: "/miniclass/backend/object-storage/05-cli-dan-sdk",
+      },
+      {
+        text: "Presigned URL dan Multipart",
+        link: "/miniclass/backend/object-storage/06-presigned-dan-multipart",
+      },
+      {
+        text: "Lab Akhir: File Manager",
+        link: "/miniclass/backend/object-storage/07-lab-file-manager",
+      },
+    ],
+  },
 ];

@@ -8,7 +8,7 @@ Ada satu kalimat yang hampir semua backend developer pernah ucapkan:<br> "it wor
 
 <img src="/miniclass/backend/assets/docker/it-works-on-my-machine-programming-coding-unisex-graphic-t-shirt-707248.webp" width="480">
 
-Kalimat itu bukan alasan. Itu gejala. Gejala bahwa yang rusak bukan kodemu, tapi perbedaan antara dua mesin yang seharusnya kembar. Dan perbedaan itulah alasan kenapa container ada.
+Kalimat itu menunjukkan bahwa masalahnya bukan pada kode, melainkan pada perbedaan antara dua mesin yang seharusnya sama. Perbedaan itu alasan container ada.
 
 ---
 
@@ -17,7 +17,7 @@ Kalimat itu bukan alasan. Itu gejala. Gejala bahwa yang rusak bukan kodemu, tapi
 Kode kita tidak berubah. Yang berubah adalah **lingkungan tempat kode itu berjalan**. Ada beberapa hal yang sering luput:
 
 - Versi runtime berbeda. Laptopmu Node 20, server masih Node 16.
-- Dependency sistem berbeda. Di Ubuntu ada `libssl1.1`, di image baru cuma `libssl3`.
+- Dependency sistem berbeda. Di Ubuntu ada `libssl1.1`, di image baru hanya `libssl3`.
 - Konfigurasi berbeda. Path file, user, permission, timezone, locale.
 - Ada hal yang kamu install manual enam bulan lalu, lalu lupa. Di mesin lain hal itu tidak ada.
 
@@ -67,12 +67,12 @@ Analogi yang paling sering dipakai, dan menurutku paling pas: **VM itu seperti m
 
 Karena tidak membawa OS, container jadi:
 
-- **Ringan.** Ukurannya bisa belasan MB, karena isinya cuma aplikasi dan dependency yang benar-benar dipakai.
+- **Ringan.** Ukurannya bisa belasan MB, karena isinya hanya aplikasi dan dependency yang benar-benar dipakai.
 - **Cepat start.** Biasanya di bawah satu detik, karena tinggal menjalankan proses, bukan booting OS.
 - **Hemat resource.** Tidak ada kernel duplikat yang harus diberi RAM.
 
 ::: warning Satu Hal yang Sering Salah Paham
-Container bukan VM kecil. Container adalah **proses biasa** di host yang diberi batas dan isolasi. Kalau kamu membuka daftar proses di host, proses di dalam container sebenarnya terlihat juga. Bedanya, proses itu tidak bisa melihat proses lain di luar container-nya.
+Container bukan VM kecil, melainkan **proses biasa** di host yang diberi batas dan isolasi. Kalau kamu membuka daftar proses di host, proses di dalam container sebenarnya terlihat juga. Bedanya, proses itu tidak bisa melihat proses lain di luar container-nya.
 :::
 
 ---
@@ -114,7 +114,7 @@ Modul ini dibagi dua bagian.
 
 **Bagian pertama, praktik.** Kita install Docker, belajar memakai image dan container, menulis Dockerfile, menyusun banyak service dengan Compose, lalu mengatur data dan jaringan.
 
-**Bagian kedua, isi perutnya.** Kita bongkar cara kerja container dari lapisan paling dasar: chroot, namespaces, dan cgroups. Setelah bagian ini, Docker tidak lagi terasa seperti sihir.
+**Bagian kedua, isi perutnya.** Kita bongkar cara kerja container dari lapisan paling dasar: chroot, namespaces, dan cgroups. Setelah bagian ini, cara kerja Docker menjadi jelas.
 
 ---
 

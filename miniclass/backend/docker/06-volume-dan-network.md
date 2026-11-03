@@ -17,7 +17,7 @@ Jawabannya ada di dua konsep: **volume** dan **network**.
 
 Secara default, container punya lapisan tulis di atas image. Namanya **writable layer**. Apa pun yang kamu tulis ke dalam container saat berjalan masuk ke lapisan ini.
 
-Masalahnya, lapisan ini **hilang saat container dihapus**. Bukan saat di-stop, tapi saat di-`rm`. Jadi:
+Masalahnya, lapisan ini **hilang saat container dihapus**, bukan saat di-stop. Jadi:
 
 ```bash
 docker run -d --name db latihan-db
@@ -131,7 +131,7 @@ Ini kesalahan nomor satu pemula Docker.
 
 Di laptopmu, aplikasi dan database berjalan di mesin yang sama. Jadi `localhost:5432` masuk akal.
 
-Di dalam container, `localhost` berarti **container itu sendiri**. Bukan laptopmu, bukan container lain. Kalau aplikasi di container `app` mencoba connect ke `localhost:5432`, dia mencari PostgreSQL di dalam container `app`, yang tentu saja tidak ada.
+Di dalam container, `localhost` berarti **container itu sendiri**, bukan laptopmu dan bukan container lain. Kalau aplikasi di container `app` mencoba connect ke `localhost:5432`, dia mencari PostgreSQL di dalam container `app`, yang tentu saja tidak ada.
 
 Solusinya: pakai nama service atau nama container.
 
@@ -162,7 +162,7 @@ docker run -d --name app --network jaringan-app app-sederhana:1.0
 
 Sekarang dari dalam `app`, hostname `db` bisa dipakai.
 
-Compose melakukan ini otomatis. Itu sebabnya contoh Compose di pertemuan sebelumnya langsung bekerja tanpa konfigurasi network tambahan.
+Compose melakukan ini otomatis. Karena itu contoh Compose di pertemuan sebelumnya langsung bekerja tanpa konfigurasi network tambahan.
 
 ### Melihat Network
 
