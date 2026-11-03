@@ -184,7 +184,7 @@ Image tidak bisa dihapus kalau masih dipakai container, bahkan container yang se
 
 ## Container Sekali Pakai
 
-Untuk eksperimen, kamu tidak ingin meninggalkan sampah. Dua flag ini sangat berguna:
+Untuk eksperimen, kamu tidak ingin meninggalkan leftover container. Dua flag ini sangat berguna:
 
 ```bash
 docker run --rm -it alpine sh

@@ -6,7 +6,7 @@ Ini pertemuan terakhir. Kamu sudah mencoba chroot, namespaces, dan cgroups. Seka
 
 Jadi, setelah semua ini, apa sebenarnya container itu? Satu kalimat:
 
-**Container bukan mesin. Container adalah proses biasa yang diberi batas dan pandangan sendiri.**
+**Container bukan mesin, melainkan proses biasa yang diberi batas dan pandangan sendiri.**
 
 Kalau kamu paham kalimat itu, kamu tidak akan lagi menganggap Docker sebagai `blek mejik`. Kamu juga akan lebih cepat mendiagnosis masalah, karena kamu tahu lapisan mana yang harus diperiksa.
 
@@ -94,8 +94,8 @@ Karena containerd dan runc mengikuti standar, container yang dibuat Docker bisa 
 
 **Open Container Initiative (OCI)** mendefinisikan dua spesifikasi utama:
 
-- **Image spec**: format image, layer, dan manifest. Inilah sebabnya image Docker bisa dipakai di Podman.
-- **Runtime spec**: cara runtime membuat dan menjalankan container. Inilah sebabnya runc bisa dipakai oleh banyak alat.
+- **Image spec**: format image, layer, dan manifest. Karena itu image Docker bisa dipakai di Podman.
+- **Runtime spec**: cara runtime membuat dan menjalankan container. Karena itu runc bisa dipakai oleh banyak alat.
 
 Docker adalah produk yang populer, tapi fondasinya adalah standar terbuka. Ini penting untuk kamu tahu, karena di dunia kerja kamu akan bertemu banyak alat yang saling bicara lewat standar yang sama.
 
@@ -103,11 +103,11 @@ Docker adalah produk yang populer, tapi fondasinya adalah standar terbuka. Ini p
 
 ## Isi Sebenarnya Sebuah Image
 
-Kalau kamu membongkar image, isinya bukan file ISO atau disk image. Image adalah kumpulan **layer** yang ditumpuk.
+Kalau kamu membongkar image, isinya kumpulan **layer** yang ditumpuk, bukan file ISO atau disk image.
 
 Setiap layer adalah arsip berisi perubahan file: file baru, file yang diubah, atau file yang dihapus. Saat container dijalankan, layer-layer itu digabung menjadi satu file system read-only, lalu ditambah satu lapisan tulis di atasnya.
 
-Itu sebabnya:
+Karena itu:
 
 - Image bisa di-share dengan hemat, karena layer yang sama tidak diunduh ulang.
 - Build bisa cepat, karena layer yang tidak berubah diambil dari cache.
@@ -115,7 +115,7 @@ Itu sebabnya:
 
 ---
 
-## Container Bukan VM, Tapi Bukan Juga Tanpa Isolasi
+## Isolasi Container
 
 Di awal modul kita bilang container lebih ringan dari VM. Itu benar. Tapi jangan salah paham: container tetap punya isolasi yang serius.
 
@@ -127,7 +127,7 @@ Di awal modul kita bilang container lebih ringan dari VM. Itu benar. Tapi jangan
 | Start | Puluhan detik | Kurang dari satu detik |
 | Kepadatan | Rendah | Tinggi |
 
-Container dengan konfigurasi yang buruk, misalnya `--privileged` tanpa alasan, bisa menjadi lubang keamanan. Isolasi container sangat bergantung pada namespace dan cgroup yang dipasang dengan benar.
+Container dengan konfigurasi yang buruk, misalnya `--privileged` tanpa alasan, bisa menimbulkan security vulnerability. Isolasi container sangat bergantung pada namespace dan cgroup yang dipasang dengan benar.
 
 ::: warning `--privileged` Bukan Solusi Cepat
 Kalau container gagal jalan dan solusinya adalah menambahkan `--privileged`, kamu sedang mematikan hampir semua isolasi. Cari penyebab sebenarnya: permission file, device yang hilang, atau capability yang kurang. Pakai `--privileged` hanya untuk debugging sementara.
@@ -163,7 +163,7 @@ Docker bukan satu-satunya alat. Beberapa alternatif yang akan kamu temui:
 - **LXC/LXD**: container sistem, bukan container aplikasi.
 - **Firecracker**: microVM, isolasi lebih kuat dengan start cepat.
 
-Yang penting bukan hafal daftarnya, tapi paham bahwa semuanya memakai primitif kernel yang sama: namespace, cgroups, dan file system.
+Kamu tidak perlu menghafal daftarnya. Yang penting adalah memahami bahwa semuanya memakai primitif kernel yang sama: namespace, cgroups, dan file system.
 
 ---
 

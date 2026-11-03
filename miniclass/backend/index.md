@@ -22,6 +22,14 @@ Miniclass ini mencakup:
   - [Namespaces](/miniclass/backend/docker/08-namespaces)
   - [cgroups](/miniclass/backend/docker/09-cgroups)
   - [Docker Itu Sebenarnya Apa](/miniclass/backend/docker/10-docker-itu-apa)
+- **Advance: Object Storage**:
+  - [Apa itu Object Storage](/miniclass/backend/object-storage/01-apa-itu-object-storage)
+  - [Model Data dan Request S3](/miniclass/backend/object-storage/02-model-data-dan-request-s3)
+  - [Lab: RustFS sebagai S3 Lokal](/miniclass/backend/object-storage/03-lab-rustfs-s3-lokal)
+  - [Operasi S3 lewat HTTP](/miniclass/backend/object-storage/04-operasi-s3-lewat-http)
+  - [CLI dan SDK](/miniclass/backend/object-storage/05-cli-dan-sdk)
+  - [Presigned URL dan Multipart](/miniclass/backend/object-storage/06-presigned-dan-multipart)
+  - [Lab Akhir: File Manager](/miniclass/backend/object-storage/07-lab-file-manager)
 
 ### Panduan Belajar
 

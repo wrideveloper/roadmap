@@ -51,7 +51,7 @@ ls /
 cat /etc/os-release
 ```
 
-Kamu akan melihat struktur direktori Alpine, bukan struktur laptopmu. Kamu sekarang berada di dalam "dunia" yang berbeda, padahal tidak ada VM yang dijalankan.
+Kamu akan melihat struktur direktori Alpine, bukan struktur laptopmu. Kamu sekarang berada di file system yang berbeda, padahal tidak ada VM yang dijalankan.
 
 Untuk keluar:
 

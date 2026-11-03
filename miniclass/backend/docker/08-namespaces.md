@@ -145,7 +145,7 @@ ip addr
 
 Sekarang loopback hidup, tapi tetap tidak ada akses ke internet.
 
-::: tip Inilah Kenapa Docker Butuh veth
+::: tip Kenapa Docker Butuh veth
 Docker tidak membiarkan namespace network terputus. Dia membuat pasangan interface **veth** yang menghubungkan namespace container ke bridge di host. Kita tidak akan membangun itu manual di modul ini, tapi sekarang kamu tahu kenapa container punya IP sendiri.
 :::
 
@@ -205,10 +205,10 @@ Saat kamu menjalankan container, Docker pada dasarnya melakukan ini:
 2. Menyiapkan root file system dari image.
 3. Menjalankan proses utama di dalam namespace tersebut.
 
-Itu sebabnya proses di container punya PID `1`, punya hostname sendiri, punya network sendiri, dan tidak melihat proses host.
+Karena itu proses di container punya PID `1`, punya hostname sendiri, punya network sendiri, dan tidak melihat proses host.
 
 ::: warning Satu Container Satu Proses Utama
-Karena PID namespace, proses pertama di container menjadi PID 1. Proses ini punya tanggung jawab khusus, misalnya menerima sinyal dan membersihkan child process. Itu sebabnya menjalankan banyak service di satu container dianggap praktik yang kurang baik.
+Karena PID namespace, proses pertama di container menjadi PID 1. Proses ini punya tanggung jawab khusus, misalnya menerima sinyal dan membersihkan child process. Karena itu menjalankan banyak service di satu container dianggap praktik yang kurang baik.
 :::
 
 ---
