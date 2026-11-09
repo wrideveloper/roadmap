@@ -37,6 +37,10 @@ export default [
         link: "/miniclass/backend/fundamental/instalasi",
       },
       {
+        text: "Pengenalan REST API",
+        link: "/miniclass/backend/fundamental/konsep-rest-api",
+      },
+      {
         text: "Studi Kasus: Mini Proyek Absensi",
         link: "/miniclass/backend/fundamental/studi-kasus-absensi",
       },
