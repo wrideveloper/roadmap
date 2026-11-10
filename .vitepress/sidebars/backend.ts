@@ -257,4 +257,14 @@ export default [
       },
     ],
   },
+  {
+    text: "Advance: Observability",
+    collapsed: false,
+    items: [
+      {
+        text: "Observability dan Structured Logging",
+        link: "/miniclass/backend/observability/01-observability-dan-structured-logging",
+      },
+    ],
+  },
 ];

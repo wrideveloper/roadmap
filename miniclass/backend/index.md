@@ -30,6 +30,8 @@ Miniclass ini mencakup:
   - [CLI dan SDK](/miniclass/backend/object-storage/05-cli-dan-sdk)
   - [Presigned URL dan Multipart](/miniclass/backend/object-storage/06-presigned-dan-multipart)
   - [Lab Akhir: File Manager](/miniclass/backend/object-storage/07-lab-file-manager)
+- **Advance: Observability**:
+  - [Observability dan Structured Logging](/miniclass/backend/observability/01-observability-dan-structured-logging)
 
 ### Panduan Belajar
 
