@@ -6,6 +6,9 @@ Selama sudah bisa menjalankan aplikasi file manager dari modul sebelumnya dan ju
 Modul ini tidak mengubah aplikasi sebelumnya.
 :::
 
+
+<img src="https://i.programmerhumor.io/2022/09/programmerhumor-io-programming-memes-47a88711005e0cd.jpg" width="480">
+
 Suatu hari ada laporan: upload gagal untuk sebagian user. Kamu buka terminal, dan yang terlihat hanya baris seperti ini berulang-ulang:
 
 ```text
@@ -56,6 +59,8 @@ Sesi ini fokus pada log. Metrik dan trace dibahas di sesi berikutnya.
 
 ## Gejala dan Penyebab
 
+<img src="https://i.programmerhumor.io/2023/09/programmerhumor-io-backend-memes-linux-memes-6b3eccb82753699.jpg" width="480">
+
 kita perlu membedakan dua hal:
 
 - **Gejala**: apa yang dilihat user, misalnya "upload gagal" atau "halaman lambat".
@@ -66,6 +71,9 @@ Log yang buruk hanya mencatat gejala. Log yang baik membawa konteks yang cukup u
 ---
 
 ## Log yang Berguna
+
+
+<img src="https://i.programmerhumor.io/2023/01/programmerhumor-io-programming-memes-58ac414c406a1c8.jpg" width="480">
 
 Log yang berguna biasanya memiliki field berikut:
 
