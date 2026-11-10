@@ -91,6 +91,9 @@ Log yang berguna biasanya memiliki field berikut:
 
 Nama field harus konsisten. `request_id` di satu tempat dan `requestId` di tempat lain akan menyulitkan pencarian.
 
+
+<img src="https://i.programmerhumor.io/2023/05/programmerhumor-io-cloud-memes-debugging-memes-5e816a82a5cb14f.png" width="480">
+
 ### Don't
 
 ```text
