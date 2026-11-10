@@ -24,21 +24,21 @@ const steps = [
   },
   {
     step: 3,
-    tab: 'Logic & Validasi',
-    title: 'Business Logic & Validasi',
+    tab: 'Handler',
+    title: 'Handler Logic (createAbsensi)',
     actor: 'Handler (absensi.php)',
-    action: 'validateAbsensi($input)',
-    desc: 'Fungsi membaca body JSON lewat requestInput() lalu memeriksa kelengkapan data (memastikan tidak ada data yang kosong/null).',
-    sample: 'function validateAbsensi($input) {\n    if (empty($input[\'nama\']) || empty($input[\'nim\'])) {\n        response(422, ["message" => "Wajib diisi!"]);\n    }\n    return $input;\n}'
+    action: 'Eksekusi Handler',
+    desc: 'Alur masuk ke fungsi pengolah data (handler). Di sini payload JSON dari client dibaca dan divalidasi kelengkapannya sebelum diolah lebih lanjut.',
+    sample: 'function createAbsensi(): void {\n    // 1. Tangkap payload JSON dari client\n    // 2. Validasi data (apakah ada yang kosong/null?)\n    // 3. Jika valid, siapkan untuk simpan ke database...\n}'
   },
   {
     step: 4,
     tab: 'Database',
     title: 'Database Execution',
     actor: 'MySQL Database',
-    action: 'INSERT INTO tb_absensi',
-    desc: 'Setelah lolos validasi, data disimpan ke database MySQL secara aman menggunakan PDO prepared statement (:nama, :nim, :status, :tanggal).',
-    sample: 'INSERT INTO tb_absensi (nama, nim, status, tanggal)\nVALUES (:nama, :nim, :status, :tanggal);'
+    action: 'Komunikasi ke Database',
+    desc: 'Backend berbicara ke server database melalui perantara koneksi (PDO). Query disiapkan (prepare) lalu dieksekusi bersama datanya (execute).',
+    sample: '// Backend mengirim perintah lewat koneksi database (PDO)\n$stmt = $pdo->prepare("INSERT INTO tb_absensi (nama, status) VALUES (:nama, :status)");\n$stmt->execute($data);'
   },
   {
     step: 5,
