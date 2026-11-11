@@ -12,6 +12,10 @@ export default [
         text: "Role Programmer — Batas, Cabang, Demo",
         link: "/miniclass/game/programmer/",
       },
+      {
+        text: "Minggu 2 — Interface Unity dan OOP UI",
+        link: "/miniclass/game/minggu-2/",
+      },
     ],
   },
   {
