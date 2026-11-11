@@ -31,10 +31,11 @@ wri-absensi-api/
 
 | File | Peran |
 | :--- | :--- |
+| `.htaccess` | Mengarahkan semua request URL di web server Apache (XAMPP/Laragon) agar selalu masuk ke pintu gerbang `index.php`. |
 | `koneksi.php` | Membuka koneksi database via PDO dan menyediakan fungsi `db()`. |
 | `helpers.php` | Menyediakan fungsi `response()` (JSON seragam) dan `requestInput()` (baca JSON body). |
 | `router.php` | Starter template router untuk mencocokkan URL dan HTTP Method ke handler yang sesuai. |
-| `handlers/absensi.php` | Berisi 5 fungsi logika CRUD: `getAllAbsensi()`, `getAbsensiById()`, `createAbsensi()`, `updateAbsensi()`, dan `deleteAbsensi()`. |
+| `handlers/absensi.php` | Berisi fungsi logika CRUD: `getAllAbsensi()`, `getAbsensiById()`, `createAbsensi()`, `updateAbsensi()`, dan `deleteAbsensi()`. |
 | `index.php` | Tempat mendaftarkan rute (routing map) dan menjalankan aplikasi via `run()`. |
 
 ---
@@ -60,8 +61,27 @@ CREATE TABLE tb_absensi (
 
 ---
 
-### 2. File Koneksi Database (`koneksi.php`)
+### 2. Konfigurasi Server (`.htaccess`)
 
+File `.htaccess` adalah file konfigurasi khusus untuk web server **Apache** (yang dipakai oleh XAMPP dan Laragon).
+
+> **Untuk apa file ini?**  
+> Secara default, jika kamu menembak URL `/api/absensi`, Apache akan mencari folder fisik bernama `api/absensi/`. Karena folder itu tidak ada di komputermu, Apache akan menampilkan error 404.  
+> 
+> File `.htaccess` ini bertugas memerintahkan Apache: *"Jangan cari folder fisik! Tolong alihkan (**rewrite**) semua lalu lintas request ke satu pintu gerbang utama: `index.php`."*
+
+```apache
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L,QSA]
+</IfModule>
+```
+
+---
+
+### 3. File Koneksi Database (`koneksi.php`)
 Gunakan PDO (*PHP Data Objects*) yang aman dari SQL Injection:
 
 ```php
@@ -101,7 +121,7 @@ function db(): PDO
 
 ---
 
-### 3. File Helper (`helpers.php`)
+### 4. File Helper (`helpers.php`)
 
 Helper ini mengotomatiskan pengiriman format JSON dan pembacaan raw JSON payload:
 
@@ -132,7 +152,7 @@ function requestInput(): array
 
 ---
 
-### 4. Starter Router Engine (`router.php`)
+### 5. Starter Router Engine (`router.php`)
 
 :::info 💡 Starter Template
 File `router.php` ini disediakan sebagai alat bantu agar kita bisa mendefinisikan rute modern tanpa perlu menginstal *library* pihak ketiga. Kamu cukup memasukkannya ke dalam proyek tanpa perlu mengubah isinya.
@@ -224,7 +244,7 @@ function run(): void
 
 ---
 
-### 5. Peta Rute (`index.php`)
+### 6. Peta Rute (`index.php`)
 
 File ini sangat ringkas karena hanya memetakan URL dan method ke fungsi handler:
 
@@ -253,7 +273,7 @@ run();
 
 ---
 
-### 6. Kerangka Handler CRUD (`handlers/absensi.php`)
+### 7. Kerangka Handler CRUD (`handlers/absensi.php`)
 
 Buat folder `handlers/`, lalu buat file `absensi.php`. File ini adalah **area live coding utama** yang akan kita bangun bersama-sama di kelas:
 
