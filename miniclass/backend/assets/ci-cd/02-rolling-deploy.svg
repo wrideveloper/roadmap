@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img">
+  <title>Strategi Rolling: Ganti instans satu per satu tanpa downtime</title>
+  <desc>Load balancer membagi traffic ke tiga instans. Instans diperbarui satu per satu dari v1 ke v2. Saat satu instans diperbarui, dua instans lain tetap melayani pengguna sehingga tidak ada downtime dan dua versi hidup bersamaan selama proses berlangsung.</desc>
+  <style>
+    text {
+      font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* 12s smooth rolling cycle:
+       0-22%: All 3 v1
+       22-48%: Inst 1 updating, Inst 2 and 3 serve v1
+       48-74%: Inst 1 is v2, Inst 2 updating, Inst 3 serves v1
+       74-100%: Inst 1 and 2 v2, Inst 3 updates to v2
+    */
+    .t1 { animation: fadeT1 12s ease-in-out infinite; }
+    .t2 { animation: fadeT2 12s ease-in-out infinite; }
+    .t3 { animation: fadeT3 12s ease-in-out infinite; }
+    .t4 { animation: fadeT4 12s ease-in-out infinite; }
+
+    @keyframes fadeT1 {
+      0%, 19%   { opacity: 1; }
+      23%, 96%  { opacity: 0; }
+      100%      { opacity: 1; }
+    }
+    @keyframes fadeT2 {
+      0%, 20%   { opacity: 0; }
+      24%, 45%  { opacity: 1; }
+      49%, 100% { opacity: 0; }
+    }
+    @keyframes fadeT3 {
+      0%, 46%   { opacity: 0; }
+      50%, 71%  { opacity: 1; }
+      75%, 100% { opacity: 0; }
+    }
+    @keyframes fadeT4 {
+      0%, 72%   { opacity: 0; }
+      76%, 96%  { opacity: 1; }
+      100%      { opacity: 0; }
+    }
+
+    /* Instance 1 states */
+    .i1-v1  { animation: i1V1 12s ease-in-out infinite; }
+    .i1-upd { animation: i1Upd 12s ease-in-out infinite; }
+    .i1-v2  { animation: i1V2 12s ease-in-out infinite; }
+
+    @keyframes i1V1 {
+      0%, 19%   { opacity: 1; }
+      23%, 96%  { opacity: 0; }
+      100%      { opacity: 1; }
+    }
+    @keyframes i1Upd {
+      0%, 20%   { opacity: 0; }
+      24%, 44%  { opacity: 1; }
+      48%, 100% { opacity: 0; }
+    }
+    @keyframes i1V2 {
+      0%, 45%   { opacity: 0; }
+      49%, 96%  { opacity: 1; }
+      100%      { opacity: 0; }
+    }
+
+    /* Instance 2 states */
+    .i2-v1  { animation: i2V1 12s ease-in-out infinite; }
+    .i2-upd { animation: i2Upd 12s ease-in-out infinite; }
+    .i2-v2  { animation: i2V2 12s ease-in-out infinite; }
+
+    @keyframes i2V1 {
+      0%, 45%   { opacity: 1; }
+      49%, 96%  { opacity: 0; }
+      100%      { opacity: 1; }
+    }
+    @keyframes i2Upd {
+      0%, 46%   { opacity: 0; }
+      50%, 70%  { opacity: 1; }
+      74%, 100% { opacity: 0; }
+    }
+    @keyframes i2V2 {
+      0%, 71%   { opacity: 0; }
+      75%, 96%  { opacity: 1; }
+      100%      { opacity: 0; }
+    }
+
+    /* Instance 3 states */
+    .i3-v1  { animation: i3V1 12s ease-in-out infinite; }
+    .i3-upd { animation: i3Upd 12s ease-in-out infinite; }
+    .i3-v2  { animation: i3V2 12s ease-in-out infinite; }
+
+    @keyframes i3V1 {
+      0%, 71%   { opacity: 1; }
+      75%, 96%  { opacity: 0; }
+      100%      { opacity: 1; }
+    }
+    @keyframes i3Upd {
+      0%, 72%   { opacity: 0; }
+      76%, 88%  { opacity: 1; }
+      91%, 100% { opacity: 0; }
+    }
+    @keyframes i3V2 {
+      0%, 89%   { opacity: 0; }
+      92%, 97%  { opacity: 1; }
+      100%      { opacity: 0; }
+    }
+
+    /* Traffic packets from User to LB */
+    .p-in {
+      opacity: 0;
+      animation: goIn 1.2s linear infinite;
+    }
+    @keyframes goIn {
+      0%   { opacity: 0; transform: translate(0px, 0px); }
+      15%  { opacity: 1; }
+      85%  { opacity: 1; }
+      100% { opacity: 0; transform: translate(86px, 0px); }
+    }
+
+    /* Traffic packets from LB to Instance 1, 2, 3 */
+    .p-top {
+      opacity: 0;
+      animation: goTop 1.2s linear infinite;
+    }
+    @keyframes goTop {
+      0%   { opacity: 0; transform: translate(0px, 0px); }
+      15%  { opacity: 1; }
+      85%  { opacity: 1; }
+      100% { opacity: 0; transform: translate(152px, -74px); }
+    }
+
+    .p-mid {
+      opacity: 0;
+      animation: goMid 1.2s linear infinite;
+    }
+    @keyframes goMid {
+      0%   { opacity: 0; transform: translate(0px, 0px); }
+      15%  { opacity: 1; }
+      85%  { opacity: 1; }
+      100% { opacity: 0; transform: translate(152px, 0px); }
+    }
+
+    .p-bot {
+      opacity: 0;
+      animation: goBot 1.2s linear infinite;
+    }
+    @keyframes goBot {
+      0%   { opacity: 0; transform: translate(0px, 0px); }
+      15%  { opacity: 1; }
+      85%  { opacity: 1; }
+      100% { opacity: 0; transform: translate(152px, 74px); }
+    }
+
+    .d0 { animation-delay: 0.0s; }
+    .d1 { animation-delay: 0.4s; }
+    .d2 { animation-delay: 0.8s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .t1, .t2, .t4, .i1-v1, .i1-upd, .i2-v1, .i2-v2, .i3-upd, .i3-v2, .p-in, .p-top, .p-mid, .p-bot {
+        animation: none !important;
+        opacity: 0;
+      }
+      .t3, .i1-v2, .i2-upd, .i3-v1 {
+        animation: none !important;
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <rect width="800" height="400" rx="18" fill="#0f172a"/>
+
+  <!-- Header -->
+  <text x="32" y="40" font-size="18" font-weight="700" fill="#e2e8f0">Strategi Rolling: perbarui instans satu per satu</text>
+  <g class="t1">
+    <text x="32" y="65" font-size="14" font-weight="500" fill="#94a3b8">Tahap 1 · Ketiga instans berjalan pada versi v1</text>
+  </g>
+  <g class="t2">
+    <text x="32" y="65" font-size="14" font-weight="500" fill="#fbbf24">Tahap 2 · Instans 1 drain &amp; update ke v2; Instans 2 &amp; 3 tetap melayani</text>
+  </g>
+  <g class="t3">
+    <text x="32" y="65" font-size="14" font-weight="500" fill="#fbbf24">Tahap 3 · Instans 2 update; v2 (Instans 1) &amp; v1 (Instans 3) hidup bersamaan</text>
+  </g>
+  <g class="t4">
+    <text x="32" y="65" font-size="14" font-weight="500" fill="#34d399">Tahap 4 · Instans 3 selesai diperbarui; semua instans aktif di v2</text>
+  </g>
+
+  <!-- Connection Lines -->
+  <g stroke="#334155" stroke-width="2" stroke-dasharray="5 5" fill="none">
+    <line x1="146" y1="205" x2="232" y2="205"/>
+    <line x1="358" y1="192" x2="510" y2="118"/>
+    <line x1="358" y1="205" x2="510" y2="205"/>
+    <line x1="358" y1="218" x2="510" y2="292"/>
+  </g>
+
+  <!-- Continuous User -> LB Packets -->
+  <circle class="p-in d0" cx="146" cy="205" r="5" fill="#e2e8f0"/>
+  <circle class="p-in d1" cx="146" cy="205" r="5" fill="#e2e8f0"/>
+  <circle class="p-in d2" cx="146" cy="205" r="5" fill="#e2e8f0"/>
+
+  <!-- LB -> Instance 1 Packets -->
+  <g class="i1-v1">
+    <circle class="p-top d0" cx="358" cy="192" r="5" fill="#60a5fa"/>
+    <circle class="p-top d2" cx="358" cy="192" r="5" fill="#60a5fa"/>
+  </g>
+  <g class="i1-v2">
+    <circle class="p-top d0" cx="358" cy="192" r="5" fill="#34d399"/>
+    <circle class="p-top d2" cx="358" cy="192" r="5" fill="#34d399"/>
+  </g>
+
+  <!-- LB -> Instance 2 Packets -->
+  <g class="i2-v1">
+    <circle class="p-mid d1" cx="358" cy="205" r="5" fill="#60a5fa"/>
+  </g>
+  <g class="i2-v2">
+    <circle class="p-mid d1" cx="358" cy="205" r="5" fill="#34d399"/>
+  </g>
+
+  <!-- LB -> Instance 3 Packets -->
+  <g class="i3-v1">
+    <circle class="p-bot d0" cx="358" cy="218" r="5" fill="#60a5fa"/>
+    <circle class="p-bot d2" cx="358" cy="218" r="5" fill="#60a5fa"/>
+  </g>
+  <g class="i3-v2">
+    <circle class="p-bot d0" cx="358" cy="218" r="5" fill="#34d399"/>
+    <circle class="p-bot d2" cx="358" cy="218" r="5" fill="#34d399"/>
+  </g>
+
+  <!-- Pengguna Box -->
+  <rect x="36" y="173" width="110" height="64" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <text x="91" y="210" font-size="15" font-weight="600" fill="#e2e8f0" text-anchor="middle">Pengguna</text>
+
+  <!-- Load Balancer Box -->
+  <rect x="232" y="155" width="126" height="100" rx="14" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+  <text x="295" y="201" font-size="15" font-weight="700" fill="#e2e8f0" text-anchor="middle">Load Balancer</text>
+  <text x="295" y="221" font-size="11.5" fill="#94a3b8" text-anchor="middle">alihkan dari</text>
+  <text x="295" y="236" font-size="11.5" fill="#94a3b8" text-anchor="middle">instans yang drain</text>
+
+  <!-- INSTANCE 1 -->
+  <g class="i1-v1">
+    <rect x="510" y="82" width="246" height="72" rx="12" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+    <text x="530" y="114" font-size="14" font-weight="700" fill="#e2e8f0">Instans 1</text>
+    <text x="530" y="134" font-size="12" fill="#94a3b8">melayani traffic</text>
+    <rect x="684" y="103" width="54" height="28" rx="8" fill="#172554" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="711" y="122" class="mono" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">v1</text>
+  </g>
+  <g class="i1-upd">
+    <rect x="510" y="82" width="246" height="72" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="530" y="114" font-size="14" font-weight="700" fill="#fbbf24">Instans 1</text>
+    <text x="530" y="134" font-size="12" fill="#fde68a">drain &amp; ganti ke v2...</text>
+    <rect x="676" y="103" width="62" height="28" rx="8" fill="#451a03" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="707" y="122" class="mono" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">UPD</text>
+  </g>
+  <g class="i1-v2">
+    <rect x="510" y="82" width="246" height="72" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="530" y="114" font-size="14" font-weight="700" fill="#e2e8f0">Instans 1</text>
+    <text x="530" y="134" font-size="12" fill="#94a3b8">melayani traffic</text>
+    <rect x="684" y="103" width="54" height="28" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="711" y="122" class="mono" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">v2</text>
+  </g>
+
+  <!-- INSTANCE 2 -->
+  <g class="i2-v1">
+    <rect x="510" y="169" width="246" height="72" rx="12" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+    <text x="530" y="201" font-size="14" font-weight="700" fill="#e2e8f0">Instans 2</text>
+    <text x="530" y="221" font-size="12" fill="#94a3b8">melayani traffic</text>
+    <rect x="684" y="190" width="54" height="28" rx="8" fill="#172554" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="711" y="209" class="mono" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">v1</text>
+  </g>
+  <g class="i2-upd">
+    <rect x="510" y="169" width="246" height="72" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="530" y="201" font-size="14" font-weight="700" fill="#fbbf24">Instans 2</text>
+    <text x="530" y="221" font-size="12" fill="#fde68a">drain &amp; ganti ke v2...</text>
+    <rect x="676" y="190" width="62" height="28" rx="8" fill="#451a03" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="707" y="209" class="mono" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">UPD</text>
+  </g>
+  <g class="i2-v2">
+    <rect x="510" y="169" width="246" height="72" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="530" y="201" font-size="14" font-weight="700" fill="#e2e8f0">Instans 2</text>
+    <text x="530" y="221" font-size="12" fill="#94a3b8">melayani traffic</text>
+    <rect x="684" y="190" width="54" height="28" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="711" y="209" class="mono" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">v2</text>
+  </g>
+
+  <!-- INSTANCE 3 -->
+  <g class="i3-v1">
+    <rect x="510" y="256" width="246" height="72" rx="12" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+    <text x="530" y="288" font-size="14" font-weight="700" fill="#e2e8f0">Instans 3</text>
+    <text x="530" y="308" font-size="12" fill="#94a3b8">melayani traffic</text>
+    <rect x="684" y="277" width="54" height="28" rx="8" fill="#172554" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="711" y="296" class="mono" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">v1</text>
+  </g>
+  <g class="i3-upd">
+    <rect x="510" y="256" width="246" height="72" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="530" y="288" font-size="14" font-weight="700" fill="#fbbf24">Instans 3</text>
+    <text x="530" y="308" font-size="12" fill="#fde68a">drain &amp; ganti ke v2...</text>
+    <rect x="676" y="277" width="62" height="28" rx="8" fill="#451a03" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="707" y="296" class="mono" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">UPD</text>
+  </g>
+  <g class="i3-v2">
+    <rect x="510" y="256" width="246" height="72" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="530" y="288" font-size="14" font-weight="700" fill="#e2e8f0">Instans 3</text>
+    <text x="530" y="308" font-size="12" fill="#94a3b8">melayani traffic</text>
+    <rect x="684" y="277" width="54" height="28" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="711" y="296" class="mono" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">v2</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="32" y="380" font-size="13" fill="#94a3b8">Zero downtime tanpa server ganda, tetapi v1 dan v2 aktif bersamaan selama proses rolling</text>
+</svg>

@@ -273,7 +273,10 @@ export default [
     items: [
       {
         text: "Fondasi Deploy dan Artifact",
-        link: "/miniclass/backend/observability/01-observability-dan-structured-logging",
+        link: "/miniclass/backend/ci-cd/01-fondasi-deploy-dan-artifact",
+      },{
+        text: "Strategi Deploy: Recreate Sampai Canary",
+        link: "/miniclass/backend/ci-cd/02-strategi-deploy",
       },
     ],
   },

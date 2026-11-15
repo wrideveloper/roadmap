@@ -34,6 +34,7 @@ Miniclass ini mencakup:
   - [Observability dan Structured Logging](/miniclass/backend/observability/01-observability-dan-structured-logging)
 - **Advance: CI-CD**:
   - [Fondasi Deploy dan Artifact](/miniclass/backend/ci-cd/01-fondasi-deploy-dan-artifact)
+  - [Strategi Deploy: Recreate Sampai Canary](/miniclass/backend/ci-cd/02-strategi-deploy)
 
 ### Panduan Belajar
 
