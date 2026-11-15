@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img">
+  <title>Pipeline Commit ke Produksi: Satu Artifact, Banyak Lingkungan</title>
+  <desc>Alur artifact bergerak dari Commit, Test, Build Image (Tag SHA), Registry, Deploy (Digest), hingga Produksi. Di setiap transisi terdapat jaminan integritas untuk memastikan kode yang diuji identik dengan yang berjalan di produksi.</desc>
+  <style>
+    text {
+      font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .packet {
+      opacity: 0;
+      animation: movePipeline 9s linear infinite;
+    }
+    .p1 { animation-delay: 0s; }
+    .p2 { animation-delay: 3s; }
+    .p3 { animation-delay: 6s; }
+
+    @keyframes movePipeline {
+      0%   { opacity: 0; transform: translate(0px, 0px); }
+      3%   { opacity: 1; transform: translate(0px, 0px); }
+      14%  { opacity: 1; transform: translate(74px, 0px); }
+      18%  { opacity: 0; transform: translate(74px, 0px); }
+
+      20%  { opacity: 0; transform: translate(134px, 0px); }
+      22%  { opacity: 1; transform: translate(134px, 0px); }
+      33%  { opacity: 1; transform: translate(208px, 0px); }
+      37%  { opacity: 0; transform: translate(208px, 0px); }
+
+      39%  { opacity: 0; transform: translate(298px, 0px); }
+      41%  { opacity: 1; transform: translate(298px, 0px); }
+      52%  { opacity: 1; transform: translate(372px, 0px); }
+      56%  { opacity: 0; transform: translate(372px, 0px); }
+
+      58%  { opacity: 0; transform: translate(446px, 0px); }
+      60%  { opacity: 1; transform: translate(446px, 0px); }
+      71%  { opacity: 1; transform: translate(520px, 0px); }
+      75%  { opacity: 0; transform: translate(520px, 0px); }
+
+      77%  { opacity: 0; transform: translate(608px, 0px); }
+      79%  { opacity: 1; transform: translate(608px, 0px); }
+      91%  { opacity: 1; transform: translate(682px, 0px); }
+      95%  { opacity: 0; transform: translate(682px, 0px); }
+      100% { opacity: 0; transform: translate(682px, 0px); }
+    }
+
+    .stage-box {
+      animation: pulseCard 9s ease-in-out infinite;
+    }
+    .s1 { animation-delay: 0s; }
+    .s2 { animation-delay: 1.5s; }
+    .s3 { animation-delay: 3.2s; }
+    .s4 { animation-delay: 4.9s; }
+    .s5 { animation-delay: 6.6s; }
+    .s6 { animation-delay: 8.1s; }
+
+    @keyframes pulseCard {
+      0%, 100% { filter: brightness(1); }
+      8% { filter: brightness(1.3); }
+      18% { filter: brightness(1); }
+    }
+
+    .q-badge {
+      animation: pulseBadge 9s ease-in-out infinite;
+    }
+    .b1 { animation-delay: 0.7s; }
+    .b2 { animation-delay: 2.4s; }
+    .b3 { animation-delay: 4.1s; }
+    .b4 { animation-delay: 5.8s; }
+    .b5 { animation-delay: 7.5s; }
+
+    @keyframes pulseBadge {
+      0%, 100% { opacity: 0.55; transform: translateY(0px); }
+      8% { opacity: 1; transform: translateY(-3px); }
+      18% { opacity: 0.55; transform: translateY(0px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .packet, .stage-box, .q-badge {
+        animation: none !important;
+      }
+      .packet { opacity: 0; }
+      .q-badge { opacity: 1; }
+    }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="420" rx="18" fill="#0f172a"/>
+
+  <text x="32" y="40" font-size="18" font-weight="700" fill="#e2e8f0">Pipeline: Commit ke Produksi</text>
+  <text x="32" y="64" font-size="14" font-weight="500" fill="#94a3b8">Build sekali, deploy berkali-kali — memastikan artifact yang diuji identik dengan yang dirilis</text>
+
+  <g transform="translate(440, 102)">
+    <rect x="-205" y="-16" width="410" height="28" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="0" y="3" font-size="13" font-weight="600" fill="#fbbf24" text-anchor="middle">Di setiap panah: "Apa yang menjamin ini tetap sama?"</text>
+  </g>
+
+  <g stroke="#475569" stroke-width="2" stroke-dasharray="5 5" fill="none">
+    <line x1="112" y1="205" x2="182" y2="205" marker-end="url(#arrow)"/>
+    <line x1="246" y1="205" x2="316" y2="205" marker-end="url(#arrow)"/>
+    <line x1="410" y1="205" x2="480" y2="205" marker-end="url(#arrow)"/>
+    <line x1="558" y1="205" x2="628" y2="205" marker-end="url(#arrow)"/>
+    <line x1="720" y1="205" x2="790" y2="205" stroke="#fbbf24" marker-end="url(#arrow-amber)"/>
+  </g>
+
+  <!-- Wrapper posisi terpisah dari class animasi agar CSS transform tidak menimpa koordinat -->
+  <g transform="translate(148, 174)">
+    <g class="q-badge b1">
+      <circle cx="0" cy="0" r="11" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="0" y="4" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">?</text>
+    </g>
+  </g>
+  <g transform="translate(282, 174)">
+    <g class="q-badge b2">
+      <circle cx="0" cy="0" r="11" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="0" y="4" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">?</text>
+    </g>
+  </g>
+  <g transform="translate(446, 174)">
+    <g class="q-badge b3">
+      <circle cx="0" cy="0" r="11" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="0" y="4" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">?</text>
+    </g>
+  </g>
+  <g transform="translate(594, 174)">
+    <g class="q-badge b4">
+      <circle cx="0" cy="0" r="11" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="0" y="4" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">?</text>
+    </g>
+  </g>
+  <g transform="translate(756, 174)">
+    <g class="q-badge b5">
+      <circle cx="0" cy="0" r="11" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="0" y="4" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">?</text>
+    </g>
+  </g>
+
+  <g stroke="#334155" stroke-width="1.5" stroke-dasharray="3 3">
+    <line x1="148" y1="215" x2="148" y2="275"/>
+    <line x1="282" y1="215" x2="282" y2="275"/>
+    <line x1="446" y1="215" x2="446" y2="275"/>
+    <line x1="594" y1="215" x2="594" y2="275"/>
+    <line x1="756" y1="215" x2="756" y2="275"/>
+  </g>
+
+  <circle class="packet p1" cx="112" cy="205" r="6" fill="#38bdf8"/>
+  <circle class="packet p2" cx="112" cy="205" r="6" fill="#fbbf24"/>
+  <circle class="packet p3" cx="112" cy="205" r="6" fill="#34d399"/>
+
+  <g class="stage-box s1">
+    <rect x="32" y="167" width="80" height="76" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <text x="72" y="201" font-size="14" font-weight="700" fill="#e2e8f0" text-anchor="middle">Commit</text>
+    <text x="72" y="220" class="mono" font-size="11" fill="#94a3b8" text-anchor="middle">a1b2c3d</text>
+  </g>
+
+  <g class="stage-box s2">
+    <rect x="186" y="167" width="60" height="76" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <text x="216" y="201" font-size="14" font-weight="700" fill="#e2e8f0" text-anchor="middle">Test</text>
+    <text x="216" y="220" font-size="11" fill="#34d399" text-anchor="middle">CI pass</text>
+  </g>
+
+  <g class="stage-box s3">
+    <rect x="320" y="163" width="90" height="84" rx="12" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+    <text x="365" y="196" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">Build Image</text>
+    <rect x="331" y="207" width="68" height="22" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1"/>
+    <text x="365" y="222" class="mono" font-size="10.5" fill="#93c5fd" text-anchor="middle">:a1b2c3d</text>
+  </g>
+
+  <g class="stage-box s4">
+    <rect x="484" y="167" width="74" height="76" rx="12" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+    <text x="521" y="201" font-size="13" font-weight="700" fill="#e2e8f0" text-anchor="middle">Registry</text>
+    <text x="521" y="220" font-size="11" fill="#94a3b8" text-anchor="middle">simpan</text>
+  </g>
+
+  <g class="stage-box s5">
+    <rect x="632" y="163" width="88" height="84" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <text x="676" y="196" font-size="13" font-weight="700" fill="#fbbf24" text-anchor="middle">Deploy</text>
+    <rect x="641" y="207" width="70" height="22" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+    <text x="676" y="222" class="mono" font-size="10" fill="#fde68a" text-anchor="middle">@sha256:..</text>
+  </g>
+
+  <g class="stage-box s6">
+    <rect x="794" y="163" width="54" height="84" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="821" y="201" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">Prod</text>
+    <circle cx="821" cy="221" r="4.5" fill="#34d399"/>
+  </g>
+
+  <!-- Kartu Jaminan Integritas (wrapper translate terpisah dari animasi) -->
+  <g transform="translate(148, 275)">
+    <g class="q-badge b1">
+      <rect x="-56" y="0" width="112" height="58" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="0" y="21" font-size="11" font-weight="700" fill="#e2e8f0" text-anchor="middle">Git Commit SHA</text>
+      <text x="0" y="37" font-size="10" fill="#94a3b8" text-anchor="middle">Kode yang diuji</text>
+      <text x="0" y="50" font-size="10" fill="#94a3b8" text-anchor="middle">persis revisi ini</text>
+    </g>
+  </g>
+
+  <g transform="translate(282, 275)">
+    <g class="q-badge b2">
+      <rect x="-58" y="0" width="116" height="58" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="0" y="21" font-size="11" font-weight="700" fill="#e2e8f0" text-anchor="middle">Hermetic Build</text>
+      <text x="0" y="37" font-size="10" fill="#94a3b8" text-anchor="middle">Lockfile &amp; pin</text>
+      <text x="0" y="50" font-size="10" fill="#94a3b8" text-anchor="middle">versi base image</text>
+    </g>
+  </g>
+
+  <g transform="translate(446, 275)">
+    <g class="q-badge b3">
+      <rect x="-62" y="0" width="124" height="58" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="0" y="21" font-size="11" font-weight="700" fill="#60a5fa" text-anchor="middle">Tag SHA Unik</text>
+      <text x="0" y="37" font-size="10" fill="#94a3b8" text-anchor="middle">Bukan :latest,</text>
+      <text x="0" y="50" font-size="10" fill="#94a3b8" text-anchor="middle">tiap build terikat</text>
+    </g>
+  </g>
+
+  <g transform="translate(594, 275)">
+    <g class="q-badge b4">
+      <rect x="-60" y="0" width="120" height="58" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="0" y="21" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">Immutable Digest</text>
+      <text x="0" y="37" font-size="10" fill="#94a3b8" text-anchor="middle">Hash konten image</text>
+      <text x="0" y="50" font-size="10" fill="#94a3b8" text-anchor="middle">anti-ubah diam-diam</text>
+    </g>
+  </g>
+
+  <g transform="translate(756, 275)">
+    <g class="q-badge b5">
+      <rect x="-64" y="0" width="128" height="58" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="0" y="21" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle">Runtime Config</text>
+      <text x="0" y="37" font-size="10" fill="#94a3b8" text-anchor="middle">Tanpa build ulang;</text>
+      <text x="0" y="50" font-size="10" fill="#94a3b8" text-anchor="middle">env inject saat jalan</text>
+    </g>
+  </g>
+
+  <text x="32" y="392" font-size="13" fill="#94a3b8">Satu rantai verifikasi dari baris kode hingga server produksi — tidak ada celah "beda server, beda isi"</text>
+</svg>

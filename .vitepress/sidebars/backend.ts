@@ -267,4 +267,14 @@ export default [
       },
     ],
   },
+  {
+    text: "Advance: CI-CD",
+    collapsed: false,
+    items: [
+      {
+        text: "Fondasi Deploy dan Artifact",
+        link: "/miniclass/backend/observability/01-observability-dan-structured-logging",
+      },
+    ],
+  },
 ];
