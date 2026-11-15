@@ -282,6 +282,10 @@ export default [
         text: "Deploy vs Release",
         link: "/miniclass/backend/ci-cd/03-deploy-vs-release",
       },
+      {
+        text: "Keamanan Pipeline",
+        link: "/miniclass/backend/ci-cd/04-keamanan-pipeline",
+      },
     ],
   },
 ];
