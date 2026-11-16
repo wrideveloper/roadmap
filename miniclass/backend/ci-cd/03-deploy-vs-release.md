@@ -61,7 +61,7 @@ Hodgson memandang *toggle* sebagai *inventory* yang punya biaya perawatan (*carr
 
 <div align="center">
 
-![Strategi Deploy Shadow](/miniclass/backend/assets/ci-cd/03-deploy-vs-release.svg)
+![Deploy vs Release](/miniclass/backend/assets/ci-cd/03-deploy-vs-release.svg)
 
 </div>
 

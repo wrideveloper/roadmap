@@ -286,6 +286,10 @@ export default [
         text: "Keamanan Pipeline",
         link: "/miniclass/backend/ci-cd/04-keamanan-pipeline",
       },
+      {
+        text: "Lab CI-CD Github Action",
+        link: "/miniclass/backend/ci-cd/05-lab-ci-cd-github-actions",
+      },
     ],
   },
 ];

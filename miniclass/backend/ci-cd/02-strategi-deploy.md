@@ -1,7 +1,7 @@
 # Strategi Deploy: Mengganti Mesin Saat Mesin Berjalan
 
 ::: info **Prasyarat Modul**
-Kamu diasumsikan sudah paham konsep *image*, *tag*, dan *artifact* dari halaman sebelumnya, serta cara kerja *reverse proxy* secara garis besar. Halaman ini khusus membahas konsepnya dulu; praktiknya akan kita gas di Halaman 6.
+Kamu diasumsikan sudah paham konsep *image*, *tag*, dan *artifact* dari halaman sebelumnya, serta cara kerja *reverse proxy* secara garis besar. Halaman ini khusus membahas konsepnya dulu. Pipeline yang menayangkan versi baru kamu praktikkan di Halaman 5, dan cara mengamankannya dibahas di Halaman 4.
 :::
 
 Bayangkan kamu harus mengganti ban mobil. Ada beberapa cara yang bisa kamu pilih:
@@ -59,7 +59,7 @@ Konsekuensinya: **selama proses *rolling* berjalan, dua versi aplikasi hidup ber
 
 ::: warning **Peringatan: Instans yang dimatikan harus menyelesaikan tugasnya dulu**
 Saat instans lama mau dimatikan, ia wajib berhenti menerima koneksi baru, tapi **tetap menyelesaikan *request* yang sedang diproses** (*graceful shutdown* / *connection draining*).
-Aplikasi demo kita di Halaman 5 menangani sinyal `SIGTERM` khusus untuk urusan ini. Tanpa mekanisme ini, strategi *rolling* yang katanya *zero-downtime* tetap bakal memutus *request* user di tengah jalan.
+Di aplikasi sungguhan, ini berarti aplikasimu harus menangani sinyal `SIGTERM`: berhenti menerima koneksi baru, menyelesaikan *request* yang masih berjalan, baru keluar. Tanpa mekanisme ini, strategi *rolling* yang katanya *zero-downtime* tetap bakal memutus *request* user di tengah jalan.
 :::
 
 
@@ -78,7 +78,7 @@ Meski terdengar mulus, ada **tiga hal yang sering luput** saat menerapkan Blue-G
 
 1. **Sinkronisasi Database:** Fowler mencatat bahwa transaksi yang masuk saat Green aktif bisa tidak tercatat di Blue. Solusinya: skema *database* harus dibuat kompatibel dengan versi lama dan baru lebih dulu, baru aplikasi baru di-*deploy*. Dukungan untuk skema lama baru dihapus setelah versi baru benar-benar stabil (pola *expand/contract* di Halaman 3).
 2. **Ongkos Infrastruktur:** Punya dua lingkungan kembar sekaligus mekanisme *routing* yang gampang dialihkan tentu butuh *resource* ekstra. (Artikel Fowler tidak membahas biaya secara eksplisit; poin ongkos ekstra ini catatan tambahanku sendiri).
-3. **Saklar Harus Benar-Benar Satu:** Di praktik kita nanti, saklar pemindah *traffic* ini cukup berupa satu baris konfigurasi di `nginx`.
+3. **Saklar Harus Benar-Benar Satu:** Di server sungguhan, saklar pemindah *traffic* ini cukup berupa satu baris konfigurasi di `nginx`.
 
 **Kenapa saklar di `nginx` aman diputar?**
 Menurut [dokumentasi resmi `nginx`](https://nginx.org/en/docs/control.html), perintah `reload` akan mengecek sintaks konfigurasi baru terlebih dahulu. Kalau sintaksnya salah, `nginx` menolak perubahan dan tetap memakai konfigurasi lama tanpa gangguan. Kalau valid, proses *worker* lama akan berhenti menerima koneksi baru, menyelesaikan klien yang masih terhubung, baru kemudian berhenti.

@@ -37,6 +37,7 @@ Miniclass ini mencakup:
   - [Strategi Deploy: Recreate Sampai Canary](/miniclass/backend/ci-cd/02-strategi-deploy)
   - [Deploy vs Release](/miniclass/backend/ci-cd/03-deploy-vs-release)
   - [Keamanan Pipeline](/miniclass/backend/ci-cd/04-keamanan-pipeline)
+  - [Lab CI-CD Github Action](/miniclass/backend/ci-cd/05-lab-ci-cd-github-actions)
 
 ### Panduan Belajar
 
