@@ -267,4 +267,29 @@ export default [
       },
     ],
   },
+  {
+    text: "Advance: CI-CD",
+    collapsed: false,
+    items: [
+      {
+        text: "Fondasi Deploy dan Artifact",
+        link: "/miniclass/backend/ci-cd/01-fondasi-deploy-dan-artifact",
+      },{
+        text: "Strategi Deploy: Recreate Sampai Canary",
+        link: "/miniclass/backend/ci-cd/02-strategi-deploy",
+      },
+      {
+        text: "Deploy vs Release",
+        link: "/miniclass/backend/ci-cd/03-deploy-vs-release",
+      },
+      {
+        text: "Keamanan Pipeline",
+        link: "/miniclass/backend/ci-cd/04-keamanan-pipeline",
+      },
+      {
+        text: "Lab CI-CD Github Action",
+        link: "/miniclass/backend/ci-cd/05-lab-ci-cd-github-actions",
+      },
+    ],
+  },
 ];

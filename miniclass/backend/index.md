@@ -32,6 +32,12 @@ Miniclass ini mencakup:
   - [Lab Akhir: File Manager](/miniclass/backend/object-storage/07-lab-file-manager)
 - **Advance: Observability**:
   - [Observability dan Structured Logging](/miniclass/backend/observability/01-observability-dan-structured-logging)
+- **Advance: CI-CD**:
+  - [Fondasi Deploy dan Artifact](/miniclass/backend/ci-cd/01-fondasi-deploy-dan-artifact)
+  - [Strategi Deploy: Recreate Sampai Canary](/miniclass/backend/ci-cd/02-strategi-deploy)
+  - [Deploy vs Release](/miniclass/backend/ci-cd/03-deploy-vs-release)
+  - [Keamanan Pipeline](/miniclass/backend/ci-cd/04-keamanan-pipeline)
+  - [Lab CI-CD Github Action](/miniclass/backend/ci-cd/05-lab-ci-cd-github-actions)
 
 ### Panduan Belajar
 

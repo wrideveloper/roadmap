@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img">
+  <title>Strategi Recreate: Matikan versi lama, nyalakan versi baru</title>
+  <desc>Pengguna mengirim request ke server. Pada fase pertama v1 aktif melayani. Pada fase kedua v1 dimatikan untuk diganti v2 sehingga terjadi downtime dan request gagal. Pada fase ketiga v2 menyala dan kembali melayani traffic.</desc>
+  <style>
+    text {
+      font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* 12s smooth cycle:
+       0-30%: v1 online
+       30-62%: downtime (v1 stopped, v2 starting)
+       62-100%: v2 online
+    */
+    .phase-1 { animation: visP1 12s ease-in-out infinite; }
+    .phase-2 { animation: visP2 12s ease-in-out infinite; }
+    .phase-3 { animation: visP3 12s ease-in-out infinite; }
+
+    @keyframes visP1 {
+      0%, 27%   { opacity: 1; }
+      31%, 96%  { opacity: 0; }
+      100%      { opacity: 1; }
+    }
+    @keyframes visP2 {
+      0%, 28%   { opacity: 0; }
+      32%, 59%  { opacity: 1; }
+      63%, 100% { opacity: 0; }
+    }
+    @keyframes visP3 {
+      0%, 60%   { opacity: 0; }
+      64%, 96%  { opacity: 1; }
+      100%      { opacity: 0; }
+    }
+
+    /* Packets flowing to server when online */
+    .pkt-ok {
+      opacity: 0;
+      animation: flowOk 1.6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    }
+    .d0 { animation-delay: 0.0s; }
+    .d1 { animation-delay: 0.4s; }
+    .d2 { animation-delay: 0.8s; }
+    .d3 { animation-delay: 1.2s; }
+
+    @keyframes flowOk {
+      0%   { opacity: 0; transform: translate(0px, 0px); }
+      12%  { opacity: 1; }
+      85%  { opacity: 1; }
+      100% { opacity: 0; transform: translate(310px, 0px); }
+    }
+
+    /* Packets failing mid-way during downtime */
+    .pkt-fail {
+      opacity: 0;
+      animation: flowFail 1.6s ease-out infinite;
+    }
+    @keyframes flowFail {
+      0%   { opacity: 0; transform: translate(0px, 0px) scale(1); }
+      15%  { opacity: 1; transform: translate(40px, 0px) scale(1); }
+      65%  { opacity: 1; transform: translate(155px, 0px) scale(1.1); }
+      100% { opacity: 0; transform: translate(165px, 18px) scale(0.4); }
+    }
+
+    /* Progress bar inside server during downtime */
+    .boot-bar {
+      animation: bootFill 12s linear infinite;
+    }
+    @keyframes bootFill {
+      0%, 30%   { width: 0px; }
+      60%       { width: 176px; }
+      63%, 100% { width: 176px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .phase-1, .phase-3, .pkt-ok, .pkt-fail, .boot-bar { animation: none !important; }
+      .phase-1, .phase-3, .pkt-ok, .pkt-fail { opacity: 0; }
+      .phase-2 { animation: none !important; opacity: 1; }
+    }
+  </style>
+
+  <rect width="800" height="400" rx="18" fill="#0f172a"/>
+
+  <!-- Header -->
+  <text x="32" y="40" font-size="18" font-weight="700" fill="#e2e8f0">Strategi Recreate: matikan lama, nyalakan baru</text>
+  <g class="phase-1">
+    <text x="32" y="66" font-size="14" font-weight="500" fill="#60a5fa">Tahap 1 · v1 aktif melayani seluruh request pengguna</text>
+  </g>
+  <g class="phase-2">
+    <text x="32" y="66" font-size="14" font-weight="600" fill="#f87171">Tahap 2 · v1 dimatikan, v2 belum siap — terjadi downtime!</text>
+  </g>
+  <g class="phase-3">
+    <text x="32" y="66" font-size="14" font-weight="500" fill="#34d399">Tahap 3 · v2 aktif, seluruh traffic kembali normal</text>
+  </g>
+
+  <!-- Connection Track -->
+  <line x1="168" y1="205" x2="478" y2="205" stroke="#334155" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Phase 1 Packets (Blue v1) -->
+  <g class="phase-1">
+    <circle class="pkt-ok d0" cx="168" cy="205" r="6" fill="#60a5fa"/>
+    <circle class="pkt-ok d1" cx="168" cy="205" r="6" fill="#60a5fa"/>
+    <circle class="pkt-ok d2" cx="168" cy="205" r="6" fill="#60a5fa"/>
+    <circle class="pkt-ok d3" cx="168" cy="205" r="6" fill="#60a5fa"/>
+  </g>
+
+  <!-- Phase 2 Packets (Red Fail + 503 Badge) -->
+  <g class="phase-2">
+    <circle class="pkt-fail d0" cx="168" cy="205" r="6" fill="#f87171"/>
+    <circle class="pkt-fail d1" cx="168" cy="205" r="6" fill="#f87171"/>
+    <circle class="pkt-fail d2" cx="168" cy="205" r="6" fill="#f87171"/>
+    <circle class="pkt-fail d3" cx="168" cy="205" r="6" fill="#f87171"/>
+
+    <g transform="translate(332, 165)">
+      <rect x="-54" y="-14" width="108" height="24" rx="8" fill="#450a0a" stroke="#f87171" stroke-width="1.5"/>
+      <text x="0" y="2" class="mono" font-size="11" font-weight="700" fill="#fca5a5" text-anchor="middle">503 Gagal</text>
+    </g>
+    <line x1="324" y1="197" x2="340" y2="213" stroke="#f87171" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="340" y1="197" x2="324" y2="213" stroke="#f87171" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Phase 3 Packets (Green v2) -->
+  <g class="phase-3">
+    <circle class="pkt-ok d0" cx="168" cy="205" r="6" fill="#34d399"/>
+    <circle class="pkt-ok d1" cx="168" cy="205" r="6" fill="#34d399"/>
+    <circle class="pkt-ok d2" cx="168" cy="205" r="6" fill="#34d399"/>
+    <circle class="pkt-ok d3" cx="168" cy="205" r="6" fill="#34d399"/>
+  </g>
+
+  <!-- Pengguna Box -->
+  <rect x="44" y="171" width="124" height="68" rx="14" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <text x="106" y="203" font-size="15" font-weight="700" fill="#e2e8f0" text-anchor="middle">Pengguna</text>
+  <text x="106" y="222" font-size="12" fill="#94a3b8" text-anchor="middle">kirim request</text>
+
+  <!-- Server Box: Phase 1 (v1 Active) -->
+  <g class="phase-1">
+    <rect x="482" y="133" width="248" height="144" rx="16" fill="#1e293b" stroke="#60a5fa" stroke-width="2.5"/>
+    <rect x="556" y="151" width="100" height="24" rx="12" fill="#172554" stroke="#3b82f6" stroke-width="1"/>
+    <text x="606" y="167" font-size="11" font-weight="700" fill="#93c5fd" text-anchor="middle">ONLINE</text>
+    <text x="606" y="207" font-size="22" font-weight="700" fill="#60a5fa" text-anchor="middle">Server · v1</text>
+    <text x="606" y="232" font-size="13" fill="#94a3b8" text-anchor="middle">melayani 100% traffic</text>
+    <text x="606" y="256" class="mono" font-size="11" fill="#64748b" text-anchor="middle">1 instans tunggal</text>
+  </g>
+
+  <!-- Server Box: Phase 2 (Downtime) -->
+  <g class="phase-2">
+    <rect x="482" y="133" width="248" height="144" rx="16" fill="#1e293b" stroke="#f87171" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <rect x="552" y="151" width="108" height="24" rx="12" fill="#450a0a" stroke="#f87171" stroke-width="1"/>
+    <text x="606" y="167" font-size="11" font-weight="700" fill="#fca5a5" text-anchor="middle">DOWNTIME</text>
+    <text x="606" y="205" font-size="18" font-weight="700" fill="#f87171" text-anchor="middle">Mengganti v1 → v2</text>
+    <text x="606" y="227" font-size="12" fill="#94a3b8" text-anchor="middle">compose down &amp;&amp; up -d</text>
+    <!-- Progress bar -->
+    <rect x="518" y="244" width="176" height="8" rx="4" fill="#0f172a"/>
+    <rect class="boot-bar" x="518" y="244" width="0" height="8" rx="4" fill="#fbbf24"/>
+  </g>
+
+  <!-- Server Box: Phase 3 (v2 Active) -->
+  <g class="phase-3">
+    <rect x="482" y="133" width="248" height="144" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="556" y="151" width="100" height="24" rx="12" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+    <text x="606" y="167" font-size="11" font-weight="700" fill="#6ee7b7" text-anchor="middle">ONLINE</text>
+    <text x="606" y="207" font-size="22" font-weight="700" fill="#34d399" text-anchor="middle">Server · v2</text>
+    <text x="606" y="232" font-size="13" fill="#94a3b8" text-anchor="middle">melayani 100% traffic</text>
+    <text x="606" y="256" class="mono" font-size="11" fill="#64748b" text-anchor="middle">tanpa resource ekstra</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="32" y="380" font-size="13" fill="#94a3b8">Hemat resource (tidak butuh server ganda), tetapi memutus layanan selama proses pergantian versi</text>
+</svg>
