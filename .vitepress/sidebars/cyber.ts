@@ -34,6 +34,10 @@ export default [
         text: "Chapter 3: Active Recon dan Network Scanning",
         link: "/miniclass/cyber/penetration-testing/minggu-03-active-reconnaissance-dan-network-scanning",
       },
+      {
+        text: "Chapter 4: Attack-Surface Mapping dan Service Enumeration",
+        link: "/miniclass/cyber/penetration-testing/attack-surface-mapping-dan-service-enumeration",
+      },
     ],
   },
 ];
