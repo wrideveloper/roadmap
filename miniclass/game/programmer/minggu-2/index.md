@@ -1,6 +1,6 @@
 # Minggu 2: Kenalan sama Interface Unity dan Logika OOP Lewat UI
 
-Minggu lalu kamu udah pasang Unity dan jalanin demo pertama ([Role Programmer](/miniclass/game/programmer/)). Minggu ini kita bedah layarnya: bagian ini namanya apa, gunanya buat apa, dan kapan kamu bakal membukanya. Setelah itu kita bikin satu script kecil yang ngubah nama, warna, dan ukuran objek UI — contoh pertama logika OOP di Unity.
+Minggu lalu kamu udah pasang Unity dan jalanin demo pertama ([Role Programmer](/miniclass/game/programmer/minggu-1/)). Minggu ini kita bedah layarnya: bagian ini namanya apa, gunanya buat apa, dan kapan kamu bakal membukanya. Setelah itu kita bikin satu script kecil yang ngubah nama, warna, dan ukuran objek UI — contoh pertama logika OOP di Unity.
 
 Semua contoh di sini pakai **Unity 6.3 LTS**, versi yang dipakai program ini sampai selesai.
 
@@ -8,7 +8,7 @@ Semua contoh di sini pakai **Unity 6.3 LTS**, versi yang dipakai program ini sam
 
 ## Satu layar, delapan bagian
 
-![Unity 6 Editor dengan delapan bagian diberi nomor: menu bar, toolbar, tool palette, Scene view, Game view, Hierarchy, Project, Inspector](../assets/minggu-2/unity6-editor-panels.jpg)
+![Unity 6 Editor dengan delapan bagian diberi nomor: menu bar, toolbar, tool palette, Scene view, Game view, Hierarchy, Project, Inspector](../../assets/minggu-2/unity6-editor-panels.jpg)
 
 *Unity 6 Editor dengan layout gelap. Nomor 1–8 bakal dipakai terus di bagian ini. Tangkapan layar: dokumentasi sesi WRI Gamedev.*
 
@@ -162,7 +162,7 @@ Tekan **Play**, terus klik area Game. Ini yang harus kelihatan:
 
 Ini hasil jadinya — satu layar yang nunjukin semua perubahan di atas sekaligus:
 
-![Hasil demo UiOopDemo saat Play: nama objek berganti di Hierarchy, panel hijau 300x300 di Game view, nilai Rect Transform dan Color berubah di Inspector, dan baris Debug.Log di status bar](../assets/minggu-2/unity6-demo-hasil.jpg)
+![Hasil demo UiOopDemo saat Play: nama objek berganti di Hierarchy, panel hijau 300x300 di Game view, nilai Rect Transform dan Color berubah di Inspector, dan baris Debug.Log di status bar](../../assets/minggu-2/unity6-demo-hasil.jpg)
 
 *Hasil menekan Play pada demo di atas. Nomor 1–6 nunjukin tempat masing-masing perubahan kelihatan. Tangkapan layar: dokumentasi sesi WRI Gamedev.*
 
