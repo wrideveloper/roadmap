@@ -23,6 +23,10 @@ export default [
         ]
       },
       {
+        text: "Game Ketik — MonkeyType Versi Unity",
+        link: "/miniclass/game/typing-game/",
+      },
+      {
         text: "2D Game Artist",
         collapsed: true,
         items: [
