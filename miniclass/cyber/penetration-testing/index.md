@@ -31,14 +31,15 @@ Seluruh pembahasan di roadmap ini ditujukan hanya untuk lingkungan belajar yang 
 
 ## Halaman Materi
 
-Saat ini Chapter 1–4 telah tersedia. Materi Chapter 5–10 akan dipublikasikan secara bertahap.
+Saat ini Chapter 1–5 telah tersedia. Materi Chapter 6–10 akan dipublikasikan secara bertahap.
 
 | Chapter | Halaman                                                                                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1       | [Introduksi, Etika, dan Metodologi](/miniclass/cyber/penetration-testing/minggu-01-introduksi-etika-dan-metodologi)                                   |
 | 2       | [Passive Reconnaissance dan OSINT](/miniclass/cyber/penetration-testing/minggu-02-passive-reconnaissance-dan-osint)                                   |
 | 3       | [Active Reconnaissance dan Network Scanning](/miniclass/cyber/penetration-testing/minggu-03-active-reconnaissance-dan-network-scanning)               |
-| 4       | [Attack-Surface Mapping dan Service Enumeration](/miniclass/cyber/penetration-testing/attack-surface-mapping-dan-service-enumeration)                |
+| 4       | [Attack-Surface Mapping dan Service Enumeration](/miniclass/cyber/penetration-testing/attack-surface-mapping-dan-service-enumeration)                 |
+| 5       | [Web Requests, Burp Repeater, and Content Discovery](/miniclass/cyber/penetration-testing/minggu-05-web-requests-burp-repeater-and-content-discovery) |
 
 ## Halaman Pendukung
 
