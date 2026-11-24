@@ -35,8 +35,12 @@ export default [
         link: "/miniclass/cyber/penetration-testing/minggu-03-active-reconnaissance-dan-network-scanning",
       },
       {
-        text: "Chapter 4: Attack-Surface Mapping dan Service Enumeration",
-        link: "/miniclass/cyber/penetration-testing/attack-surface-mapping-dan-service-enumeration",
+        text: "Chapter 4: Enumeration & Attack Surface Mapping",
+        link: "/miniclass/cyber/penetration-testing/minggu-04-enumeration-dan-attack-surface-mapping",
+      },
+      {
+        text: "Chapter 5: Web Requests, Burp Repeater, and Content Discovery",
+        link: "/miniclass/cyber/penetration-testing/minggu-05-web-requests-burp-repeater-and-content-discovery",
       },
     ],
   },
