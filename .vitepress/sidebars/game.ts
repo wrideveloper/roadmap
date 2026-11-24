@@ -5,16 +5,39 @@ export default [
     collapsed: false,
     items: [
       {
-        text: "Minggu 1 — Orientasi dan Ekspektasi",
+        text: "Orientasi dan Ekspektasi",
         link: "/miniclass/game/",
       },
       {
-        text: "Role Programmer — Batas, Cabang, Demo",
-        link: "/miniclass/game/programmer/",
+        text: "Programmer",
+        collapsed: true,
+        items: [
+          {
+            text: "Role Programmer — Batas, Cabang, Demo",
+            link: "/miniclass/game/programmer/minggu-1/",
+          },
+          {
+            text: "Minggu 2 — Interface Unity dan OOP UI",
+            link: "/miniclass/game/programmer/minggu-2/",
+          },
+        ]
       },
       {
-        text: "Minggu 2 — Interface Unity dan OOP UI",
-        link: "/miniclass/game/minggu-2/",
+        text: "Game Ketik — MonkeyType Versi Unity",
+        link: "/miniclass/game/typing-game/",
+      },
+      {
+        text: "2D Game Artist",
+        collapsed: true,
+        items: [
+
+        ]
+      },
+      {
+        text: "Game Designer",
+        collapsed: true,
+        items: [
+        ]
       },
     ],
   },

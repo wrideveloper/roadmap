@@ -51,11 +51,11 @@ Di lowongan kerja, "game programmer" jarang berdiri sendiri. Ada gameplay progra
 
 Hasil akhir dari semua cabang itu, kalau dirakit, terlihat seperti ini:
 
-![Tangkapan layar game Roundabout buatan Unity: jalan, mobil, dan karakter dilihat dari sudut atas](../assets/role-programmer/role-programmer-game-jadi.jpg)
+![Tangkapan layar game Roundabout buatan Unity: jalan, mobil, dan karakter dilihat dari sudut atas](../../assets/role-programmer/role-programmer-game-jadi.jpg)
 
 *Roundabout (No Goblin, 2014), dibuat dengan Unity. Satu layar ini adalah gabungan pekerjaan gameplay, UI, sistem, dan performance. Tangkapan layar: Wikimedia Commons, CC BY 3.0.*
 
-![Delapan cabang pekerjaan programmer game, masing-masing dengan contoh nyata](../assets/role-programmer/role-programmer-cabang.png)
+![Delapan cabang pekerjaan programmer game, masing-masing dengan contoh nyata](../../assets/role-programmer/role-programmer-cabang.png)
 
 Delapan kotak di atas bukan delapan karier yang terpisah rapi. Kebanyakan orang mulai dari satu, lalu menambah dua atau tiga seiring proyek yang dikerjakan. Yang penting: setiap cabang punya hasil yang bisa dilihat orang lain.
 
@@ -84,7 +84,7 @@ Polanya tetap berguna. Yang perlu kamu waspadai hanya satu: jangan berharap proj
 
 Kalau tabel di atas masih terasa abstrak, ini artefak nyata dari cabang pertama. Isinya bukan algoritma rumit, melainkan angka yang menentukan rasa kontrol pemain:
 
-![Potongan kode Player.cs dari Celeste: konstanta gerak seperti MaxRun, RunAccel, dan Gravity](../assets/role-programmer/role-programmer-celeste-kode.jpg)
+![Potongan kode Player.cs dari Celeste: konstanta gerak seperti MaxRun, RunAccel, dan Gravity](../../assets/role-programmer/role-programmer-celeste-kode.jpg)
 
 *Celeste, `Source/Player/Player.cs` baris 21–42. Repo [NoelFB/Celeste](https://github.com/NoelFB/Celeste) berlisensi MIT. Angka seperti `MaxRun = 90` dan `RunAccel = 1000` adalah hasil pengujian berulang, bukan nilai bawaan mesin.*
 
@@ -103,7 +103,7 @@ Untuk pemula, "bukti" bukan sertifikat dan bukan jumlah tutorial yang ditonton. 
 
 Baris kedua terlihat sepele, tetapi inilah bedanya repo yang bisa dipakai orang lain dan repo yang hanya bisa dipakai pembuatnya. Perhatikan bagaimana repo Celeste menuliskan batasannya sendiri:
 
-![README repo Celeste yang menyatakan lisensi MIT hanya berlaku untuk kode, bukan game atau asetnya](../assets/role-programmer/role-programmer-readme.jpg)
+![README repo Celeste yang menyatakan lisensi MIT hanya berlaku untuk kode, bukan game atau asetnya](../../assets/role-programmer/role-programmer-readme.jpg)
 
 *README [NoelFB/Celeste](https://github.com/NoelFB/Celeste). Kalimat terakhirnya justru yang paling berguna: ia memberi tahu apa yang **tidak** kamu dapat, sebelum kamu kecewa.*
 
@@ -152,7 +152,7 @@ Perhatikan bedanya dengan kalimat yang sering muncul di grup chat. Kolom kanan a
 
 Bentuk paling sederhana yang masih disebut "game programmer": satu objek, satu script, satu build. Tanpa aset buatan sendiri, jadi kamu tidak bisa tertahan karena belum bisa menggambar.
 
-![Alur demo 90 menit: pasang editor, buat project, susun scene, tulis script, uji, build](../assets/role-programmer/role-programmer-demo-90-menit.png)
+![Alur demo 90 menit: pasang editor, buat project, susun scene, tulis script, uji, build](../../assets/role-programmer/role-programmer-demo-90-menit.png)
 
 ### Sebelum mulai
 
@@ -201,7 +201,7 @@ Pada tahap ini, menekan **Play** belum menggerakkan apa pun. Objek hanya diam di
 
 Kenali empat panel yang akan kamu pakai terus. Ini tampilan Unity Editor yang sebenarnya, bukan ilustrasi:
 
-![Tangkapan layar Unity Editor dengan empat panel diberi nomor: Scene view, Hierarchy, Inspector, Console](../assets/role-programmer/role-programmer-unity-editor.jpg)
+![Tangkapan layar Unity Editor dengan empat panel diberi nomor: Scene view, Hierarchy, Inspector, Console](../../assets/role-programmer/role-programmer-unity-editor.jpg)
 
 *Unity Editor. Nomor 1–4 menandai panel yang disebut di seluruh materi ini. Sumber: rekaman [Dominic Branchaud](https://commons.wikimedia.org/wiki/File:Video_game_creation_using_AI_%E2%80%93_Easy_Stable_Diffusion_Unity_Integration_package.webm) di Wikimedia Commons, lisensi CC BY 3.0.*
 
@@ -282,7 +282,7 @@ Lima keputusan di kode itu yang membuatnya disebut pekerjaan programmer, bukan s
 
 Tampilannya kira-kira seperti ini — perhatikan tombol Play yang menyala dan Console yang tetap kosong:
 
-![Tampilan Unity saat Play mode: Game view berjalan, tombol Play aktif, Console tanpa error](../assets/role-programmer/role-programmer-play-mode.jpg)
+![Tampilan Unity saat Play mode: Game view berjalan, tombol Play aktif, Console tanpa error](../../assets/role-programmer/role-programmer-play-mode.jpg)
 
 *Frame yang sama dengan gambar sebelumnya, beberapa detik setelah **Play** ditekan. Sumber: rekaman Dominic Branchaud, CC BY 3.0.*
 
